@@ -14,6 +14,10 @@
 		618CF5E1284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 618CF5DF284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld */; };
 		618CF5E3284FFDEC00BFF072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618CF5E2284FFDEC00BFF072 /* Assets.xcassets */; };
 		618CF5E6284FFDEC00BFF072 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618CF5E4284FFDEC00BFF072 /* LaunchScreen.storyboard */; };
+		8405D7842850060600A917AC /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405D7832850060600A917AC /* BooksViewController.swift */; };
+		8405D7872850071E00A917AC /* GeneralBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405D7862850071E00A917AC /* GeneralBooksCollectionViewCell.swift */; };
+		8405D7892850074400A917AC /* TechnologyBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405D7882850074400A917AC /* TechnologyBooksCollectionViewCell.swift */; };
+		8405D78B2850076100A917AC /* RecipesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405D78A2850076100A917AC /* RecipesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		618CF5E2284FFDEC00BFF072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618CF5E5284FFDEC00BFF072 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618CF5E7284FFDEC00BFF072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8405D7832850060600A917AC /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		8405D7862850071E00A917AC /* GeneralBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralBooksCollectionViewCell.swift; sourceTree = "<group>"; };
+		8405D7882850074400A917AC /* TechnologyBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyBooksCollectionViewCell.swift; sourceTree = "<group>"; };
+		8405D78A2850076100A917AC /* RecipesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		618CF5D5284FFDEB00BFF072 /* TakeItEasy */ = {
 			isa = PBXGroup;
 			children = (
+				8405D785285006C800A917AC /* Books */,
 				618CF5D6284FFDEB00BFF072 /* AppDelegate.swift */,
 				618CF5D8284FFDEB00BFF072 /* SceneDelegate.swift */,
 				618CF5DA284FFDEB00BFF072 /* ViewController.swift */,
@@ -68,6 +77,17 @@
 				618CF5DF284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld */,
 			);
 			path = TakeItEasy;
+			sourceTree = "<group>";
+		};
+		8405D785285006C800A917AC /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				8405D7832850060600A917AC /* BooksViewController.swift */,
+				8405D7862850071E00A917AC /* GeneralBooksCollectionViewCell.swift */,
+				8405D7882850074400A917AC /* TechnologyBooksCollectionViewCell.swift */,
+				8405D78A2850076100A917AC /* RecipesCollectionViewCell.swift */,
+			);
+			path = Books;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8405D7892850074400A917AC /* TechnologyBooksCollectionViewCell.swift in Sources */,
+				8405D7872850071E00A917AC /* GeneralBooksCollectionViewCell.swift in Sources */,
+				8405D7842850060600A917AC /* BooksViewController.swift in Sources */,
 				618CF5DB284FFDEB00BFF072 /* ViewController.swift in Sources */,
+				8405D78B2850076100A917AC /* RecipesCollectionViewCell.swift in Sources */,
 				618CF5D7284FFDEB00BFF072 /* AppDelegate.swift in Sources */,
 				618CF5D9284FFDEB00BFF072 /* SceneDelegate.swift in Sources */,
 				618CF5E1284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld in Sources */,

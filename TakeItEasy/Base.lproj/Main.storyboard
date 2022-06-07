@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3y-u2-S9t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -71,9 +71,6 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Login to your account">
                                                     <color key="baseBackgroundColor" red="1" green="0.32092945760000002" blue="0.40859062779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="login:" destination="V3y-u2-S9t" eventType="touchUpInside" id="Tu6-4C-yCq"/>
-                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jix-RP-HIO">
                                                 <rect key="frame" x="0.0" y="372.5" width="255" height="33"/>
@@ -91,6 +88,9 @@
                                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                             <color key="baseForegroundColor" red="1" green="0.32092945760000002" blue="0.40859062779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="nGp-Iq-P2l" kind="show" id="g5l-ss-vHL"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -129,13 +129,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XKy-ie-nN1"/>
-                    <connections>
-                        <outlet property="box1" destination="KlI-WY-Ahu" id="y3g-zD-a7n"/>
-                        <outlet property="email" destination="Ssz-mK-sMx" id="GhG-9T-EBo"/>
-                        <outlet property="errorLabel" destination="LNU-ix-eo6" id="zrr-sk-27J"/>
-                        <outlet property="password" destination="6Uz-Rr-rcs" id="PNa-f9-Ugd"/>
-                        <outlet property="remember" destination="a8t-NO-jqd" id="Cpx-h0-sHl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6e-FX-d9g" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,8 +137,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="utX-pF-t1U">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9IG-Y3-HrW" sceneMemberID="firstResponder"/>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="nGp-Iq-P2l" customClass="SignUpViewController" customModule="FunZoneApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="nGp-Iq-P2l" customClass="SignUpViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Ra-0E-yST">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -188,9 +180,6 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Create an account">
                                                     <color key="baseBackgroundColor" red="1" green="0.32092945760000002" blue="0.40859062779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="signup:" destination="nGp-Iq-P2l" eventType="touchUpInside" id="Z7C-5l-tbL"/>
-                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84N-ny-sgq">
                                                 <rect key="frame" x="0.0" y="344" width="255" height="33"/>
@@ -259,14 +248,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i1Z-Sh-azw"/>
-                    <connections>
-                        <outlet property="box1" destination="ekS-vD-igu" id="lNs-f2-ERY"/>
-                        <outlet property="confirmPassword" destination="iaQ-oy-5BG" id="Pvv-0r-bBV"/>
-                        <outlet property="email" destination="THA-iu-wXC" id="QUU-bd-ZF6"/>
-                        <outlet property="errorLabel" destination="yrv-68-ilL" id="urJ-rr-3NX"/>
-                        <outlet property="password" destination="Zq9-f3-09e" id="931-J6-mBg"/>
-                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9IG-Y3-HrW" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1128" y="35"/>
         </scene>

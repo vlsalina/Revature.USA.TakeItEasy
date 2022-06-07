@@ -197,6 +197,9 @@
                                                             <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                             <color key="baseForegroundColor" red="1" green="0.32092945760000002" blue="0.40859062779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <segue destination="V3y-u2-S9t" kind="show" id="1s6-qj-ZBV"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

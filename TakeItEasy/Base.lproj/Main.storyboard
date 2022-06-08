@@ -77,7 +77,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeCell" id="rHA-kL-sqd" customClass="RecipesCollectionViewCell" customModule="TakeItEasy" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecipeCell" id="rHA-kL-sqd" customClass="RecipeBooksCollectionViewCell" customModule="TakeItEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cQf-qJ-tq8">
@@ -98,8 +98,8 @@
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <connections>
-                                            <outlet property="bookImage" destination="KpC-af-pUW" id="GBh-ha-Osl"/>
-                                            <outlet property="bookLabel" destination="aer-SQ-NGE" id="yD2-Vp-IeM"/>
+                                            <outlet property="bookImage" destination="KpC-af-pUW" id="FbR-zJ-3qb"/>
+                                            <outlet property="bookLabel" destination="aer-SQ-NGE" id="dEp-5R-Cbg"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

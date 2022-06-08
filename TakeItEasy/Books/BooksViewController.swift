@@ -10,7 +10,7 @@ import UIKit
 class BooksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var generalText = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
     var technologyText = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
-    var recipesText = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    var recipeText = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,43 +23,48 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView.restorationIdentifier{
         case "GeneralCollectionView":
-            let generalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GeneralCell", for: indexPath) as! GeneralBooksCollectionViewCell
-            generalCell.bookLabel.text = generalText[indexPath.row]
-            generalCell.backgroundColor = .systemGray
-            generalCell.layer.cornerRadius = 10
-            generalCell.layer.masksToBounds = true
-            print(1)
+            var generalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GeneralCell", for: indexPath) as! GeneralBooksCollectionViewCell
+            generalCell = setupGeneralCell(generalCell, indexPath)
             return generalCell
             
         case "TechnologyCollectionView":
-            let technologyCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TechnologyCell", for: indexPath) as! TechnologyBooksCollectionViewCell
-            technologyCell.bookLabel.text = technologyText[indexPath.row]
-            technologyCell.backgroundColor = .systemGray2
-            technologyCell.layer.cornerRadius = 10
-            technologyCell.layer.masksToBounds = true
-            print(1)
+            var technologyCell = collectionView.dequeueReusableCell(withReuseIdentifier: "TechnologyCell", for: indexPath) as! TechnologyBooksCollectionViewCell
+            technologyCell = setupTechnologyCell(technologyCell, indexPath)
             return technologyCell
             
         case "RecipesCollectionView":
-            let recipeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipesCollectionViewCell
-            recipeCell.bookLabel.text = recipesText[indexPath.row]
-            recipeCell.backgroundColor = .systemGray4
-            recipeCell.layer.cornerRadius = 10
-            recipeCell.layer.masksToBounds = true
-            print(1)
+            var recipeCell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCell", for: indexPath) as! RecipeBooksCollectionViewCell
+            recipeCell = setupRecipeCell(recipeCell, indexPath)
             return recipeCell
             
         default:
             let generalCell = collectionView.dequeueReusableCell(withReuseIdentifier: "GeneralCell", for: indexPath) as! GeneralBooksCollectionViewCell
-            generalCell.bookLabel.text = generalText[indexPath.row]
-            generalCell.backgroundColor = .systemGray6
-            generalCell.layer.cornerRadius = 10
-            generalCell.layer.masksToBounds = true
             return generalCell
         }
     }
     
-    
+    func setupGeneralCell(_ generalCell : GeneralBooksCollectionViewCell, _ indexPath : IndexPath) -> GeneralBooksCollectionViewCell{
+        generalCell.bookLabel.text = generalText[indexPath.row]
+        generalCell.backgroundColor = .systemGray
+        generalCell.layer.cornerRadius = 10
+        generalCell.layer.masksToBounds = true
+        return generalCell
+    }
 
+    func setupTechnologyCell(_ technologyCell : TechnologyBooksCollectionViewCell, _ indexPath : IndexPath) -> TechnologyBooksCollectionViewCell{
+        technologyCell.bookLabel.text = technologyText[indexPath.row]
+        technologyCell.backgroundColor = .systemGray2
+        technologyCell.layer.cornerRadius = 10
+        technologyCell.layer.masksToBounds = true
+        return technologyCell
+    }
+    
+    func setupRecipeCell(_ recipeCell : RecipeBooksCollectionViewCell, _ indexPath : IndexPath) -> RecipeBooksCollectionViewCell{
+        recipeCell.bookLabel.text = recipeText[indexPath.row]
+        recipeCell.backgroundColor = .systemGray4
+        recipeCell.layer.cornerRadius = 10
+        recipeCell.layer.masksToBounds = true
+        return recipeCell
+    }
     
 }

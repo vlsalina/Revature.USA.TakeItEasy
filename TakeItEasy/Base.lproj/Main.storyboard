@@ -263,9 +263,9 @@
         <!--Quiz Page-->
         <scene sceneID="De7-Ze-wHL">
             <objects>
-                <viewController title="Quiz Page" id="kKf-V3-McW" sceneMemberID="viewController">
+                <viewController title="Quiz Page" modalPresentationStyle="fullScreen" id="kKf-V3-McW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzF-jh-jax">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-QC-AIZ" userLabel="Navigation Bar">
@@ -379,7 +379,9 @@
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="thN-9I-9dm" secondAttribute="trailing" constant="24" id="tvs-21-ged"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quiz" selectedImage="questionmark.square.fill" catalog="system" id="tMI-ZU-iiS"/>
+                    <tabBarItem key="tabBarItem" title="Quiz" image="questionmark.square.fill" catalog="system" selectedImage="questionmark.square.fill" id="tMI-ZU-iiS">
+                        <color key="badgeColor" systemColor="tintColor"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyK-Po-tnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -388,9 +390,9 @@
         <!--Search Page-->
         <scene sceneID="jWP-9Z-f5D">
             <objects>
-                <viewController title="Search Page" id="eUS-iK-d8C" sceneMemberID="viewController">
+                <viewController title="Search Page" modalPresentationStyle="fullScreen" id="eUS-iK-d8C" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ayS-01-DDC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Qle-R4-uLz" userLabel="Navigation Bar">
@@ -424,7 +426,9 @@
                             <constraint firstItem="4nR-W3-g3T" firstAttribute="trailing" secondItem="Qle-R4-uLz" secondAttribute="trailing" constant="24" id="uNa-Rp-n9V"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" selectedImage="magnifyingglass" catalog="system" id="Q8e-UD-VlV"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="Q8e-UD-VlV">
+                        <color key="badgeColor" systemColor="tintColor"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3P-sp-weR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -436,10 +440,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEC-iO-hCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="I6V-QB-spb" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="RxI-sw-LNd"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2w0-gE-lx3">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="2w0-gE-lx3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="tintColor"/>
+                        <color key="selectedImageTintColor" systemColor="tintColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="kKf-V3-McW" kind="relationship" relationship="viewControllers" id="SnV-ZW-BuE"/>
@@ -463,6 +469,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

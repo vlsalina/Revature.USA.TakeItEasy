@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BooksViewController: UIViewController {
+class BooksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
     var generalTitles = ["Basic Operators", "Closures", "Collection Types", "Control Flow"]
     var technologyTitles = ["Enumerations", "Error Handling", "Extensions", "Functions", "Inheritance"]
     var recipeTitles = ["Initialization", "Methods", "Nested Types", "Optional Chaining", "Properties", "Structures and Classes"]

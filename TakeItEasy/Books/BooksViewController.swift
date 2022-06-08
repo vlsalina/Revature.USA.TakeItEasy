@@ -9,15 +9,24 @@ import UIKit
 
 class BooksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var generalText = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    var technologyText = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
-    var recipeText = ["10", "20", "30", "40", "50", "60", "70", "80", "90", "100"]
+    var technologyText = ["a", "b", "c", "d", "e", "f"]
+    var recipeText = ["10", "20", "30", "40", "50"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        switch collectionView.restorationIdentifier{
+        case "GeneralCollectionView":
+            return generalText.count
+        case "TechnologyCollectionView":
+            return technologyText.count
+        case "RecipesCollectionView":
+            return recipeText.count
+        default:
+            return generalText.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

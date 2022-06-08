@@ -18,6 +18,7 @@
 		8405D7872850071E00A917AC /* GeneralBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405D7862850071E00A917AC /* GeneralBooksCollectionViewCell.swift */; };
 		8405D7892850074400A917AC /* TechnologyBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405D7882850074400A917AC /* TechnologyBooksCollectionViewCell.swift */; };
 		8445857C28503BBE0088F363 /* RecipeBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445857B28503BBE0088F363 /* RecipeBooksCollectionViewCell.swift */; };
+		8445858028504DB90088F363 /* NavigationBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445857F28504DB90088F363 /* NavigationBarData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8405D7862850071E00A917AC /* GeneralBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralBooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		8405D7882850074400A917AC /* TechnologyBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyBooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		8445857B28503BBE0088F363 /* RecipeBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBooksCollectionViewCell.swift; sourceTree = "<group>"; };
+		8445857F28504DB90088F363 /* NavigationBarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				618CF5E4284FFDEC00BFF072 /* LaunchScreen.storyboard */,
 				618CF5E7284FFDEC00BFF072 /* Info.plist */,
 				618CF5DF284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld */,
+				8445857F28504DB90088F363 /* NavigationBarData.swift */,
 			);
 			path = TakeItEasy;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				8405D7872850071E00A917AC /* GeneralBooksCollectionViewCell.swift in Sources */,
 				8405D7842850060600A917AC /* BooksViewController.swift in Sources */,
 				618CF5DB284FFDEB00BFF072 /* ViewController.swift in Sources */,
+				8445858028504DB90088F363 /* NavigationBarData.swift in Sources */,
 				8445857C28503BBE0088F363 /* RecipeBooksCollectionViewCell.swift in Sources */,
 				618CF5D7284FFDEB00BFF072 /* AppDelegate.swift in Sources */,
 				618CF5D9284FFDEB00BFF072 /* SceneDelegate.swift in Sources */,

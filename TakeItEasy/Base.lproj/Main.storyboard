@@ -396,7 +396,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Qle-R4-uLz" userLabel="Navigation Bar">
-                                <rect key="frame" x="24" y="0.0" width="366" height="31"/>
+                                <rect key="frame" x="24" y="24" width="366" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfI-EG-oCE">
                                         <rect key="frame" x="0.0" y="0.0" width="78.5" height="31"/>
@@ -421,7 +421,7 @@
                         <viewLayoutGuide key="safeArea" id="4nR-W3-g3T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Qle-R4-uLz" firstAttribute="top" secondItem="4nR-W3-g3T" secondAttribute="top" id="FzV-s0-0Qe"/>
+                            <constraint firstItem="Qle-R4-uLz" firstAttribute="top" secondItem="4nR-W3-g3T" secondAttribute="top" constant="24" id="dEC-3N-4X8"/>
                             <constraint firstItem="Qle-R4-uLz" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="24" id="pdT-Bf-MfM"/>
                             <constraint firstItem="4nR-W3-g3T" firstAttribute="trailing" secondItem="Qle-R4-uLz" secondAttribute="trailing" constant="24" id="uNa-Rp-n9V"/>
                         </constraints>

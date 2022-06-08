@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		612D60F928513BE300EFFD42 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D60F828513BE300EFFD42 /* LoginPageViewController.swift */; };
+		612D60FC28513D1900EFFD42 /* DBLoginHelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D60FB28513D1900EFFD42 /* DBLoginHelperClass.swift */; };
+		612D60FF28513E9600EFFD42 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D60FE28513E9600EFFD42 /* LoginConstants.swift */; };
+		612D610228513F4000EFFD42 /* RememberMeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D610128513F4000EFFD42 /* RememberMeHelper.swift */; };
+		612D610428513FB900EFFD42 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D610328513FB900EFFD42 /* MetaData.swift */; };
+		612D6106285144CD00EFFD42 /* KeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D6105285144CD00EFFD42 /* KeychainConstants.swift */; };
+		612D61092851479C00EFFD42 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D61082851479C00EFFD42 /* KeychainManager.swift */; };
+		612D610B285148A300EFFD42 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D610A285148A300EFFD42 /* UserDefaults.swift */; };
+		612D611828514B5800EFFD42 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D611628514B5800EFFD42 /* User+CoreDataClass.swift */; };
+		612D611928514B5800EFFD42 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612D611728514B5800EFFD42 /* User+CoreDataProperties.swift */; };
 		618CF5D7284FFDEB00BFF072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618CF5D6284FFDEB00BFF072 /* AppDelegate.swift */; };
 		618CF5D9284FFDEB00BFF072 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618CF5D8284FFDEB00BFF072 /* SceneDelegate.swift */; };
 		618CF5DB284FFDEB00BFF072 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618CF5DA284FFDEB00BFF072 /* ViewController.swift */; };
@@ -17,6 +27,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		612D60F828513BE300EFFD42 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		612D60FB28513D1900EFFD42 /* DBLoginHelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBLoginHelperClass.swift; sourceTree = "<group>"; };
+		612D60FE28513E9600EFFD42 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
+		612D610128513F4000EFFD42 /* RememberMeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberMeHelper.swift; sourceTree = "<group>"; };
+		612D610328513FB900EFFD42 /* MetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaData.swift; sourceTree = "<group>"; };
+		612D6105285144CD00EFFD42 /* KeychainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConstants.swift; sourceTree = "<group>"; };
+		612D61082851479C00EFFD42 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		612D610A285148A300EFFD42 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		612D611628514B5800EFFD42 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		612D611728514B5800EFFD42 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		618CF5D3284FFDEB00BFF072 /* TakeItEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeItEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618CF5D6284FFDEB00BFF072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618CF5D8284FFDEB00BFF072 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,9 +59,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		612D60F628513BC600EFFD42 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				612D60F728513BCC00EFFD42 /* LoginPage */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		612D60F728513BCC00EFFD42 /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				612D60F828513BE300EFFD42 /* LoginPageViewController.swift */,
+			);
+			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		612D60FA28513CED00EFFD42 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				612D60FB28513D1900EFFD42 /* DBLoginHelperClass.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		612D60FD28513E7700EFFD42 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				612D60FE28513E9600EFFD42 /* LoginConstants.swift */,
+				612D610328513FB900EFFD42 /* MetaData.swift */,
+				612D6105285144CD00EFFD42 /* KeychainConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		612D610028513F2A00EFFD42 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				612D610128513F4000EFFD42 /* RememberMeHelper.swift */,
+				612D610A285148A300EFFD42 /* UserDefaults.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		612D61072851475900EFFD42 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				612D61082851479C00EFFD42 /* KeychainManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		612D611128514A1C00EFFD42 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		618CF5CA284FFDEB00BFF072 = {
 			isa = PBXGroup;
 			children = (
+				612D611628514B5800EFFD42 /* User+CoreDataClass.swift */,
+				612D611728514B5800EFFD42 /* User+CoreDataProperties.swift */,
 				618CF5D5284FFDEB00BFF072 /* TakeItEasy */,
 				618CF5D4284FFDEB00BFF072 /* Products */,
 			);
@@ -58,6 +138,12 @@
 		618CF5D5284FFDEB00BFF072 /* TakeItEasy */ = {
 			isa = PBXGroup;
 			children = (
+				612D611128514A1C00EFFD42 /* Entities */,
+				612D61072851475900EFFD42 /* Services */,
+				612D610028513F2A00EFFD42 /* Helpers */,
+				612D60FD28513E7700EFFD42 /* Constants */,
+				612D60FA28513CED00EFFD42 /* CoreData */,
+				612D60F628513BC600EFFD42 /* Pages */,
 				618CF5D6284FFDEB00BFF072 /* AppDelegate.swift */,
 				618CF5D8284FFDEB00BFF072 /* SceneDelegate.swift */,
 				618CF5DA284FFDEB00BFF072 /* ViewController.swift */,
@@ -143,8 +229,18 @@
 			files = (
 				618CF5DB284FFDEB00BFF072 /* ViewController.swift in Sources */,
 				618CF5D7284FFDEB00BFF072 /* AppDelegate.swift in Sources */,
+				612D610228513F4000EFFD42 /* RememberMeHelper.swift in Sources */,
+				612D611828514B5800EFFD42 /* User+CoreDataClass.swift in Sources */,
+				612D60FC28513D1900EFFD42 /* DBLoginHelperClass.swift in Sources */,
 				618CF5D9284FFDEB00BFF072 /* SceneDelegate.swift in Sources */,
+				612D6106285144CD00EFFD42 /* KeychainConstants.swift in Sources */,
+				612D61092851479C00EFFD42 /* KeychainManager.swift in Sources */,
+				612D610428513FB900EFFD42 /* MetaData.swift in Sources */,
+				612D610B285148A300EFFD42 /* UserDefaults.swift in Sources */,
+				612D611928514B5800EFFD42 /* User+CoreDataProperties.swift in Sources */,
+				612D60F928513BE300EFFD42 /* LoginPageViewController.swift in Sources */,
 				618CF5E1284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld in Sources */,
+				612D60FF28513E9600EFFD42 /* LoginConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

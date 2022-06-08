@@ -49,22 +49,22 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     func setupGeneralCell(_ generalCell : GeneralBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
         generalCell.bookLabel.text = generalText[indexPath.row]
         generalCell.backgroundColor = .systemGray
-        return setCornerRadiuForCell(generalCell)
+        return setCornerRadiusForCell(generalCell)
     }
 
     func setupTechnologyCell(_ technologyCell : TechnologyBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
         technologyCell.bookLabel.text = technologyText[indexPath.row]
         technologyCell.backgroundColor = .systemGray2
-        return setCornerRadiuForCell(technologyCell)
+        return setCornerRadiusForCell(technologyCell)
     }
     
     func setupRecipeCell(_ recipeCell : RecipeBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
         recipeCell.bookLabel.text = recipeText[indexPath.row]
         recipeCell.backgroundColor = .systemGray4
-        return setCornerRadiuForCell(recipeCell)
+        return setCornerRadiusForCell(recipeCell)
     }
     
-    func setCornerRadiuForCell(_ collectionViewCell : UICollectionViewCell) -> UICollectionViewCell{
+    func setCornerRadiusForCell(_ collectionViewCell : UICollectionViewCell) -> UICollectionViewCell{
         collectionViewCell.layer.cornerRadius = 10
         collectionViewCell.layer.masksToBounds = true
         return collectionViewCell

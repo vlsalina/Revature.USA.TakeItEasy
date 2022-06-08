@@ -8,9 +8,12 @@
 import UIKit
 
 class BooksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    var generalText = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    var technologyText = ["a", "b", "c", "d", "e", "f"]
-    var recipeText = ["10", "20", "30", "40", "50"]
+    var generalText = ["Basic Operators", "Closures", "Collection Types", "Control Flow"]
+    var technologyText = ["Enumerations", "Error Handling", "Extensions", "Functions", "Inheritance"]
+    var recipeText = ["Initialization", "Methods", "Nested Types", "Optional Chaining", "Properties", "Structures and Classes"]
+    var generalImages = ["Basic Operators", "Closures", "Collection Types", "Control Flow"]
+    var technologyImages = ["Enumerations", "Error Handling", "Extensions", "Functions", "Inheritance"]
+    var recipeImages = ["Initialization", "Methods", "Nested Types", "Optional Chaining", "Properties", "Structures and Classes"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,18 +51,21 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     func setupGeneralCell(_ generalCell : GeneralBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
         generalCell.bookLabel.text = generalText[indexPath.row]
+        generalCell.bookImage.image = UIImage(named: generalImages[indexPath.row])
         generalCell.backgroundColor = .systemGray
         return setCornerRadiusForCell(generalCell)
     }
 
     func setupTechnologyCell(_ technologyCell : TechnologyBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
         technologyCell.bookLabel.text = technologyText[indexPath.row]
+        technologyCell.bookImage.image = UIImage(named: technologyImages[indexPath.row])
         technologyCell.backgroundColor = .systemGray2
         return setCornerRadiusForCell(technologyCell)
     }
     
     func setupRecipeCell(_ recipeCell : RecipeBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
         recipeCell.bookLabel.text = recipeText[indexPath.row]
+        recipeCell.bookImage.image = UIImage(named: recipeImages[indexPath.row])
         recipeCell.backgroundColor = .systemGray4
         return setCornerRadiusForCell(recipeCell)
     }

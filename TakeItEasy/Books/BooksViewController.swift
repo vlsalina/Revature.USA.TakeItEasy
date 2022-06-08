@@ -49,6 +49,28 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch collectionView.restorationIdentifier{
+        case "GeneralCollectionView":
+            print(generalText[indexPath.item])
+            goToOpenedBookViewController(generalText[indexPath.item])
+        case "TechnologyCollectionView":
+            print(technologyText[indexPath.item])
+            goToOpenedBookViewController(technologyText[indexPath.item])
+        case "RecipesCollectionView":
+            print(recipeText[indexPath.item])
+            goToOpenedBookViewController(recipeText[indexPath.item])
+        default:
+           print("no item")
+        }
+    }
+    
+    func goToOpenedBookViewController(_ bookTitle : String){
+        let storyObject = UIStoryboard(name: "Main", bundle: nil)
+        let openedBookViewController = storyObject.instantiateViewController(withIdentifier: "OpenedBook") as! OpenedBookViewController
+        openedBookViewController.bookFileName = bookTitle
+        self.navigationController?.pushViewController(openedBookViewController, animated: true)    }
+    
     func setupGeneralCell(_ generalCell : GeneralBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
         generalCell.bookLabel.text = generalText[indexPath.row]
         generalCell.bookImage.image = UIImage(named: generalImages[indexPath.row])

@@ -19,22 +19,27 @@
 		8405D7892850074400A917AC /* TechnologyBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405D7882850074400A917AC /* TechnologyBooksCollectionViewCell.swift */; };
 		8445857C28503BBE0088F363 /* RecipeBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445857B28503BBE0088F363 /* RecipeBooksCollectionViewCell.swift */; };
 		8445858028504DB90088F363 /* NavigationBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8445857F28504DB90088F363 /* NavigationBarData.swift */; };
+		84A3C4F22851196C00664E96 /* Control Flow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4E32851196B00664E96 /* Control Flow.pdf */; };
+		84A3C4F32851196C00664E96 /* Extensions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4E42851196B00664E96 /* Extensions.pdf */; };
+		84A3C4F42851196C00664E96 /* Initialization.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4E52851196B00664E96 /* Initialization.pdf */; };
+		84A3C4F52851196C00664E96 /* Collection Types.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4E62851196B00664E96 /* Collection Types.pdf */; };
+		84A3C4F62851196C00664E96 /* Properties.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4E72851196B00664E96 /* Properties.pdf */; };
+		84A3C4F72851196C00664E96 /* Nested Types.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4E82851196B00664E96 /* Nested Types.pdf */; };
+		84A3C4F82851196C00664E96 /* Enumerations.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4E92851196B00664E96 /* Enumerations.pdf */; };
+		84A3C4F92851196C00664E96 /* Methods.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4EA2851196B00664E96 /* Methods.pdf */; };
+		84A3C4FA2851196C00664E96 /* Functions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4EB2851196B00664E96 /* Functions.pdf */; };
+		84A3C4FB2851196C00664E96 /* Structures and Classes.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4EC2851196B00664E96 /* Structures and Classes.pdf */; };
+		84A3C4FC2851196C00664E96 /* Error Handling.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4ED2851196B00664E96 /* Error Handling.pdf */; };
+		84A3C4FD2851196C00664E96 /* Closures.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4EE2851196B00664E96 /* Closures.pdf */; };
+		84A3C4FE2851196C00664E96 /* Basic Operators.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4EF2851196B00664E96 /* Basic Operators.pdf */; };
+		84A3C4FF2851196C00664E96 /* Optional Chaining.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4F02851196B00664E96 /* Optional Chaining.pdf */; };
+		84A3C5002851196C00664E96 /* Inheritance.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C4F12851196C00664E96 /* Inheritance.pdf */; };
+		84A3C52628512E2E00664E96 /* The_Time_Machine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C52128512E2D00664E96 /* The_Time_Machine.pdf */; };
+		84A3C52728512E2E00664E96 /* Twenty_Thousand_Leagues_Under_the_Sea.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C52228512E2D00664E96 /* Twenty_Thousand_Leagues_Under_the_Sea.pdf */; };
+		84A3C52828512E2E00664E96 /* The_Count_of_Monte_Cristo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C52328512E2E00664E96 /* The_Count_of_Monte_Cristo.pdf */; };
+		84A3C52928512E2E00664E96 /* Moby_Dick.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C52428512E2E00664E96 /* Moby_Dick.pdf */; };
+		84A3C52A28512E2E00664E96 /* The_Great_Gatsby.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C52528512E2E00664E96 /* The_Great_Gatsby.pdf */; };
 		84F5B5162850FA3E004B0220 /* OpenedBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5B5152850FA3E004B0220 /* OpenedBookViewController.swift */; };
-		84F5B54728510AEE004B0220 /* Collection Types.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B53828510AED004B0220 /* Collection Types.pdf */; };
-		84F5B54828510AEE004B0220 /* Properties.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B53928510AED004B0220 /* Properties.pdf */; };
-		84F5B54928510AEE004B0220 /* Closures.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B53A28510AED004B0220 /* Closures.pdf */; };
-		84F5B54A28510AEE004B0220 /* Control Flow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B53B28510AED004B0220 /* Control Flow.pdf */; };
-		84F5B54B28510AEE004B0220 /* Methods.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B53C28510AED004B0220 /* Methods.pdf */; };
-		84F5B54C28510AEE004B0220 /* Optional Chaining.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B53D28510AED004B0220 /* Optional Chaining.pdf */; };
-		84F5B54D28510AEE004B0220 /* Structures and Classes.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B53E28510AED004B0220 /* Structures and Classes.pdf */; };
-		84F5B54E28510AEE004B0220 /* Extensions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B53F28510AED004B0220 /* Extensions.pdf */; };
-		84F5B54F28510AEE004B0220 /* Basic Operators.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B54028510AED004B0220 /* Basic Operators.pdf */; };
-		84F5B55028510AEE004B0220 /* Error Handling.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B54128510AEE004B0220 /* Error Handling.pdf */; };
-		84F5B55128510AEE004B0220 /* Nested Types.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B54228510AEE004B0220 /* Nested Types.pdf */; };
-		84F5B55228510AEE004B0220 /* Functions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B54328510AEE004B0220 /* Functions.pdf */; };
-		84F5B55328510AEE004B0220 /* Enumerations.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B54428510AEE004B0220 /* Enumerations.pdf */; };
-		84F5B55428510AEE004B0220 /* Inheritance.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B54528510AEE004B0220 /* Inheritance.pdf */; };
-		84F5B55528510AEE004B0220 /* Initialization.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84F5B54628510AEE004B0220 /* Initialization.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,22 +57,27 @@
 		8405D7882850074400A917AC /* TechnologyBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyBooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		8445857B28503BBE0088F363 /* RecipeBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		8445857F28504DB90088F363 /* NavigationBarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarData.swift; sourceTree = "<group>"; };
+		84A3C4E32851196B00664E96 /* Control Flow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Control Flow.pdf"; path = "../../../../funzone books/Control Flow.pdf"; sourceTree = "<group>"; };
+		84A3C4E42851196B00664E96 /* Extensions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Extensions.pdf; path = "../../../../funzone books/Extensions.pdf"; sourceTree = "<group>"; };
+		84A3C4E52851196B00664E96 /* Initialization.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Initialization.pdf; path = "../../../../funzone books/Initialization.pdf"; sourceTree = "<group>"; };
+		84A3C4E62851196B00664E96 /* Collection Types.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Collection Types.pdf"; path = "../../../../funzone books/Collection Types.pdf"; sourceTree = "<group>"; };
+		84A3C4E72851196B00664E96 /* Properties.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Properties.pdf; path = "../../../../funzone books/Properties.pdf"; sourceTree = "<group>"; };
+		84A3C4E82851196B00664E96 /* Nested Types.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Nested Types.pdf"; path = "../../../../funzone books/Nested Types.pdf"; sourceTree = "<group>"; };
+		84A3C4E92851196B00664E96 /* Enumerations.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Enumerations.pdf; path = "../../../../funzone books/Enumerations.pdf"; sourceTree = "<group>"; };
+		84A3C4EA2851196B00664E96 /* Methods.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Methods.pdf; path = "../../../../funzone books/Methods.pdf"; sourceTree = "<group>"; };
+		84A3C4EB2851196B00664E96 /* Functions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Functions.pdf; path = "../../../../funzone books/Functions.pdf"; sourceTree = "<group>"; };
+		84A3C4EC2851196B00664E96 /* Structures and Classes.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Structures and Classes.pdf"; path = "../../../../funzone books/Structures and Classes.pdf"; sourceTree = "<group>"; };
+		84A3C4ED2851196B00664E96 /* Error Handling.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Error Handling.pdf"; path = "../../../../funzone books/Error Handling.pdf"; sourceTree = "<group>"; };
+		84A3C4EE2851196B00664E96 /* Closures.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Closures.pdf; path = "../../../../funzone books/Closures.pdf"; sourceTree = "<group>"; };
+		84A3C4EF2851196B00664E96 /* Basic Operators.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Basic Operators.pdf"; path = "../../../../funzone books/Basic Operators.pdf"; sourceTree = "<group>"; };
+		84A3C4F02851196B00664E96 /* Optional Chaining.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Optional Chaining.pdf"; path = "../../../../funzone books/Optional Chaining.pdf"; sourceTree = "<group>"; };
+		84A3C4F12851196C00664E96 /* Inheritance.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Inheritance.pdf; path = "../../../../funzone books/Inheritance.pdf"; sourceTree = "<group>"; };
+		84A3C52128512E2D00664E96 /* The_Time_Machine.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = The_Time_Machine.pdf; path = ../../../../TakeItEasyBooks/The_Time_Machine.pdf; sourceTree = "<group>"; };
+		84A3C52228512E2D00664E96 /* Twenty_Thousand_Leagues_Under_the_Sea.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Twenty_Thousand_Leagues_Under_the_Sea.pdf; path = ../../../../TakeItEasyBooks/Twenty_Thousand_Leagues_Under_the_Sea.pdf; sourceTree = "<group>"; };
+		84A3C52328512E2E00664E96 /* The_Count_of_Monte_Cristo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = The_Count_of_Monte_Cristo.pdf; path = ../../../../TakeItEasyBooks/The_Count_of_Monte_Cristo.pdf; sourceTree = "<group>"; };
+		84A3C52428512E2E00664E96 /* Moby_Dick.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Moby_Dick.pdf; path = ../../../../TakeItEasyBooks/Moby_Dick.pdf; sourceTree = "<group>"; };
+		84A3C52528512E2E00664E96 /* The_Great_Gatsby.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = The_Great_Gatsby.pdf; path = ../../../../TakeItEasyBooks/The_Great_Gatsby.pdf; sourceTree = "<group>"; };
 		84F5B5152850FA3E004B0220 /* OpenedBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedBookViewController.swift; sourceTree = "<group>"; };
-		84F5B53828510AED004B0220 /* Collection Types.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Collection Types.pdf"; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Collection Types.pdf"; sourceTree = "<group>"; };
-		84F5B53928510AED004B0220 /* Properties.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Properties.pdf; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Properties.pdf"; sourceTree = "<group>"; };
-		84F5B53A28510AED004B0220 /* Closures.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Closures.pdf; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Closures.pdf"; sourceTree = "<group>"; };
-		84F5B53B28510AED004B0220 /* Control Flow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Control Flow.pdf"; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Control Flow.pdf"; sourceTree = "<group>"; };
-		84F5B53C28510AED004B0220 /* Methods.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Methods.pdf; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Methods.pdf"; sourceTree = "<group>"; };
-		84F5B53D28510AED004B0220 /* Optional Chaining.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Optional Chaining.pdf"; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Optional Chaining.pdf"; sourceTree = "<group>"; };
-		84F5B53E28510AED004B0220 /* Structures and Classes.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Structures and Classes.pdf"; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Structures and Classes.pdf"; sourceTree = "<group>"; };
-		84F5B53F28510AED004B0220 /* Extensions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Extensions.pdf; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Extensions.pdf"; sourceTree = "<group>"; };
-		84F5B54028510AED004B0220 /* Basic Operators.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Basic Operators.pdf"; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Basic Operators.pdf"; sourceTree = "<group>"; };
-		84F5B54128510AEE004B0220 /* Error Handling.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Error Handling.pdf"; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Error Handling.pdf"; sourceTree = "<group>"; };
-		84F5B54228510AEE004B0220 /* Nested Types.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Nested Types.pdf"; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Nested Types.pdf"; sourceTree = "<group>"; };
-		84F5B54328510AEE004B0220 /* Functions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Functions.pdf; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Functions.pdf"; sourceTree = "<group>"; };
-		84F5B54428510AEE004B0220 /* Enumerations.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Enumerations.pdf; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Enumerations.pdf"; sourceTree = "<group>"; };
-		84F5B54528510AEE004B0220 /* Inheritance.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Inheritance.pdf; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Inheritance.pdf"; sourceTree = "<group>"; };
-		84F5B54628510AEE004B0220 /* Initialization.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Initialization.pdf; path = "../../../../../Desktop/Curts Desktop Files/funzone books/Initialization.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +127,7 @@
 		8405D785285006C800A917AC /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				84F5B53728510A81004B0220 /* BookSampleFiles */,
+				84A3C4E22851195900664E96 /* BooksSampleFiles */,
 				8405D7832850060600A917AC /* BooksViewController.swift */,
 				8405D7862850071E00A917AC /* GeneralBooksCollectionViewCell.swift */,
 				8405D7882850074400A917AC /* TechnologyBooksCollectionViewCell.swift */,
@@ -127,26 +137,31 @@
 			path = Books;
 			sourceTree = "<group>";
 		};
-		84F5B53728510A81004B0220 /* BookSampleFiles */ = {
+		84A3C4E22851195900664E96 /* BooksSampleFiles */ = {
 			isa = PBXGroup;
 			children = (
-				84F5B54028510AED004B0220 /* Basic Operators.pdf */,
-				84F5B53A28510AED004B0220 /* Closures.pdf */,
-				84F5B53828510AED004B0220 /* Collection Types.pdf */,
-				84F5B53B28510AED004B0220 /* Control Flow.pdf */,
-				84F5B54428510AEE004B0220 /* Enumerations.pdf */,
-				84F5B54128510AEE004B0220 /* Error Handling.pdf */,
-				84F5B53F28510AED004B0220 /* Extensions.pdf */,
-				84F5B54328510AEE004B0220 /* Functions.pdf */,
-				84F5B54528510AEE004B0220 /* Inheritance.pdf */,
-				84F5B54628510AEE004B0220 /* Initialization.pdf */,
-				84F5B53C28510AED004B0220 /* Methods.pdf */,
-				84F5B54228510AEE004B0220 /* Nested Types.pdf */,
-				84F5B53D28510AED004B0220 /* Optional Chaining.pdf */,
-				84F5B53928510AED004B0220 /* Properties.pdf */,
-				84F5B53E28510AED004B0220 /* Structures and Classes.pdf */,
+				84A3C52428512E2E00664E96 /* Moby_Dick.pdf */,
+				84A3C52328512E2E00664E96 /* The_Count_of_Monte_Cristo.pdf */,
+				84A3C52528512E2E00664E96 /* The_Great_Gatsby.pdf */,
+				84A3C52128512E2D00664E96 /* The_Time_Machine.pdf */,
+				84A3C52228512E2D00664E96 /* Twenty_Thousand_Leagues_Under_the_Sea.pdf */,
+				84A3C4EF2851196B00664E96 /* Basic Operators.pdf */,
+				84A3C4EE2851196B00664E96 /* Closures.pdf */,
+				84A3C4E62851196B00664E96 /* Collection Types.pdf */,
+				84A3C4E32851196B00664E96 /* Control Flow.pdf */,
+				84A3C4E92851196B00664E96 /* Enumerations.pdf */,
+				84A3C4ED2851196B00664E96 /* Error Handling.pdf */,
+				84A3C4E42851196B00664E96 /* Extensions.pdf */,
+				84A3C4EB2851196B00664E96 /* Functions.pdf */,
+				84A3C4F12851196C00664E96 /* Inheritance.pdf */,
+				84A3C4E52851196B00664E96 /* Initialization.pdf */,
+				84A3C4EA2851196B00664E96 /* Methods.pdf */,
+				84A3C4E82851196B00664E96 /* Nested Types.pdf */,
+				84A3C4F02851196B00664E96 /* Optional Chaining.pdf */,
+				84A3C4E72851196B00664E96 /* Properties.pdf */,
+				84A3C4EC2851196B00664E96 /* Structures and Classes.pdf */,
 			);
-			path = BookSampleFiles;
+			path = BooksSampleFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,24 +222,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84F5B55528510AEE004B0220 /* Initialization.pdf in Resources */,
-				84F5B55228510AEE004B0220 /* Functions.pdf in Resources */,
-				84F5B54C28510AEE004B0220 /* Optional Chaining.pdf in Resources */,
-				84F5B55328510AEE004B0220 /* Enumerations.pdf in Resources */,
-				84F5B54D28510AEE004B0220 /* Structures and Classes.pdf in Resources */,
-				84F5B55128510AEE004B0220 /* Nested Types.pdf in Resources */,
-				84F5B54828510AEE004B0220 /* Properties.pdf in Resources */,
+				84A3C52628512E2E00664E96 /* The_Time_Machine.pdf in Resources */,
+				84A3C4F52851196C00664E96 /* Collection Types.pdf in Resources */,
+				84A3C4F42851196C00664E96 /* Initialization.pdf in Resources */,
+				84A3C4FB2851196C00664E96 /* Structures and Classes.pdf in Resources */,
+				84A3C52928512E2E00664E96 /* Moby_Dick.pdf in Resources */,
+				84A3C4F32851196C00664E96 /* Extensions.pdf in Resources */,
+				84A3C4F72851196C00664E96 /* Nested Types.pdf in Resources */,
+				84A3C4F62851196C00664E96 /* Properties.pdf in Resources */,
 				618CF5E6284FFDEC00BFF072 /* LaunchScreen.storyboard in Resources */,
-				84F5B54F28510AEE004B0220 /* Basic Operators.pdf in Resources */,
-				84F5B54A28510AEE004B0220 /* Control Flow.pdf in Resources */,
-				84F5B54728510AEE004B0220 /* Collection Types.pdf in Resources */,
-				84F5B55028510AEE004B0220 /* Error Handling.pdf in Resources */,
+				84A3C4FA2851196C00664E96 /* Functions.pdf in Resources */,
+				84A3C4F92851196C00664E96 /* Methods.pdf in Resources */,
+				84A3C4FC2851196C00664E96 /* Error Handling.pdf in Resources */,
+				84A3C4F82851196C00664E96 /* Enumerations.pdf in Resources */,
+				84A3C52A28512E2E00664E96 /* The_Great_Gatsby.pdf in Resources */,
+				84A3C5002851196C00664E96 /* Inheritance.pdf in Resources */,
+				84A3C4F22851196C00664E96 /* Control Flow.pdf in Resources */,
+				84A3C4FE2851196C00664E96 /* Basic Operators.pdf in Resources */,
+				84A3C52828512E2E00664E96 /* The_Count_of_Monte_Cristo.pdf in Resources */,
+				84A3C4FF2851196C00664E96 /* Optional Chaining.pdf in Resources */,
 				618CF5E3284FFDEC00BFF072 /* Assets.xcassets in Resources */,
-				84F5B54E28510AEE004B0220 /* Extensions.pdf in Resources */,
-				84F5B54928510AEE004B0220 /* Closures.pdf in Resources */,
+				84A3C4FD2851196C00664E96 /* Closures.pdf in Resources */,
 				618CF5DE284FFDEB00BFF072 /* Main.storyboard in Resources */,
-				84F5B55428510AEE004B0220 /* Inheritance.pdf in Resources */,
-				84F5B54B28510AEE004B0220 /* Methods.pdf in Resources */,
+				84A3C52728512E2E00664E96 /* Twenty_Thousand_Leagues_Under_the_Sea.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

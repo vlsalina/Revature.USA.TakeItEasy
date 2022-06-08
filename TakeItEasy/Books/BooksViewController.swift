@@ -8,9 +8,9 @@
 import UIKit
 
 class BooksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    var generalText = ["Basic Operators", "Closures", "Collection Types", "Control Flow"]
-    var technologyText = ["Enumerations", "Error Handling", "Extensions", "Functions", "Inheritance"]
-    var recipeText = ["Initialization", "Methods", "Nested Types", "Optional Chaining", "Properties", "Structures and Classes"]
+    var generalTitles = ["Basic Operators", "Closures", "Collection Types", "Control Flow"]
+    var technologyTitles = ["Enumerations", "Error Handling", "Extensions", "Functions", "Inheritance"]
+    var recipeTitles = ["Initialization", "Methods", "Nested Types", "Optional Chaining", "Properties", "Structures and Classes"]
     var generalImages = ["Basic Operators", "Closures", "Collection Types", "Control Flow"]
     var technologyImages = ["Enumerations", "Error Handling", "Extensions", "Functions", "Inheritance"]
     var recipeImages = ["Initialization", "Methods", "Nested Types", "Optional Chaining", "Properties", "Structures and Classes"]
@@ -22,13 +22,13 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView.restorationIdentifier{
         case "GeneralCollectionView":
-            return generalText.count
+            return generalTitles.count
         case "TechnologyCollectionView":
-            return technologyText.count
+            return technologyTitles.count
         case "RecipesCollectionView":
-            return recipeText.count
+            return recipeTitles.count
         default:
-            return generalText.count
+            return generalTitles.count
         }
     }
     
@@ -52,14 +52,14 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch collectionView.restorationIdentifier{
         case "GeneralCollectionView":
-            print(generalText[indexPath.item])
-            goToOpenedBookViewController(generalText[indexPath.item])
+            print(generalTitles[indexPath.item])
+            goToOpenedBookViewController(generalTitles[indexPath.item])
         case "TechnologyCollectionView":
-            print(technologyText[indexPath.item])
-            goToOpenedBookViewController(technologyText[indexPath.item])
+            print(technologyTitles[indexPath.item])
+            goToOpenedBookViewController(technologyTitles[indexPath.item])
         case "RecipesCollectionView":
-            print(recipeText[indexPath.item])
-            goToOpenedBookViewController(recipeText[indexPath.item])
+            print(recipeTitles[indexPath.item])
+            goToOpenedBookViewController(recipeTitles[indexPath.item])
         default:
            print("no item")
         }
@@ -72,21 +72,21 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         self.navigationController?.pushViewController(openedBookViewController, animated: true)    }
     
     func setupGeneralCell(_ generalCell : GeneralBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
-        generalCell.bookLabel.text = generalText[indexPath.row]
+        generalCell.bookLabel.text = generalTitles[indexPath.row]
         generalCell.bookImage.image = UIImage(named: generalImages[indexPath.row])
         generalCell.backgroundColor = .systemGray
         return setCornerRadiusForCell(generalCell)
     }
 
     func setupTechnologyCell(_ technologyCell : TechnologyBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
-        technologyCell.bookLabel.text = technologyText[indexPath.row]
+        technologyCell.bookLabel.text = technologyTitles[indexPath.row]
         technologyCell.bookImage.image = UIImage(named: technologyImages[indexPath.row])
         technologyCell.backgroundColor = .systemGray2
         return setCornerRadiusForCell(technologyCell)
     }
     
     func setupRecipeCell(_ recipeCell : RecipeBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
-        recipeCell.bookLabel.text = recipeText[indexPath.row]
+        recipeCell.bookLabel.text = recipeTitles[indexPath.row]
         recipeCell.bookImage.image = UIImage(named: recipeImages[indexPath.row])
         recipeCell.backgroundColor = .systemGray4
         return setCornerRadiusForCell(recipeCell)

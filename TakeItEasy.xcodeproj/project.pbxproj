@@ -34,6 +34,7 @@
 		84A3C55C28513F1600664E96 /* Structures and Classes.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54D28513F1600664E96 /* Structures and Classes.pdf */; };
 		84A3C55D28513F1600664E96 /* Inheritance.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54E28513F1600664E96 /* Inheritance.pdf */; };
 		84A3C5612851406C00664E96 /* OpenedBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C5602851406C00664E96 /* OpenedBooksViewController.swift */; };
+		84A3C5652851504000664E96 /* NavigationBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C5642851504000664E96 /* NavigationBarData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		84A3C54D28513F1600664E96 /* Structures and Classes.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Structures and Classes.pdf"; path = "../../../../funzone books/Structures and Classes.pdf"; sourceTree = "<group>"; };
 		84A3C54E28513F1600664E96 /* Inheritance.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Inheritance.pdf; path = "../../../../funzone books/Inheritance.pdf"; sourceTree = "<group>"; };
 		84A3C5602851406C00664E96 /* OpenedBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedBooksViewController.swift; sourceTree = "<group>"; };
+		84A3C5642851504000664E96 /* NavigationBarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				618CF5E4284FFDEC00BFF072 /* LaunchScreen.storyboard */,
 				618CF5E7284FFDEC00BFF072 /* Info.plist */,
 				618CF5DF284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld */,
+				84A3C5642851504000664E96 /* NavigationBarData.swift */,
 			);
 			path = TakeItEasy;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				84A3C53428513BB300664E96 /* BooksViewController.swift in Sources */,
 				84A3C53E28513C4900664E96 /* RecipeBooksCollectionViewCell.swift in Sources */,
 				618CF5DB284FFDEB00BFF072 /* ViewController.swift in Sources */,
+				84A3C5652851504000664E96 /* NavigationBarData.swift in Sources */,
 				618CF5D7284FFDEB00BFF072 /* AppDelegate.swift in Sources */,
 				618CF5D9284FFDEB00BFF072 /* SceneDelegate.swift in Sources */,
 				618CF5E1284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld in Sources */,

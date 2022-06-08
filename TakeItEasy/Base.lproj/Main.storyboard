@@ -632,9 +632,6 @@
             <point key="canvasLocation" x="3260.8695652173915" y="34.821428571428569"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="1s6-qj-ZBV"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="apps.iphone.badge.plus" catalog="system" width="106" height="128"/>
         <image name="harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview" width="1280" height="618"/>

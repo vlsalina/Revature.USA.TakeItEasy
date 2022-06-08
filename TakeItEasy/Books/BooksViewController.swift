@@ -52,13 +52,10 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch collectionView.restorationIdentifier{
         case "GeneralCollectionView":
-            print(generalTitles[indexPath.item])
             goToOpenedBookViewController(generalTitles[indexPath.item])
         case "TechnologyCollectionView":
-            print(technologyTitles[indexPath.item])
             goToOpenedBookViewController(technologyTitles[indexPath.item])
         case "RecipesCollectionView":
-            print(recipeTitles[indexPath.item])
             goToOpenedBookViewController(recipeTitles[indexPath.item])
         default:
            print("no item")

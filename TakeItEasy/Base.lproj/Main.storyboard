@@ -448,7 +448,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="questionCell" id="BIj-Yl-OsS">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="questionCell" id="BIj-Yl-OsS" customClass="QuestionCollectionViewCell" customModule="TakeItEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="443"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tFV-Tu-VcA">
@@ -530,6 +530,14 @@
                                                 <constraint firstItem="CHB-yh-xJN" firstAttribute="leading" secondItem="tFV-Tu-VcA" secondAttribute="leading" id="p5x-Vy-ZlL"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="buttonA" destination="Xdy-am-wuQ" id="e7a-OY-4QE"/>
+                                            <outlet property="buttonB" destination="gF1-Cp-0Lj" id="agH-FF-rCv"/>
+                                            <outlet property="buttonC" destination="778-fN-f8q" id="axE-lh-cyc"/>
+                                            <outlet property="buttonD" destination="e4F-eN-i9o" id="5tb-Fo-cW9"/>
+                                            <outlet property="imageView" destination="axr-cS-JJi" id="nCh-gg-uDI"/>
+                                            <outlet property="questionBox" destination="JIs-fm-vaA" id="VVG-Kw-9GR"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eUO-A8-wBc">
                                         <rect key="frame" x="0.0" y="483" width="374" height="443"/>

@@ -139,7 +139,7 @@
                         <outlet property="passwordField" destination="6Uz-Rr-rcs" id="pnH-KG-kP0"/>
                         <outlet property="rememberMe" destination="a8t-NO-jqd" id="VXI-pl-5Hj"/>
                         <outlet property="useridField" destination="Ssz-mK-sMx" id="BIc-gy-e0S"/>
-                        <segue destination="I6V-QB-spb" kind="show" identifier="TagSegue1" id="afk-88-Zk5"/>
+                        <segue destination="I6V-QB-spb" kind="show" identifier="TabSegue1" id="afk-88-Zk5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6e-FX-d9g" sceneMemberID="firstResponder"/>
@@ -289,7 +289,7 @@
         <!--Quiz Page-->
         <scene sceneID="De7-Ze-wHL">
             <objects>
-                <viewController title="Quiz Page" modalPresentationStyle="fullScreen" id="kKf-V3-McW" sceneMemberID="viewController">
+                <viewController title="Quiz Page" modalPresentationStyle="fullScreen" id="kKf-V3-McW" customClass="QuizPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzF-jh-jax">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,7 +344,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ClF-6T-eQS">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quizCell" id="ClF-6T-eQS" customClass="QuizCollectionViewCell" customModule="TakeItEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="366"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AAL-99-Cz4">
@@ -358,14 +358,26 @@
                                                         <constraint firstAttribute="height" constant="366" id="ivd-wK-JbW"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EQ-Bs-xvk">
+                                                    <rect key="frame" x="99" y="140" width="162" height="86"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="72"/>
+                                                    <color key="textColor" systemColor="tintColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="pir-ZK-BYf" secondAttribute="trailing" id="CbB-9w-UMl"/>
                                                 <constraint firstAttribute="bottom" secondItem="pir-ZK-BYf" secondAttribute="bottom" id="Lex-NY-Wml"/>
+                                                <constraint firstItem="0EQ-Bs-xvk" firstAttribute="leading" secondItem="AAL-99-Cz4" secondAttribute="leading" constant="98.859999999999999" id="UzS-56-COl"/>
                                                 <constraint firstItem="pir-ZK-BYf" firstAttribute="top" secondItem="AAL-99-Cz4" secondAttribute="top" id="XSq-dT-T66"/>
                                                 <constraint firstItem="pir-ZK-BYf" firstAttribute="leading" secondItem="AAL-99-Cz4" secondAttribute="leading" id="s5g-2y-ehx"/>
+                                                <constraint firstItem="0EQ-Bs-xvk" firstAttribute="top" secondItem="AAL-99-Cz4" secondAttribute="top" constant="140.19999999999999" id="u7O-j1-6Rq"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageView" destination="pir-ZK-BYf" id="wSz-wR-YaD"/>
+                                            <outlet property="label" destination="0EQ-Bs-xvk" id="kAh-Mt-m33"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -408,6 +420,10 @@
                     <tabBarItem key="tabBarItem" title="Quiz" image="questionmark.square.fill" catalog="system" selectedImage="questionmark.square.fill" id="tMI-ZU-iiS">
                         <color key="badgeColor" systemColor="tintColor"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="messageBox" destination="EVc-do-FIW" id="IAc-Mw-9Of"/>
+                        <outlet property="quizCollection" destination="wN1-Oe-ynx" id="hiD-TS-Vwb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyK-Po-tnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -31,6 +31,24 @@ class Quizzes {
                 Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
                 Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
             ], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+            Quiz(name: "quiz1", questions: [
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+            ], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+            Quiz(name: "quiz1", questions: [
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+            ], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+            Quiz(name: "quiz1", questions: [
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+            ], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
             
         ]
     }

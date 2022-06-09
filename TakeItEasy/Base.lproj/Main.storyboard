@@ -380,6 +380,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="kKf-V3-McW" id="1qV-LZ-fOQ"/>
+                                    <outlet property="delegate" destination="kKf-V3-McW" id="OAT-mH-28y"/>
+                                </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CY1-W8-zSm" userLabel="Details View">
                                 <rect key="frame" x="24" y="621" width="366" height="128"/>
@@ -432,7 +436,7 @@
         <!--Questions Page View Controller-->
         <scene sceneID="eBC-FH-Wkn">
             <objects>
-                <viewController id="vwT-b5-13A" customClass="QuestionsPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionsPageVC" id="vwT-b5-13A" customClass="QuestionsPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7mM-9A-rDh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -26,33 +26,12 @@ class Quizzes {
         
         return [
             Quiz(name: "quiz1", questions: [
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
+                Question(question: "???", choices: Choices(answers: ["a", "b", "c", "d"]), correctAnswer: "a"),
             ], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-            Quiz(name: "quiz2", questions: [
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-            ], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-            Quiz(name: "quiz3", questions: [
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-            ], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-            Quiz(name: "quiz4", questions: [
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-                Question(question: "???"),
-            ], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+            
         ]
     }
 }
@@ -71,8 +50,20 @@ struct Quiz {
 
 struct Question {
     var question : String
-    init(question: String) {
+    var choices : Choices
+    var correctAnswer : String
+    init(question: String, choices: Choices, correctAnswer: String) {
         self.question = question
+        self.choices = choices
+        self.correctAnswer = correctAnswer
+    }
+}
+
+struct Choices {
+    var answers : [String]
+    
+    init(answers: [String]) {
+        self.answers = answers
     }
 }
 

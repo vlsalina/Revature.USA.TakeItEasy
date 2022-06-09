@@ -29,21 +29,6 @@
 		6192AFB92852532800631265 /* Quizzes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AFB82852532800631265 /* Quizzes.swift */; };
 		6192AFBB2852535500631265 /* QuizPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AFBA2852535500631265 /* QuizPageViewController.swift */; };
 		6192AFBD2852536C00631265 /* QuizCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AFBC2852536C00631265 /* QuizCollectionViewCell.swift */; };
-		6192AFCD2852547000631265 /* Methods.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFBE2852547000631265 /* Methods.pdf */; };
-		6192AFCE2852547000631265 /* Functions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFBF2852547000631265 /* Functions.pdf */; };
-		6192AFCF2852547000631265 /* Structures and Classes.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFC02852547000631265 /* Structures and Classes.pdf */; };
-		6192AFD02852547000631265 /* Inheritance.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFC12852547000631265 /* Inheritance.pdf */; };
-		6192AFD12852547000631265 /* Control Flow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFC22852547000631265 /* Control Flow.pdf */; };
-		6192AFD22852547000631265 /* Optional Chaining.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFC32852547000631265 /* Optional Chaining.pdf */; };
-		6192AFD32852547000631265 /* Collection Types.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFC42852547000631265 /* Collection Types.pdf */; };
-		6192AFD42852547000631265 /* Basic Operators.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFC52852547000631265 /* Basic Operators.pdf */; };
-		6192AFD52852547000631265 /* Closures.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFC62852547000631265 /* Closures.pdf */; };
-		6192AFD62852547000631265 /* Extensions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFC72852547000631265 /* Extensions.pdf */; };
-		6192AFD72852547000631265 /* Nested Types.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFC82852547000631265 /* Nested Types.pdf */; };
-		6192AFD82852547000631265 /* Error Handling.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFC92852547000631265 /* Error Handling.pdf */; };
-		6192AFD92852547000631265 /* Enumerations.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFCA2852547000631265 /* Enumerations.pdf */; };
-		6192AFDA2852547000631265 /* Properties.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFCB2852547000631265 /* Properties.pdf */; };
-		6192AFDB2852547000631265 /* Initialization.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6192AFCC2852547000631265 /* Initialization.pdf */; };
 		733261AC28522E19008CBC5C /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261AB28522E19008CBC5C /* MusicViewController.swift */; };
 		733261AF28522E68008CBC5C /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261AE28522E68008CBC5C /* MusicCollectionViewCell.swift */; };
 		84A3C53428513BB300664E96 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C53328513BB300664E96 /* BooksViewController.swift */; };
@@ -78,21 +63,6 @@
 		6192AFB82852532800631265 /* Quizzes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizzes.swift; sourceTree = "<group>"; };
 		6192AFBA2852535500631265 /* QuizPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPageViewController.swift; sourceTree = "<group>"; };
 		6192AFBC2852536C00631265 /* QuizCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCollectionViewCell.swift; sourceTree = "<group>"; };
-		6192AFBE2852547000631265 /* Methods.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Methods.pdf; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Methods.pdf"; sourceTree = "<group>"; };
-		6192AFBF2852547000631265 /* Functions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Functions.pdf; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Functions.pdf"; sourceTree = "<group>"; };
-		6192AFC02852547000631265 /* Structures and Classes.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Structures and Classes.pdf"; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Structures and Classes.pdf"; sourceTree = "<group>"; };
-		6192AFC12852547000631265 /* Inheritance.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Inheritance.pdf; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Inheritance.pdf"; sourceTree = "<group>"; };
-		6192AFC22852547000631265 /* Control Flow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Control Flow.pdf"; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Control Flow.pdf"; sourceTree = "<group>"; };
-		6192AFC32852547000631265 /* Optional Chaining.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Optional Chaining.pdf"; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Optional Chaining.pdf"; sourceTree = "<group>"; };
-		6192AFC42852547000631265 /* Collection Types.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Collection Types.pdf"; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Collection Types.pdf"; sourceTree = "<group>"; };
-		6192AFC52852547000631265 /* Basic Operators.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Basic Operators.pdf"; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Basic Operators.pdf"; sourceTree = "<group>"; };
-		6192AFC62852547000631265 /* Closures.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Closures.pdf; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Closures.pdf"; sourceTree = "<group>"; };
-		6192AFC72852547000631265 /* Extensions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Extensions.pdf; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Extensions.pdf"; sourceTree = "<group>"; };
-		6192AFC82852547000631265 /* Nested Types.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Nested Types.pdf"; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Nested Types.pdf"; sourceTree = "<group>"; };
-		6192AFC92852547000631265 /* Error Handling.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Error Handling.pdf"; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Error Handling.pdf"; sourceTree = "<group>"; };
-		6192AFCA2852547000631265 /* Enumerations.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Enumerations.pdf; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Enumerations.pdf"; sourceTree = "<group>"; };
-		6192AFCB2852547000631265 /* Properties.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Properties.pdf; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Properties.pdf"; sourceTree = "<group>"; };
-		6192AFCC2852547000631265 /* Initialization.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Initialization.pdf; path = "../../../../../../../Downloads/drive-download-20220609T140016Z-001/Initialization.pdf"; sourceTree = "<group>"; };
 		733261AB28522E19008CBC5C /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		733261AE28522E68008CBC5C /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
 		84A3C53328513BB300664E96 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
@@ -245,7 +215,6 @@
 		84A3C53028513B1600664E96 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				84A3C53F28513EFA00664E96 /* BookPDFSamples */,
 				84A3C53328513BB300664E96 /* BooksViewController.swift */,
 				84A3C53528513BF200664E96 /* GeneralBooksCollectionViewCell.swift */,
 				84A3C53B28513C3600664E96 /* TechnologyBooksCollectionViewCell.swift */,
@@ -253,28 +222,6 @@
 				84A3C5602851406C00664E96 /* OpenedBooksViewController.swift */,
 			);
 			path = Books;
-			sourceTree = "<group>";
-		};
-		84A3C53F28513EFA00664E96 /* BookPDFSamples */ = {
-			isa = PBXGroup;
-			children = (
-				6192AFC52852547000631265 /* Basic Operators.pdf */,
-				6192AFC62852547000631265 /* Closures.pdf */,
-				6192AFC42852547000631265 /* Collection Types.pdf */,
-				6192AFC22852547000631265 /* Control Flow.pdf */,
-				6192AFCA2852547000631265 /* Enumerations.pdf */,
-				6192AFC92852547000631265 /* Error Handling.pdf */,
-				6192AFC72852547000631265 /* Extensions.pdf */,
-				6192AFBF2852547000631265 /* Functions.pdf */,
-				6192AFC12852547000631265 /* Inheritance.pdf */,
-				6192AFCC2852547000631265 /* Initialization.pdf */,
-				6192AFBE2852547000631265 /* Methods.pdf */,
-				6192AFC82852547000631265 /* Nested Types.pdf */,
-				6192AFC32852547000631265 /* Optional Chaining.pdf */,
-				6192AFCB2852547000631265 /* Properties.pdf */,
-				6192AFC02852547000631265 /* Structures and Classes.pdf */,
-			);
-			path = BookPDFSamples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,24 +282,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6192AFDB2852547000631265 /* Initialization.pdf in Resources */,
-				6192AFD22852547000631265 /* Optional Chaining.pdf in Resources */,
-				6192AFCE2852547000631265 /* Functions.pdf in Resources */,
-				6192AFD92852547000631265 /* Enumerations.pdf in Resources */,
-				6192AFD72852547000631265 /* Nested Types.pdf in Resources */,
-				6192AFD12852547000631265 /* Control Flow.pdf in Resources */,
-				6192AFDA2852547000631265 /* Properties.pdf in Resources */,
-				6192AFD82852547000631265 /* Error Handling.pdf in Resources */,
-				6192AFD32852547000631265 /* Collection Types.pdf in Resources */,
-				6192AFD52852547000631265 /* Closures.pdf in Resources */,
 				618CF5E6284FFDEC00BFF072 /* LaunchScreen.storyboard in Resources */,
-				6192AFD02852547000631265 /* Inheritance.pdf in Resources */,
 				618CF5E3284FFDEC00BFF072 /* Assets.xcassets in Resources */,
-				6192AFD42852547000631265 /* Basic Operators.pdf in Resources */,
-				6192AFCF2852547000631265 /* Structures and Classes.pdf in Resources */,
 				618CF5DE284FFDEB00BFF072 /* Main.storyboard in Resources */,
-				6192AFCD2852547000631265 /* Methods.pdf in Resources */,
-				6192AFD62852547000631265 /* Extensions.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

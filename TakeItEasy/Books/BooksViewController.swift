@@ -28,9 +28,10 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchBarTableViewCell
-        myCell.bookTitle.text = searchResults[indexPath.row]
-        return myCell
+        let searchBarCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchBarTableViewCell
+        searchBarCell.bookTitle.text = searchResults[indexPath.row]
+        searchBarCell.bookImage.image = UIImage(named: searchResults[indexPath.row])
+        return searchBarCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

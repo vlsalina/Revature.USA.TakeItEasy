@@ -19,6 +19,9 @@
 		6192AF5328517CFA00631265 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF5128517CFA00631265 /* User+CoreDataClass.swift */; };
 		6192AF5428517CFA00631265 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF5228517CFA00631265 /* User+CoreDataProperties.swift */; };
 		6192AF5728517E4A00631265 /* LoginConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF5628517E4A00631265 /* LoginConstants.swift */; };
+		6192AF5928517F5300631265 /* MetaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF5828517F5300631265 /* MetaData.swift */; };
+		6192AF5C28517F9100631265 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF5B28517F9100631265 /* KeychainManager.swift */; };
+		6192AF5E28517FEA00631265 /* KeychainConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF5D28517FEA00631265 /* KeychainConstants.swift */; };
 		84A3C53428513BB300664E96 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C53328513BB300664E96 /* BooksViewController.swift */; };
 		84A3C53628513BF200664E96 /* GeneralBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C53528513BF200664E96 /* GeneralBooksCollectionViewCell.swift */; };
 		84A3C53C28513C3600664E96 /* TechnologyBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C53B28513C3600664E96 /* TechnologyBooksCollectionViewCell.swift */; };
@@ -56,6 +59,9 @@
 		6192AF5128517CFA00631265 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6192AF5228517CFA00631265 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		6192AF5628517E4A00631265 /* LoginConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginConstants.swift; sourceTree = "<group>"; };
+		6192AF5828517F5300631265 /* MetaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaData.swift; sourceTree = "<group>"; };
+		6192AF5B28517F9100631265 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		6192AF5D28517FEA00631265 /* KeychainConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainConstants.swift; sourceTree = "<group>"; };
 		84A3C53328513BB300664E96 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		84A3C53528513BF200664E96 /* GeneralBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralBooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		84A3C53B28513C3600664E96 /* TechnologyBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyBooksCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -110,6 +116,7 @@
 		618CF5D5284FFDEB00BFF072 /* TakeItEasy */ = {
 			isa = PBXGroup;
 			children = (
+				6192AF5A28517F7800631265 /* Utils */,
 				6192AF5528517DC000631265 /* Constants */,
 				6192AF4D28517C8F00631265 /* CoreData */,
 				6192AF4928517C2600631265 /* Controllers */,
@@ -154,8 +161,18 @@
 			isa = PBXGroup;
 			children = (
 				6192AF5628517E4A00631265 /* LoginConstants.swift */,
+				6192AF5828517F5300631265 /* MetaData.swift */,
+				6192AF5D28517FEA00631265 /* KeychainConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		6192AF5A28517F7800631265 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6192AF5B28517F9100631265 /* KeychainManager.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		84A3C53028513B1600664E96 /* Books */ = {
@@ -286,6 +303,7 @@
 				6192AF4C28517C4600631265 /* LoginPageViewController.swift in Sources */,
 				84A3C53E28513C4900664E96 /* RecipeBooksCollectionViewCell.swift in Sources */,
 				618CF5DB284FFDEB00BFF072 /* ViewController.swift in Sources */,
+				6192AF5C28517F9100631265 /* KeychainManager.swift in Sources */,
 				618CF5D7284FFDEB00BFF072 /* AppDelegate.swift in Sources */,
 				618CF5D9284FFDEB00BFF072 /* SceneDelegate.swift in Sources */,
 				6192AF5028517CDC00631265 /* DBLoginHelperClass.swift in Sources */,
@@ -293,6 +311,8 @@
 				618CF5E1284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld in Sources */,
 				84A3C5612851406C00664E96 /* OpenedBooksViewController.swift in Sources */,
 				6192AF5728517E4A00631265 /* LoginConstants.swift in Sources */,
+				6192AF5E28517FEA00631265 /* KeychainConstants.swift in Sources */,
+				6192AF5928517F5300631265 /* MetaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

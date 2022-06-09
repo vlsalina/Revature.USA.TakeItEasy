@@ -14,11 +14,24 @@ class BooksViewController: UIViewController {
     var generalImages = ["Basic Operators", "Closures", "Collection Types", "Control Flow"]
     var technologyImages = ["Enumerations", "Error Handling", "Extensions", "Functions", "Inheritance"]
     var recipeImages = ["Initialization", "Methods", "Nested Types", "Optional Chaining", "Properties", "Structures and Classes"]
+    var searchResults : [String] = []
+    var currentTitles : [String] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty{ //if search is empty, search results should hold all data
+            searchResults = []
+        }
+        else{ //filter data using search text and store in search results
+            currentTitles = generalTitles + technologyTitles + recipeTitles
+            searchResults = currentTitles.filter {(str : String) -> Bool in return str.lowercased().contains(searchText.lowercased())}
+        }
+        booksCollectionView.reloadData() //reload collection view to show updated result
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView.restorationIdentifier{
         case "GeneralCollectionView":

@@ -23,5 +23,26 @@ internal func validateLoginCredentials(userid: String, password: String) throws 
     
 }
 
+// validate signup credentials
+func validateSignUpCredentials(userid: String, password: String, confirmPassword: String) throws {
+    
+    guard (!userid.isEmpty) else {
+        throw LoginErrors.invalidLoginCredentials
+    }
+    
+    guard (!password.isEmpty) else {
+        throw LoginErrors.invalidLoginCredentials
+    }
+    
+    guard (!confirmPassword.isEmpty) else {
+        throw LoginErrors.invalidLoginCredentials
+    }
+    
+    guard (password == confirmPassword) else {
+        throw LoginErrors.passwordsDoNotMatch
+    }
+    
+}
+
 
 

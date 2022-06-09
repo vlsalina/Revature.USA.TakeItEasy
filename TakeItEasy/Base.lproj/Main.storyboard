@@ -210,6 +210,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Get One-Time Password">
                                                     <color key="baseBackgroundColor" red="1" green="0.32092945760000002" blue="0.40859062779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="signup:" destination="nGp-Iq-P2l" eventType="touchUpInside" id="DsH-3G-hEs"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="84N-ny-sgq">
                                                 <rect key="frame" x="0.0" y="439.5" width="255" height="33"/>
@@ -270,6 +273,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i1Z-Sh-azw"/>
+                    <connections>
+                        <outlet property="box1" destination="ekS-vD-igu" id="Bd3-Jg-Sbx"/>
+                        <outlet property="confirmPasswordField" destination="iaQ-oy-5BG" id="qNT-Xc-BX8"/>
+                        <outlet property="emailField" destination="THA-iu-wXC" id="eXZ-8y-YdM"/>
+                        <outlet property="errorLabel" destination="0mM-YK-FQB" id="7Up-Xv-Ah2"/>
+                        <outlet property="mobileNoField" destination="qKX-ti-1sw" id="jGN-ZF-IMG"/>
+                        <outlet property="passwordField" destination="Zq9-f3-09e" id="lMw-Zo-ZWn"/>
+                        <outlet property="useridField" destination="YQD-Ge-exd" id="Hs4-2j-RGA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9IG-Y3-HrW" sceneMemberID="firstResponder"/>
             </objects>

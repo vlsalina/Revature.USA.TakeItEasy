@@ -33,13 +33,17 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         return myCell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        goToOpenedBookViewController(searchResults[indexPath.item])
+    }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty{ //if search is empty, search results should hold all data
+            searchBarTableView.isHidden = true
             searchResults = []
         }
         else{ //filter data using search text and store in search results
-            
+            searchBarTableView.isHidden = false
             searchResults = allTitles.filter {(str : String) -> Bool in return str.lowercased().contains(searchText.lowercased())}
         }
         searchBarTableView.reloadData() //reload collection view to show updated result

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Page View Controller-->
         <scene sceneID="EJm-Ht-SBB">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="V3y-u2-S9t" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="V3y-u2-S9t" customClass="LoginPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b3s-l7-9My">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="width" constant="62" id="o5a-wK-Hys"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-WY-Ahu">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlI-WY-Ahu" userLabel="Box1">
                                 <rect key="frame" x="48.5" y="222.5" width="315" height="465.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="OaG-I3-kku" userLabel="Box2">
@@ -73,7 +73,7 @@
                                                     <color key="baseBackgroundColor" red="1" green="0.32092945760000002" blue="0.40859062779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="I6V-QB-spb" kind="show" id="5Tq-8F-JGG"/>
+                                                    <action selector="login:" destination="V3y-u2-S9t" eventType="touchUpInside" id="CA8-Mw-uBx"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jix-RP-HIO">
@@ -133,6 +133,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XKy-ie-nN1"/>
+                    <connections>
+                        <outlet property="box1" destination="KlI-WY-Ahu" id="o4D-sG-uo4"/>
+                        <outlet property="errorLabel" destination="LNU-ix-eo6" id="KOK-FF-glx"/>
+                        <outlet property="passwordField" destination="6Uz-Rr-rcs" id="pnH-KG-kP0"/>
+                        <outlet property="rememberMe" destination="a8t-NO-jqd" id="VXI-pl-5Hj"/>
+                        <outlet property="useridField" destination="Ssz-mK-sMx" id="BIc-gy-e0S"/>
+                        <segue destination="I6V-QB-spb" kind="show" identifier="TagSegue1" id="afk-88-Zk5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6e-FX-d9g" sceneMemberID="firstResponder"/>
             </objects>

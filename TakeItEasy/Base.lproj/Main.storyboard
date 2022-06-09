@@ -460,10 +460,10 @@
             </objects>
             <point key="canvasLocation" x="938" y="1659"/>
         </scene>
-        <!--Item-->
+        <!--Music Page-->
         <scene sceneID="W5A-Bm-RPE">
             <objects>
-                <viewController id="7q6-K2-sXA" sceneMemberID="viewController">
+                <viewController title="Music Page" id="7q6-K2-sXA" customClass="MusicViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gz5-DX-REJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -472,15 +472,15 @@
                                 <rect key="frame" x="19" y="144" width="374" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xws-5C-xgJ">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xws-5C-xgJ">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="musicCell" id="wTg-hv-Ilm">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="musicCell" id="wTg-hv-Ilm" customClass="MusicCollectionViewCell" customModule="TakeItEasy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="41" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ukt-aT-m7S">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -488,6 +488,10 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="7q6-K2-sXA" id="v9o-hV-FTh"/>
+                                    <outlet property="delegate" destination="7q6-K2-sXA" id="yTF-kW-Lsz"/>
+                                </connections>
                             </collectionView>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OdU-Xn-4C3">
                                 <rect key="frame" x="-1" y="73" width="414" height="44"/>
@@ -556,7 +560,7 @@
                         <viewLayoutGuide key="safeArea" id="pYT-mk-H87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="music.note" catalog="system" id="WP5-Ul-kxX"/>
+                    <tabBarItem key="tabBarItem" title="Music" selectedImage="music.note" catalog="system" id="WP5-Ul-kxX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVq-Im-Q0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

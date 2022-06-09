@@ -32,13 +32,16 @@ class SignupPageViewController: UIViewController {
         
         // error handling
         do {
-            try validateSignUpCredentials(userid: useridField.text!, password: passwordField.text!, confirmPassword: confirmPasswordField.text!)
+            try validateSignUpCredentials(userid: useridField.text!, email: emailField.text!, password: passwordField.text!, confirmPassword: confirmPasswordField.text!, mobileNo: mobileNoField.text!)
             status = true
         } catch LoginErrors.invalidLoginCredentials {
-            
             errorLabel.text = LoginConstants.invalidLoginCredentails.rawValue
         } catch LoginErrors.passwordsDoNotMatch {
             errorLabel.text = LoginConstants.passwordsDoNotMatch.rawValue
+        } catch SignupErrors.invalidEmail {
+            errorLabel.text = SignupConstants.invalidEmail.rawValue
+        } catch SignupErrors.invalidMobileNo {
+            errorLabel.text = SignupConstants.invalidMobileNo.rawValue
         } catch {
             errorLabel.text = SignupConstants.unknownSignUpError.rawValue
         }

@@ -24,10 +24,14 @@ internal func validateLoginCredentials(userid: String, password: String) throws 
 }
 
 // validate signup credentials
-func validateSignUpCredentials(userid: String, password: String, confirmPassword: String) throws {
+func validateSignUpCredentials(userid: String, email: String, password: String, confirmPassword: String, mobileNo: String) throws {
     
     guard (!userid.isEmpty) else {
         throw LoginErrors.invalidLoginCredentials
+    }
+    
+    guard (!email.isEmpty) else {
+        throw SignupErrors.invalidEmail
     }
     
     guard (!password.isEmpty) else {
@@ -40,6 +44,10 @@ func validateSignUpCredentials(userid: String, password: String, confirmPassword
     
     guard (password == confirmPassword) else {
         throw LoginErrors.passwordsDoNotMatch
+    }
+    
+    guard (!mobileNo.isEmpty) else {
+        throw SignupErrors.invalidMobileNo
     }
     
 }

@@ -52,6 +52,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch collectionView.restorationIdentifier{
         case "GeneralCollectionView":
+            print(1)
             goToOpenedBookViewController(generalTitles[indexPath.item])
         case "TechnologyCollectionView":
             goToOpenedBookViewController(technologyTitles[indexPath.item])
@@ -66,7 +67,10 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         let storyObject = UIStoryboard(name: "Main", bundle: nil)
         let openedBookViewController = storyObject.instantiateViewController(withIdentifier: "OpenedBook") as! OpenedBooksViewController
         openedBookViewController.bookFileName = bookTitle
-        self.navigationController?.pushViewController(openedBookViewController, animated: true)    }
+        present(openedBookViewController, animated: true,  completion: nil)
+        //self.navigationController?.pushViewController(openedBookViewController, animated: true)
+        
+    }
     
     func setupGeneralCell(_ generalCell : GeneralBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
         generalCell.bookLabel.text = generalTitles[indexPath.row]

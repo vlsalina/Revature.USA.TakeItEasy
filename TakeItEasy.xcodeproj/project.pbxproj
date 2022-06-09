@@ -18,23 +18,23 @@
 		84A3C53628513BF200664E96 /* GeneralBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C53528513BF200664E96 /* GeneralBooksCollectionViewCell.swift */; };
 		84A3C53C28513C3600664E96 /* TechnologyBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C53B28513C3600664E96 /* TechnologyBooksCollectionViewCell.swift */; };
 		84A3C53E28513C4900664E96 /* RecipeBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C53D28513C4900664E96 /* RecipeBooksCollectionViewCell.swift */; };
-		84A3C54F28513F1600664E96 /* Methods.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54028513F1500664E96 /* Methods.pdf */; };
-		84A3C55028513F1600664E96 /* Basic Operators.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54128513F1500664E96 /* Basic Operators.pdf */; };
-		84A3C55128513F1600664E96 /* Control Flow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54228513F1500664E96 /* Control Flow.pdf */; };
-		84A3C55228513F1600664E96 /* Closures.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54328513F1500664E96 /* Closures.pdf */; };
-		84A3C55328513F1600664E96 /* Collection Types.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54428513F1600664E96 /* Collection Types.pdf */; };
-		84A3C55428513F1600664E96 /* Nested Types.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54528513F1600664E96 /* Nested Types.pdf */; };
-		84A3C55528513F1600664E96 /* Error Handling.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54628513F1600664E96 /* Error Handling.pdf */; };
-		84A3C55628513F1600664E96 /* Enumerations.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54728513F1600664E96 /* Enumerations.pdf */; };
-		84A3C55728513F1600664E96 /* Optional Chaining.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54828513F1600664E96 /* Optional Chaining.pdf */; };
-		84A3C55828513F1600664E96 /* Properties.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54928513F1600664E96 /* Properties.pdf */; };
-		84A3C55928513F1600664E96 /* Extensions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54A28513F1600664E96 /* Extensions.pdf */; };
-		84A3C55A28513F1600664E96 /* Initialization.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54B28513F1600664E96 /* Initialization.pdf */; };
-		84A3C55B28513F1600664E96 /* Functions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54C28513F1600664E96 /* Functions.pdf */; };
-		84A3C55C28513F1600664E96 /* Structures and Classes.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54D28513F1600664E96 /* Structures and Classes.pdf */; };
-		84A3C55D28513F1600664E96 /* Inheritance.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84A3C54E28513F1600664E96 /* Inheritance.pdf */; };
 		84A3C5612851406C00664E96 /* OpenedBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C5602851406C00664E96 /* OpenedBooksViewController.swift */; };
 		84A3C5652851504000664E96 /* NavigationBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3C5642851504000664E96 /* NavigationBarData.swift */; };
+		84B6538E2851B46400FE8DA9 /* Inheritance.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B6537F2851B46400FE8DA9 /* Inheritance.pdf */; };
+		84B6538F2851B46400FE8DA9 /* Error Handling.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B653802851B46400FE8DA9 /* Error Handling.pdf */; };
+		84B653902851B46400FE8DA9 /* Basic Operators.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B653812851B46400FE8DA9 /* Basic Operators.pdf */; };
+		84B653912851B46400FE8DA9 /* Optional Chaining.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B653822851B46400FE8DA9 /* Optional Chaining.pdf */; };
+		84B653922851B46400FE8DA9 /* Structures and Classes.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B653832851B46400FE8DA9 /* Structures and Classes.pdf */; };
+		84B653932851B46400FE8DA9 /* Collection Types.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B653842851B46400FE8DA9 /* Collection Types.pdf */; };
+		84B653942851B46500FE8DA9 /* Enumerations.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B653852851B46400FE8DA9 /* Enumerations.pdf */; };
+		84B653952851B46500FE8DA9 /* Nested Types.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B653862851B46400FE8DA9 /* Nested Types.pdf */; };
+		84B653962851B46500FE8DA9 /* Properties.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B653872851B46400FE8DA9 /* Properties.pdf */; };
+		84B653972851B46500FE8DA9 /* Methods.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B653882851B46400FE8DA9 /* Methods.pdf */; };
+		84B653982851B46500FE8DA9 /* Control Flow.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B653892851B46400FE8DA9 /* Control Flow.pdf */; };
+		84B653992851B46500FE8DA9 /* Extensions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B6538A2851B46400FE8DA9 /* Extensions.pdf */; };
+		84B6539A2851B46500FE8DA9 /* Functions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B6538B2851B46400FE8DA9 /* Functions.pdf */; };
+		84B6539B2851B46500FE8DA9 /* Initialization.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B6538C2851B46400FE8DA9 /* Initialization.pdf */; };
+		84B6539C2851B46500FE8DA9 /* Closures.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 84B6538D2851B46400FE8DA9 /* Closures.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,23 +51,23 @@
 		84A3C53528513BF200664E96 /* GeneralBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralBooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		84A3C53B28513C3600664E96 /* TechnologyBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyBooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		84A3C53D28513C4900664E96 /* RecipeBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBooksCollectionViewCell.swift; sourceTree = "<group>"; };
-		84A3C54028513F1500664E96 /* Methods.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Methods.pdf; path = "../../../../funzone books/Methods.pdf"; sourceTree = "<group>"; };
-		84A3C54128513F1500664E96 /* Basic Operators.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Basic Operators.pdf"; path = "../../../../funzone books/Basic Operators.pdf"; sourceTree = "<group>"; };
-		84A3C54228513F1500664E96 /* Control Flow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Control Flow.pdf"; path = "../../../../funzone books/Control Flow.pdf"; sourceTree = "<group>"; };
-		84A3C54328513F1500664E96 /* Closures.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Closures.pdf; path = "../../../../funzone books/Closures.pdf"; sourceTree = "<group>"; };
-		84A3C54428513F1600664E96 /* Collection Types.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Collection Types.pdf"; path = "../../../../funzone books/Collection Types.pdf"; sourceTree = "<group>"; };
-		84A3C54528513F1600664E96 /* Nested Types.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Nested Types.pdf"; path = "../../../../funzone books/Nested Types.pdf"; sourceTree = "<group>"; };
-		84A3C54628513F1600664E96 /* Error Handling.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Error Handling.pdf"; path = "../../../../funzone books/Error Handling.pdf"; sourceTree = "<group>"; };
-		84A3C54728513F1600664E96 /* Enumerations.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Enumerations.pdf; path = "../../../../funzone books/Enumerations.pdf"; sourceTree = "<group>"; };
-		84A3C54828513F1600664E96 /* Optional Chaining.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Optional Chaining.pdf"; path = "../../../../funzone books/Optional Chaining.pdf"; sourceTree = "<group>"; };
-		84A3C54928513F1600664E96 /* Properties.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Properties.pdf; path = "../../../../funzone books/Properties.pdf"; sourceTree = "<group>"; };
-		84A3C54A28513F1600664E96 /* Extensions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Extensions.pdf; path = "../../../../funzone books/Extensions.pdf"; sourceTree = "<group>"; };
-		84A3C54B28513F1600664E96 /* Initialization.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Initialization.pdf; path = "../../../../funzone books/Initialization.pdf"; sourceTree = "<group>"; };
-		84A3C54C28513F1600664E96 /* Functions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Functions.pdf; path = "../../../../funzone books/Functions.pdf"; sourceTree = "<group>"; };
-		84A3C54D28513F1600664E96 /* Structures and Classes.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Structures and Classes.pdf"; path = "../../../../funzone books/Structures and Classes.pdf"; sourceTree = "<group>"; };
-		84A3C54E28513F1600664E96 /* Inheritance.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Inheritance.pdf; path = "../../../../funzone books/Inheritance.pdf"; sourceTree = "<group>"; };
 		84A3C5602851406C00664E96 /* OpenedBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenedBooksViewController.swift; sourceTree = "<group>"; };
 		84A3C5642851504000664E96 /* NavigationBarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarData.swift; sourceTree = "<group>"; };
+		84B6537F2851B46400FE8DA9 /* Inheritance.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Inheritance.pdf; path = ../../../../BookSamples/Inheritance.pdf; sourceTree = "<group>"; };
+		84B653802851B46400FE8DA9 /* Error Handling.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Error Handling.pdf"; path = "../../../../BookSamples/Error Handling.pdf"; sourceTree = "<group>"; };
+		84B653812851B46400FE8DA9 /* Basic Operators.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Basic Operators.pdf"; path = "../../../../BookSamples/Basic Operators.pdf"; sourceTree = "<group>"; };
+		84B653822851B46400FE8DA9 /* Optional Chaining.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Optional Chaining.pdf"; path = "../../../../BookSamples/Optional Chaining.pdf"; sourceTree = "<group>"; };
+		84B653832851B46400FE8DA9 /* Structures and Classes.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Structures and Classes.pdf"; path = "../../../../BookSamples/Structures and Classes.pdf"; sourceTree = "<group>"; };
+		84B653842851B46400FE8DA9 /* Collection Types.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Collection Types.pdf"; path = "../../../../BookSamples/Collection Types.pdf"; sourceTree = "<group>"; };
+		84B653852851B46400FE8DA9 /* Enumerations.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Enumerations.pdf; path = ../../../../BookSamples/Enumerations.pdf; sourceTree = "<group>"; };
+		84B653862851B46400FE8DA9 /* Nested Types.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Nested Types.pdf"; path = "../../../../BookSamples/Nested Types.pdf"; sourceTree = "<group>"; };
+		84B653872851B46400FE8DA9 /* Properties.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Properties.pdf; path = ../../../../BookSamples/Properties.pdf; sourceTree = "<group>"; };
+		84B653882851B46400FE8DA9 /* Methods.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Methods.pdf; path = ../../../../BookSamples/Methods.pdf; sourceTree = "<group>"; };
+		84B653892851B46400FE8DA9 /* Control Flow.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Control Flow.pdf"; path = "../../../../BookSamples/Control Flow.pdf"; sourceTree = "<group>"; };
+		84B6538A2851B46400FE8DA9 /* Extensions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Extensions.pdf; path = ../../../../BookSamples/Extensions.pdf; sourceTree = "<group>"; };
+		84B6538B2851B46400FE8DA9 /* Functions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Functions.pdf; path = ../../../../BookSamples/Functions.pdf; sourceTree = "<group>"; };
+		84B6538C2851B46400FE8DA9 /* Initialization.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Initialization.pdf; path = ../../../../BookSamples/Initialization.pdf; sourceTree = "<group>"; };
+		84B6538D2851B46400FE8DA9 /* Closures.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Closures.pdf; path = ../../../../BookSamples/Closures.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 		84A3C53028513B1600664E96 /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				84A3C53F28513EFA00664E96 /* BookPDFSamples */,
+				84B6537E2851B45300FE8DA9 /* BookPdfSamples */,
 				84A3C53328513BB300664E96 /* BooksViewController.swift */,
 				84A3C53528513BF200664E96 /* GeneralBooksCollectionViewCell.swift */,
 				84A3C53B28513C3600664E96 /* TechnologyBooksCollectionViewCell.swift */,
@@ -127,26 +127,26 @@
 			path = Books;
 			sourceTree = "<group>";
 		};
-		84A3C53F28513EFA00664E96 /* BookPDFSamples */ = {
+		84B6537E2851B45300FE8DA9 /* BookPdfSamples */ = {
 			isa = PBXGroup;
 			children = (
-				84A3C54128513F1500664E96 /* Basic Operators.pdf */,
-				84A3C54328513F1500664E96 /* Closures.pdf */,
-				84A3C54428513F1600664E96 /* Collection Types.pdf */,
-				84A3C54228513F1500664E96 /* Control Flow.pdf */,
-				84A3C54728513F1600664E96 /* Enumerations.pdf */,
-				84A3C54628513F1600664E96 /* Error Handling.pdf */,
-				84A3C54A28513F1600664E96 /* Extensions.pdf */,
-				84A3C54C28513F1600664E96 /* Functions.pdf */,
-				84A3C54E28513F1600664E96 /* Inheritance.pdf */,
-				84A3C54B28513F1600664E96 /* Initialization.pdf */,
-				84A3C54028513F1500664E96 /* Methods.pdf */,
-				84A3C54528513F1600664E96 /* Nested Types.pdf */,
-				84A3C54828513F1600664E96 /* Optional Chaining.pdf */,
-				84A3C54928513F1600664E96 /* Properties.pdf */,
-				84A3C54D28513F1600664E96 /* Structures and Classes.pdf */,
+				84B653812851B46400FE8DA9 /* Basic Operators.pdf */,
+				84B6538D2851B46400FE8DA9 /* Closures.pdf */,
+				84B653842851B46400FE8DA9 /* Collection Types.pdf */,
+				84B653892851B46400FE8DA9 /* Control Flow.pdf */,
+				84B653852851B46400FE8DA9 /* Enumerations.pdf */,
+				84B653802851B46400FE8DA9 /* Error Handling.pdf */,
+				84B6538A2851B46400FE8DA9 /* Extensions.pdf */,
+				84B6538B2851B46400FE8DA9 /* Functions.pdf */,
+				84B6537F2851B46400FE8DA9 /* Inheritance.pdf */,
+				84B6538C2851B46400FE8DA9 /* Initialization.pdf */,
+				84B653882851B46400FE8DA9 /* Methods.pdf */,
+				84B653862851B46400FE8DA9 /* Nested Types.pdf */,
+				84B653822851B46400FE8DA9 /* Optional Chaining.pdf */,
+				84B653872851B46400FE8DA9 /* Properties.pdf */,
+				84B653832851B46400FE8DA9 /* Structures and Classes.pdf */,
 			);
-			path = BookPDFSamples;
+			path = BookPdfSamples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,24 +207,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84A3C55728513F1600664E96 /* Optional Chaining.pdf in Resources */,
+				84B653992851B46500FE8DA9 /* Extensions.pdf in Resources */,
+				84B653952851B46500FE8DA9 /* Nested Types.pdf in Resources */,
+				84B6539B2851B46500FE8DA9 /* Initialization.pdf in Resources */,
 				618CF5E6284FFDEC00BFF072 /* LaunchScreen.storyboard in Resources */,
+				84B6538E2851B46400FE8DA9 /* Inheritance.pdf in Resources */,
+				84B653972851B46500FE8DA9 /* Methods.pdf in Resources */,
 				618CF5E3284FFDEC00BFF072 /* Assets.xcassets in Resources */,
-				84A3C55228513F1600664E96 /* Closures.pdf in Resources */,
-				84A3C55428513F1600664E96 /* Nested Types.pdf in Resources */,
-				84A3C55028513F1600664E96 /* Basic Operators.pdf in Resources */,
-				84A3C55928513F1600664E96 /* Extensions.pdf in Resources */,
 				618CF5DE284FFDEB00BFF072 /* Main.storyboard in Resources */,
-				84A3C55C28513F1600664E96 /* Structures and Classes.pdf in Resources */,
-				84A3C55328513F1600664E96 /* Collection Types.pdf in Resources */,
-				84A3C55A28513F1600664E96 /* Initialization.pdf in Resources */,
-				84A3C55D28513F1600664E96 /* Inheritance.pdf in Resources */,
-				84A3C55828513F1600664E96 /* Properties.pdf in Resources */,
-				84A3C54F28513F1600664E96 /* Methods.pdf in Resources */,
-				84A3C55628513F1600664E96 /* Enumerations.pdf in Resources */,
-				84A3C55128513F1600664E96 /* Control Flow.pdf in Resources */,
-				84A3C55B28513F1600664E96 /* Functions.pdf in Resources */,
-				84A3C55528513F1600664E96 /* Error Handling.pdf in Resources */,
+				84B653902851B46400FE8DA9 /* Basic Operators.pdf in Resources */,
+				84B6538F2851B46400FE8DA9 /* Error Handling.pdf in Resources */,
+				84B6539C2851B46500FE8DA9 /* Closures.pdf in Resources */,
+				84B653942851B46500FE8DA9 /* Enumerations.pdf in Resources */,
+				84B653982851B46500FE8DA9 /* Control Flow.pdf in Resources */,
+				84B653932851B46400FE8DA9 /* Collection Types.pdf in Resources */,
+				84B653912851B46400FE8DA9 /* Optional Chaining.pdf in Resources */,
+				84B653922851B46400FE8DA9 /* Structures and Classes.pdf in Resources */,
+				84B6539A2851B46500FE8DA9 /* Functions.pdf in Resources */,
+				84B653962851B46500FE8DA9 /* Properties.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

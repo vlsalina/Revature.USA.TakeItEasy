@@ -7,17 +7,48 @@
 
 import UIKit
 
-class BooksViewController: UIViewController {
+class BooksViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var searchBarTableView: UITableView!
     var generalTitles = ["Basic Operators", "Closures", "Collection Types", "Control Flow"]
     var technologyTitles = ["Enumerations", "Error Handling", "Extensions", "Functions", "Inheritance"]
     var recipeTitles = ["Initialization", "Methods", "Nested Types", "Optional Chaining", "Properties", "Structures and Classes"]
     var generalImages = ["Basic Operators", "Closures", "Collection Types", "Control Flow"]
     var technologyImages = ["Enumerations", "Error Handling", "Extensions", "Functions", "Inheritance"]
     var recipeImages = ["Initialization", "Methods", "Nested Types", "Optional Chaining", "Properties", "Structures and Classes"]
+    var allTitles : [String] = []
+    var searchResults : [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        allTitles = generalTitles + technologyTitles + recipeTitles
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchResults.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let myCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SearchBarTableViewCell
+        myCell.bookTitle.text = searchResults[indexPath.row]
+        return myCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        goToOpenedBookViewController(searchResults[indexPath.item])
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty{ //if search is empty, search results should hold all data
+            searchBarTableView.isHidden = true
+            searchResults = []
+        }
+        else{ //filter data using search text and store in search results
+            searchBarTableView.isHidden = false
+            searchResults = allTitles.filter {(str : String) -> Bool in return str.lowercased().contains(searchText.lowercased())}
+        }
+        searchBarTableView.reloadData() //reload collection view to show updated result
+    }
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView.restorationIdentifier{
@@ -69,7 +100,8 @@ class BooksViewController: UIViewController {
         let storyObject = UIStoryboard(name: "Main", bundle: nil)
         let openedBookViewController = storyObject.instantiateViewController(withIdentifier: "OpenedBook") as! OpenedBooksViewController
         openedBookViewController.bookFileName = bookTitle
-        self.navigationController?.pushViewController(openedBookViewController, animated: true)    }
+        self.navigationController?.pushViewController(openedBookViewController, animated: true)
+    }
     
     func setupGeneralCell(_ generalCell : GeneralBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
         generalCell.bookLabel.text = generalTitles[indexPath.row]

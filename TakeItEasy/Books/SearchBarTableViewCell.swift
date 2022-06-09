@@ -8,6 +8,7 @@
 import UIKit
 
 class SearchBarTableViewCell: UITableViewCell {
+    @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var bookTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

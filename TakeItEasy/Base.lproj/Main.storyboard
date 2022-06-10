@@ -313,6 +313,9 @@
                                         <rect key="frame" x="290.5" y="0.0" width="75.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
+                                        <connections>
+                                            <segue destination="V3y-u2-S9t" kind="show" id="X4l-Cb-NcZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -1298,6 +1301,9 @@
             <point key="canvasLocation" x="4017" y="35"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="X4l-Cb-NcZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="apps.iphone.badge.plus" catalog="system" width="106" height="128"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>

@@ -12,29 +12,66 @@ class Quiz {
     
     
     var name : String
-    var correctAnswer : String
-    var choices : [String]
     var image : UIImage
+    var details : Details
     
-    init(name: String, correctAnswer: String, choices: [String], image: UIImage) {
+    init(name: String, image: UIImage, details: Details) {
         self.name = name
-        self.correctAnswer = correctAnswer
-        self.choices = choices
         self.image = image
+        self.details = details
     }
     
     static func FetchQuizzes() -> [Quiz] {
         return [
-            Quiz(name: "Quiz1", correctAnswer: "correct", choices: ["a", "b", "c", "d"], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-            Quiz(name: "Quiz1", correctAnswer: "correct", choices: ["a", "b", "c", "d"], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-            Quiz(name: "Quiz1", correctAnswer: "correct", choices: ["a", "b", "c", "d"], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-            Quiz(name: "Quiz1", correctAnswer: "correct", choices: ["a", "b", "c", "d"], image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(correctAnswer: "a", questions: [
+                Question(question: "a"),
+                Question(question: "b"),
+                Question(question: "c"),
+                Question(question: "d"),
+            ])),
+            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(correctAnswer: "a", questions: [
+                Question(question: "a"),
+                Question(question: "b"),
+                Question(question: "c"),
+                Question(question: "d"),
+            ])),
+            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(correctAnswer: "a", questions: [
+                Question(question: "a"),
+                Question(question: "b"),
+                Question(question: "c"),
+                Question(question: "d"),
+            ])),
+            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(correctAnswer: "a", questions: [
+                Question(question: "a"),
+                Question(question: "b"),
+                Question(question: "c"),
+                Question(question: "d"),
+            ])),
+            
         ]
+        
     }
     
-    
-
-    
 }
+
+class Details {
+    var correctAnswer : String
+    var questions : [Question]
+    
+    init(correctAnswer: String, questions: [Question]) {
+        self.correctAnswer = correctAnswer
+        self.questions = questions
+    }
+}
+
+class Question {
+    var question : String
+    
+    init(question: String) {
+        self.question = question
+    }
+}
+
+
 
 

@@ -12,7 +12,7 @@ class QuizPageViewController: UIViewController {
     @IBOutlet weak var messageBox: UITextView!
     @IBOutlet weak var quizCollection: UICollectionView!
     
-    var quizzes = Quizzes.FetchQuizzes()
+    var quizzes = Quiz.FetchQuizzes()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,12 +48,12 @@ extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("clicked")
-        let storyObject = UIStoryboard(name: "Main", bundle: nil)
-        let questionsVC = storyObject.instantiateViewController(withIdentifier: "QuestionsPageVC") as! QuestionsPageViewController
+        let questionsVC = storyboard?.instantiateViewController(withIdentifier: "QuestionsPageVC") as! QuestionsPageViewController
         questionsVC.quiz = quizzes[indexPath.row]
         //bookDelegate?.cellWasClicked(book: books[indexPath.row])
         //        self.present(bookVC, animated: true, completion: nil)
-        segueToVC(target: "QuestionsPageVC", sender: self)
+//        segueToVC(target: "QuestionsPageVC", sender: self)
+        present(questionsVC, animated: true, completion: nil)
     }
     
     

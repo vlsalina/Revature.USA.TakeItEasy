@@ -16,6 +16,7 @@ class QuestionsPageViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
     }
     
     /*
@@ -32,15 +33,27 @@ class QuestionsPageViewController: UIViewController {
 
 extension QuestionsPageViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (quiz?.questions.count)!
+        return 4
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = questoinCollection.dequeueReusableCell(withReuseIdentifier: "questionCell", for: indexPath) as! QuestionCollectionViewCell
-        
-        cell.question = quiz?.questions[indexPath.row]
-        
+
         return cell
     }
-    
+
 }
+
+
+//extension QuestionsPageViewController : UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return (quiz?.details.questions.count)!
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = questoinCollection.dequeueReusableCell(withReuseIdentifier: "questionCell", for: indexPath) as! QuestionCollectionViewCell
+//
+//        return cell
+//    }
+//
+//}

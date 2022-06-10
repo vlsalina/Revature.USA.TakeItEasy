@@ -23,31 +23,33 @@ class Quiz {
     
     static func FetchQuizzes() -> [Quiz] {
         return [
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(correctAnswer: "a", questions: [
-                Question(question: "a"),
-                Question(question: "b"),
-                Question(question: "c"),
-                Question(question: "d"),
-            ])),
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(correctAnswer: "a", questions: [
-                Question(question: "a"),
-                Question(question: "b"),
-                Question(question: "c"),
-                Question(question: "d"),
-            ])),
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(correctAnswer: "a", questions: [
-                Question(question: "a"),
-                Question(question: "b"),
-                Question(question: "c"),
-                Question(question: "d"),
-            ])),
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(correctAnswer: "a", questions: [
-                Question(question: "a"),
-                Question(question: "b"),
-                Question(question: "c"),
-                Question(question: "d"),
-            ])),
-            
+            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
+                Question(question: "???", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "???", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "???", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "???", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+            ])
+            ),
         ]
         
     }
@@ -55,21 +57,34 @@ class Quiz {
 }
 
 class Details {
-    var correctAnswer : String
     var questions : [Question]
     
-    init(correctAnswer: String, questions: [Question]) {
-        self.correctAnswer = correctAnswer
+    init(questions: [Question]) {
         self.questions = questions
     }
 }
 
 class Question {
     var question : String
+    var choices : [Choice]
+    var correctAnswer: String
+    var image : UIImage
     
-    init(question: String) {
+    init(question: String, choices: [Choice], correctAnswer: String, image: UIImage) {
         self.question = question
+        self.choices = choices
+        self.correctAnswer = correctAnswer
+        self.image = image
     }
+}
+
+class Choice {
+    var choice : String
+    
+    init(choice: String) {
+        self.choice = choice
+    }
+    
 }
 
 

@@ -29,113 +29,10 @@ class Quiz {
                     Choice(choice: "b"),
                     Choice(choice: "c"),
                     Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
             ])
             ),
             
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-            ])
-            ),
-            
-            
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-            ])
-            ),
-            
-            
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
-                    Choice(choice: "a"),
-                    Choice(choice: "b"),
-                    Choice(choice: "c"),
-                    Choice(choice: "d"),
-                ], correctAnswer: "a", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-            ])
-            ),
             
             
             
@@ -158,15 +55,21 @@ class Details {
 class Question {
     var question : String
     var choices : [Choice]
-    var correctAnswer: String
+    var correctAnswer: Choice
+    var answer : Choice?
     var image : UIImage
     
-    init(question: String, choices: [Choice], correctAnswer: String, image: UIImage) {
+    init(question: String, choices: [Choice], correctAnswer: Choice, image: UIImage) {
         self.question = question
         self.choices = choices
         self.correctAnswer = correctAnswer
         self.image = image
     }
+    
+    func chooseAction(a: Choice) {
+        self.answer = a
+    }
+    
 }
 
 class Choice {

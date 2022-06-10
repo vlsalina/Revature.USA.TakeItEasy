@@ -490,6 +490,9 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="chooseA:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="S67-Ln-IVs"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -500,6 +503,9 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="chooseB:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="oAl-2Z-PPu"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -510,6 +516,9 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="chooseC:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="1RD-8k-zjW"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -520,6 +529,9 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="chooseD:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="HFD-CY-1Zn"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>

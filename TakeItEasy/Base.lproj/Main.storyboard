@@ -453,14 +453,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="questionCell" id="BIj-Yl-OsS" customClass="QuestionCollectionViewCell" customModule="TakeItEasy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="443"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="381"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tFV-Tu-VcA">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="443"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="381"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CHB-yh-xJN">
-                                                    <rect key="frame" x="0.0" y="5" width="374" height="434"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CHB-yh-xJN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="381"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview" translatesAutoresizingMaskIntoConstraints="NO" id="axr-cS-JJi">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
@@ -469,16 +469,19 @@
                                                                 <constraint firstAttribute="width" constant="374" id="Ngd-rQ-nBg"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JIs-fm-vaA">
-                                                            <rect key="frame" x="0.0" y="140" width="374" height="128"/>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="a;ksdfj;lkj;laskdfj;alskdfj;alsdkfj;alskdfja;sldkfj;alskdfja;sldkfjal;sdkfjas;ldkfja;sldkfjas;ldkfjas;ldfkj" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JIs-fm-vaA">
+                                                            <rect key="frame" x="0.0" y="140" width="374" height="75"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="374" id="oE5-VS-ef8"/>
+                                                                <constraint firstAttribute="height" constant="75" id="sZA-1N-tX8"/>
+                                                            </constraints>
                                                             <color key="textColor" systemColor="labelColor"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FPp-tb-v0B">
-                                                            <rect key="frame" x="0.0" y="280" width="374" height="154"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FPp-tb-v0B">
+                                                            <rect key="frame" x="0.0" y="227" width="374" height="154"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chC-ww-mSp">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
@@ -525,12 +528,17 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="axr-cS-JJi" firstAttribute="top" secondItem="CHB-yh-xJN" secondAttribute="top" id="YfD-Xi-105"/>
+                                                        <constraint firstAttribute="width" constant="374" id="iDC-Hk-xTK"/>
                                                         <constraint firstItem="axr-cS-JJi" firstAttribute="leading" secondItem="CHB-yh-xJN" secondAttribute="leading" id="sH7-XK-3iP"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="CHB-yh-xJN" firstAttribute="top" secondItem="tFV-Tu-VcA" secondAttribute="top" id="0Kv-HK-zFe"/>
+                                                <constraint firstAttribute="bottom" secondItem="CHB-yh-xJN" secondAttribute="bottom" id="MAf-iL-80D"/>
+                                                <constraint firstItem="CHB-yh-xJN" firstAttribute="top" secondItem="tFV-Tu-VcA" secondAttribute="top" id="S7Y-fp-oud"/>
+                                                <constraint firstAttribute="trailing" secondItem="CHB-yh-xJN" secondAttribute="trailing" id="Vwy-mt-8VZ"/>
+                                                <constraint firstItem="CHB-yh-xJN" firstAttribute="leading" secondItem="tFV-Tu-VcA" secondAttribute="leading" id="c1C-ca-dEp"/>
                                                 <constraint firstItem="CHB-yh-xJN" firstAttribute="leading" secondItem="tFV-Tu-VcA" secondAttribute="leading" id="p5x-Vy-ZlL"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -544,7 +552,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eUO-A8-wBc">
-                                        <rect key="frame" x="0.0" y="483" width="374" height="443"/>
+                                        <rect key="frame" x="0.0" y="421" width="374" height="443"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="icf-VK-r23">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="443"/>
@@ -627,7 +635,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GDy-iN-T4j">
-                                        <rect key="frame" x="0.0" y="966" width="374" height="443"/>
+                                        <rect key="frame" x="0.0" y="904" width="374" height="443"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="lFS-QB-H4T">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="443"/>
@@ -710,7 +718,7 @@
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iSg-nk-sfk">
-                                        <rect key="frame" x="0.0" y="1449" width="374" height="443"/>
+                                        <rect key="frame" x="0.0" y="1387" width="374" height="443"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="RQD-mS-iTr">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="443"/>

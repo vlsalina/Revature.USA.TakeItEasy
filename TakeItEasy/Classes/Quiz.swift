@@ -23,6 +23,7 @@ class Quiz {
     
     static func FetchQuizzes() -> [Quiz] {
         return [
+            // Quiz
             Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
                 Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
                     Choice(choice: "a"),
@@ -54,9 +55,118 @@ class Quiz {
                     Choice(choice: "c"),
                     Choice(choice: "d"),
                 ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
-                
             ])
             ),
+            
+            
+            // Quiz
+            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+            ])
+            ),
+            
+            // Quiz
+            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+            ])
+            ),
+            
+            
+            // Quiz
+            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+                Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
+                    Choice(choice: "a"),
+                    Choice(choice: "b"),
+                    Choice(choice: "c"),
+                    Choice(choice: "d"),
+                ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
+            ])
+            ),
+            
+            
+            
         ]
     }
     

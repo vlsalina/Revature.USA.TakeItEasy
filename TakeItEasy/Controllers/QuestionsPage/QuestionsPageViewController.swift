@@ -11,11 +11,20 @@ class QuestionsPageViewController: UIViewController {
     
     @IBOutlet weak var questoinCollection: UICollectionView!
     var quiz : Quiz?
+    let scoreKeeperObj = ScoreKeeper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+    }
+    
+    @IBAction func submitQuiz(_ sender: Any) {
+        let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
+        let quizPageVC = storyboard?.instantiateViewController(withIdentifier: "QuizPageVC") as! QuizPageViewController
+        quizPageVC.scoreMessage = result
+        present(quizPageVC, animated: true, completion: nil)
         
     }
     
@@ -35,7 +44,7 @@ extension QuestionsPageViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (quiz?.details.questions.count)!
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = questoinCollection.dequeueReusableCell(withReuseIdentifier: "questionCell", for: indexPath) as! QuestionCollectionViewCell
         
@@ -43,19 +52,6 @@ extension QuestionsPageViewController : UICollectionViewDataSource {
         cell.question = quiz?.details.questions[indexPath.row]
         return cell
     }
-
+    
 }
 
-
-//extension QuestionsPageViewController : UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return (quiz?.details.questions.count)!
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = questoinCollection.dequeueReusableCell(withReuseIdentifier: "questionCell", for: indexPath) as! QuestionCollectionViewCell
-//
-//        return cell
-//    }
-//
-//}

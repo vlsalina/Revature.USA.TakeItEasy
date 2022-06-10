@@ -289,7 +289,7 @@
         <!--Quiz Page-->
         <scene sceneID="De7-Ze-wHL">
             <objects>
-                <viewController title="Quiz Page" modalPresentationStyle="fullScreen" id="kKf-V3-McW" customClass="QuizPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizPageVC" title="Quiz Page" modalPresentationStyle="fullScreen" id="kKf-V3-McW" customClass="QuizPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzF-jh-jax">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -313,6 +313,9 @@
                                         <rect key="frame" x="290.5" y="0.0" width="75.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
+                                        <connections>
+                                            <segue destination="V3y-u2-S9t" kind="show" id="X4l-Cb-NcZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -388,7 +391,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CY1-W8-zSm" userLabel="Details View">
                                 <rect key="frame" x="24" y="621" width="366" height="128"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EVc-do-FIW">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EVc-do-FIW">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="128"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -441,9 +444,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kMh-2T-8NJ">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kMh-2T-8NJ">
+                                <rect key="frame" x="20" y="44" width="374" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="40" minimumInteritemSpacing="10" id="zag-VE-ZM6">
                                     <size key="itemSize" width="374" height="443"/>
@@ -490,6 +492,9 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="chooseA:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="S67-Ln-IVs"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -500,6 +505,9 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="chooseB:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="oAl-2Z-PPu"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -510,6 +518,9 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="chooseC:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="1RD-8k-zjW"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -520,6 +531,9 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <connections>
+                                                                                <action selector="chooseD:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="HFD-CY-1Zn"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </subviews>
                                                                 </stackView>
@@ -806,9 +820,33 @@
                                     <outlet property="delegate" destination="vwT-b5-13A" id="Gva-64-dpX"/>
                                 </connections>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WLf-Sx-zfu">
+                                <rect key="frame" x="20" y="811" width="374" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQu-al-ELb">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Submit">
+                                            <color key="baseBackgroundColor" red="1" green="0.32092945760000002" blue="0.40859062779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="submitQuiz:" destination="vwT-b5-13A" eventType="touchUpInside" id="tRS-Of-FOq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2y9-Nl-1od"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2y9-Nl-1od" firstAttribute="bottom" secondItem="WLf-Sx-zfu" secondAttribute="bottom" constant="20" id="4oM-5N-NmR"/>
+                            <constraint firstItem="2y9-Nl-1od" firstAttribute="trailing" secondItem="WLf-Sx-zfu" secondAttribute="trailing" constant="20" id="Bea-iq-9xM"/>
+                            <constraint firstItem="WLf-Sx-zfu" firstAttribute="leading" secondItem="2y9-Nl-1od" secondAttribute="leading" constant="20" id="FhI-Ci-2bP"/>
+                            <constraint firstItem="kMh-2T-8NJ" firstAttribute="leading" secondItem="2y9-Nl-1od" secondAttribute="leading" constant="20" id="Ozo-fG-fYL"/>
+                            <constraint firstItem="kMh-2T-8NJ" firstAttribute="top" secondItem="2y9-Nl-1od" secondAttribute="top" id="RWB-pk-htf"/>
+                            <constraint firstItem="WLf-Sx-zfu" firstAttribute="top" secondItem="kMh-2T-8NJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Wpv-IN-Uli"/>
+                            <constraint firstItem="2y9-Nl-1od" firstAttribute="trailing" secondItem="kMh-2T-8NJ" secondAttribute="trailing" constant="20" id="iaJ-9S-wfM"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="questoinCollection" destination="kMh-2T-8NJ" id="C8c-dP-aIp"/>
@@ -974,7 +1012,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="EDq-5B-LL8">
             <objects>
-                <tabBarController id="I6V-QB-spb" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabPageVC" id="I6V-QB-spb" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="RxI-sw-LNd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="2w0-gE-lx3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -1263,6 +1301,9 @@
             <point key="canvasLocation" x="4017" y="35"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="X4l-Cb-NcZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="apps.iphone.badge.plus" catalog="system" width="106" height="128"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>

@@ -31,8 +31,22 @@ class QuestionCollectionViewCell: UICollectionViewCell {
             buttonD.setTitle(question.choices[3].choice, for: .normal)
             imageView.image = question.image
         }
-        
     }
     
-    
+    @IBAction func chooseA(_ sender: Any) {
+        question.chooseAction(a: question.choices[0])
+        question.displayAnswer()
+    }
+    @IBAction func chooseB(_ sender: Any) {
+        question.chooseAction(a: question.choices[1])
+        question.displayAnswer()
+    }
+    @IBAction func chooseC(_ sender: Any) {
+        question.chooseAction(a: question.choices[2])
+        question.displayAnswer()
+    }
+    @IBAction func chooseD(_ sender: Any) {
+        question.chooseAction(a: question.choices[3])
+        question.displayAnswer()
+    }
 }

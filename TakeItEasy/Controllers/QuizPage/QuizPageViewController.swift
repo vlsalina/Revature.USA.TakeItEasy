@@ -12,6 +12,8 @@ class QuizPageViewController: UIViewController {
     @IBOutlet weak var messageBox: UITextView!
     @IBOutlet weak var quizCollection: UICollectionView!
     
+    var scoreMessage : String?
+    
     var quizzes = Quiz.FetchQuizzes()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +21,18 @@ class QuizPageViewController: UIViewController {
         // Do any additional setup after loading the view.
         quizCollection.dataSource = self
         quizCollection.delegate = self
+        
+        initialize()
     }
+    
+    func initialize() {
+        if scoreMessage != nil {
+            messageBox.text = scoreMessage
+        } else {
+            messageBox.text = "Welcome to the Quiz Page!"
+        }
+    }
+    
     
     /*
      // MARK: - Navigation
@@ -50,9 +63,6 @@ extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewD
         print("clicked")
         let questionsVC = storyboard?.instantiateViewController(withIdentifier: "QuestionsPageVC") as! QuestionsPageViewController
         questionsVC.quiz = quizzes[indexPath.row]
-        //bookDelegate?.cellWasClicked(book: books[indexPath.row])
-        //        self.present(bookVC, animated: true, completion: nil)
-//        segueToVC(target: "QuestionsPageVC", sender: self)
         present(questionsVC, animated: true, completion: nil)
     }
     

@@ -22,7 +22,10 @@ class QuestionsPageViewController: UIViewController {
     
     @IBAction func submitQuiz(_ sender: Any) {
         let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
-        print(result)
+        let quizPageVC = storyboard?.instantiateViewController(withIdentifier: "QuizPageVC") as! QuizPageViewController
+        quizPageVC.scoreMessage = result
+        present(quizPageVC, animated: true, completion: nil)
+        
     }
     
     /*
@@ -52,16 +55,3 @@ extension QuestionsPageViewController : UICollectionViewDataSource {
     
 }
 
-
-//extension QuestionsPageViewController : UICollectionViewDataSource {
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return (quiz?.details.questions.count)!
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = questoinCollection.dequeueReusableCell(withReuseIdentifier: "questionCell", for: indexPath) as! QuestionCollectionViewCell
-//
-//        return cell
-//    }
-//
-//}

@@ -289,7 +289,7 @@
         <!--Quiz Page-->
         <scene sceneID="De7-Ze-wHL">
             <objects>
-                <viewController title="Quiz Page" modalPresentationStyle="fullScreen" id="kKf-V3-McW" customClass="QuizPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuizPageVC" title="Quiz Page" modalPresentationStyle="fullScreen" id="kKf-V3-McW" customClass="QuizPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tzF-jh-jax">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,7 +388,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CY1-W8-zSm" userLabel="Details View">
                                 <rect key="frame" x="24" y="621" width="366" height="128"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EVc-do-FIW">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EVc-do-FIW">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="128"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -1009,7 +1009,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="EDq-5B-LL8">
             <objects>
-                <tabBarController id="I6V-QB-spb" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabPageVC" id="I6V-QB-spb" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="RxI-sw-LNd"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="2w0-gE-lx3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

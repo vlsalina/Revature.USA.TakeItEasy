@@ -31,7 +31,6 @@ class QuestionCollectionViewCell: UICollectionViewCell {
             buttonD.setTitle(question.choices[3].choice, for: .normal)
             imageView.image = question.image
         }
-        
     }
     
     @IBAction func chooseA(_ sender: Any) {

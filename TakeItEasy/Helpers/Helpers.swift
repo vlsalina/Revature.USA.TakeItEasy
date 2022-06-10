@@ -52,6 +52,10 @@ func validateSignUpCredentials(userid: String, email: String, password: String, 
     
 }
 
-
-
+// segue helper
+func segueToVC(target: String, sender: AnyObject) {
+    let storyObject = UIStoryboard(name: "Main", bundle: nil)
+    let targetVC = storyObject.instantiateViewController(withIdentifier: target)
+    sender.present(targetVC, animated: true, completion: nil)
+}
 

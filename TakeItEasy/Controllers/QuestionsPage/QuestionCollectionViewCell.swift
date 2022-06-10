@@ -35,19 +35,19 @@ class QuestionCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func chooseA(_ sender: Any) {
-        print("Chose A")
         question.chooseAction(a: question.choices[0])
+        question.displayAnswer()
     }
     @IBAction func chooseB(_ sender: Any) {
-        print("Chose B")
         question.chooseAction(a: question.choices[1])
+        question.displayAnswer()
     }
     @IBAction func chooseC(_ sender: Any) {
-        print("Chose C")
         question.chooseAction(a: question.choices[2])
+        question.displayAnswer()
     }
     @IBAction func chooseD(_ sender: Any) {
-        print("Chose D")
         question.chooseAction(a: question.choices[3])
+        question.displayAnswer()
     }
 }

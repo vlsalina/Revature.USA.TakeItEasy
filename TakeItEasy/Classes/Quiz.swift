@@ -32,14 +32,7 @@ class Quiz {
                 ], correctAnswer: Choice(choice: "a"), image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!),
             ])
             ),
-            
-            
-            
-            
-            
-            
         ]
-        
     }
     
 }
@@ -68,6 +61,10 @@ class Question {
     
     func chooseAction(a: Choice) {
         self.answer = a
+    }
+    
+    func displayAnswer() {
+        print(answer!.choice as String)
     }
     
 }

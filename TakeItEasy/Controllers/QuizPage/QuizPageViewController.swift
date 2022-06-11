@@ -23,7 +23,6 @@ class QuizPageViewController: UIViewController {
         quizCollection.delegate = self
         
         initialize()
-        initializeDB()
     }
     
     func initialize() {
@@ -33,22 +32,6 @@ class QuizPageViewController: UIViewController {
             messageBox.text = "Welcome to the Quiz Page!"
         }
     }
-    
-    func initializeDB() {
-        SQLHelper.sqlObj.createDB()
-        SQLHelper.sqlObj.createTable()
-        SQLHelper.sqlObj.insertAllData(quizData: quizData)
-        showData()
-    }
-    
-    func showData() {
-        var result = SQLHelper.sqlObj.viewData()
-        for q in result {
-            print("\(q.name)")
-        }
-        
-    }
-    
     
     /*
      // MARK: - Navigation

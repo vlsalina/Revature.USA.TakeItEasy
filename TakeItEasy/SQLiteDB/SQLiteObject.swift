@@ -8,8 +8,8 @@
 import Foundation
 import SQLite3
 
-class SQLHelper {
-    static var sqlObj = SQLHelper()
+class SQLiteObject {
+    static var sqlObj = SQLiteObject()
     
     var Quizzes = [QuizSQLClass]()
     
@@ -71,6 +71,10 @@ class SQLHelper {
         var stmt : OpaquePointer?
         let query = "insert into quizzes (name, image) values (?,?)"
         
+        
+        
+        print("Count: ", quizData.count)
+        
         if sqlite3_prepare(dbpointer, query, -1, &stmt, nil) != SQLITE_OK {
             let err = String(cString: sqlite3_errmsg(dbpointer)!)
             print("error in query creation ", err)
@@ -79,12 +83,12 @@ class SQLHelper {
         for (index, quiz) in quizData.enumerated() {
             
             // prepare id
-//            let id = Int32(index + 1)
-//            if sqlite3_bind_int(stmt, 0, id) != SQLITE_OK {
-//                let err = String(cString: sqlite3_errmsg(dbpointer)!)
-//                print("error in saving id ", err)
-//
-//            }
+            //            let id = Int32(index + 1)
+            //            if sqlite3_bind_int(stmt, 0, id) != SQLITE_OK {
+            //                let err = String(cString: sqlite3_errmsg(dbpointer)!)
+            //                print("error in saving id ", err)
+            //
+            //            }
             
             // prepare quiz name
             let qName : NSString = quiz.name as NSString
@@ -107,13 +111,15 @@ class SQLHelper {
                 let err = String(cString: sqlite3_errmsg(dbpointer)!)
                 print("error in table creation ", err)
             }
+            
+            
+            print("data saved ")
         }
         
-        print("data saved ")
     }
     
     
-    func viewData() -> [QuizSQLClass] {
+    func getData() -> [QuizSQLClass] {
         Quizzes.removeAll()
         let query = "select * from quizzes"
         var stmt : OpaquePointer?
@@ -129,7 +135,7 @@ class SQLHelper {
             let name = String(cString: sqlite3_column_text(stmt, 1))
             let image = String(cString: sqlite3_column_text(stmt, 2))
             
-            Quizzes.append(QuizSQLClass(name: name, image: image))
+            Quizzes.append(QuizSQLClass(id: Int(id), name: name, image: image))
         }
         
         return Quizzes
@@ -146,7 +152,7 @@ class SQLHelper {
                 let name = String(cString: sqlite3_column_text(stmt, 1))
                 let image = String(cString: sqlite3_column_text(stmt, 2))
                 
-                quiz = QuizSQLClass(name: name, image: image)
+                quiz = QuizSQLClass(id: Int(id), name: name, image: image)
                 
             }
             
@@ -192,10 +198,5 @@ class SQLHelper {
         }
         
     }
-    
-    
-    
-    
-    
     
 }

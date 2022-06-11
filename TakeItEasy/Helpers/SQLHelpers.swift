@@ -38,5 +38,9 @@ func insertAllData() {
 func initializeSQLite() {
     SQLiteObject.sqlObj.createDB()
     SQLiteObject.sqlObj.createTable()
+    if (!userDefaults.bool(forKey: SQLiteConstants.SQL.rawValue)) {
+        insertAllData()
+        userDefaults.set(true, forKey: SQLiteConstants.SQL.rawValue)
+    }
 }
 

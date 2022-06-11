@@ -23,6 +23,7 @@ class QuizPageViewController: UIViewController {
         quizCollection.delegate = self
         
         initialize()
+        initializeSQLite()
     }
     
     func initialize() {

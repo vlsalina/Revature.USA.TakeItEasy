@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 let quizzes = [
-    QuizSQLClass(name: "SWIFT", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview", qkey: QuizKeys.QUIZ1.rawValue),
-    QuizSQLClass(name: "XCODE", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview", qkey: QuizKeys.QUIZ2.rawValue),
-    QuizSQLClass(name: "STORYBOARD", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview", qkey: QuizKeys.QUIZ3.rawValue),
-    QuizSQLClass(name: "COLLECTIONS", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview", qkey: QuizKeys.QUIZ4.rawValue),
+    QuizSQLClass(id: QuizKeys.QUIZ1.rawValue, name: "SWIFT", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview"),
+    QuizSQLClass(id: QuizKeys.QUIZ2.rawValue, name: "XCODE", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview"),
+    QuizSQLClass(id: QuizKeys.QUIZ3.rawValue, name: "STORYBOARD", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview"),
+    QuizSQLClass(id: QuizKeys.QUIZ4.rawValue, name: "COLLECTIONS", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")
 ]
 
 //let questions = [

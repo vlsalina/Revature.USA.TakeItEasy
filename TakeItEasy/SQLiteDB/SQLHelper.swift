@@ -79,12 +79,12 @@ class SQLHelper {
         for (index, quiz) in quizData.enumerated() {
             
             // prepare id
-            let id = Int32(quiz.id)
-            if sqlite3_bind_int(stmt, 0, id) != SQLITE_OK {
-                let err = String(cString: sqlite3_errmsg(dbpointer)!)
-                print("error in saving id ", err)
-                
-            }
+//            let id = Int32(index + 1)
+//            if sqlite3_bind_int(stmt, 0, id) != SQLITE_OK {
+//                let err = String(cString: sqlite3_errmsg(dbpointer)!)
+//                print("error in saving id ", err)
+//
+//            }
             
             // prepare quiz name
             let qName : NSString = quiz.name as NSString
@@ -129,7 +129,7 @@ class SQLHelper {
             let name = String(cString: sqlite3_column_text(stmt, 1))
             let image = String(cString: sqlite3_column_text(stmt, 2))
             
-            Quizzes.append(QuizSQLClass(id: Int(id), name: name, image: image))
+            Quizzes.append(QuizSQLClass(name: name, image: image))
         }
         
         return Quizzes
@@ -146,7 +146,7 @@ class SQLHelper {
                 let name = String(cString: sqlite3_column_text(stmt, 1))
                 let image = String(cString: sqlite3_column_text(stmt, 2))
                 
-                quiz = QuizSQLClass(id: Int(id), name: name, image: image)
+                quiz = QuizSQLClass(name: name, image: image)
                 
             }
             

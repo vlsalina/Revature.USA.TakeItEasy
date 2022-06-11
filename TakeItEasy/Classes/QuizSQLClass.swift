@@ -9,12 +9,10 @@ import Foundation
 import UIKit
 
 class QuizSQLClass {
-    var id : Int
     var name : String
     var image : String
     
-    init(id: Int, name: String, image: String) {
-        self.id = id
+    init(name: String, image: String) {
         self.name = name
         self.image = image
     }

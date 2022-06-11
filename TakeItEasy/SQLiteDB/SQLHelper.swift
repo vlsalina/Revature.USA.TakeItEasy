@@ -67,7 +67,7 @@ class SQLHelper {
     }
     
     
-    func insertAllData(quizzes: [QuizSQLClass]) {
+    func insertAllData(quizData: [QuizSQLClass]) {
         var stmt : OpaquePointer?
         let query = "insert into quizzes (name, image) values (?,?)"
         
@@ -76,7 +76,7 @@ class SQLHelper {
             print("error in query creation ", err)
         }
         
-        for (index, quiz) in quizzes.enumerated() {
+        for (index, quiz) in quizData.enumerated() {
             
             // prepare id
             let id = Int32(quiz.id)

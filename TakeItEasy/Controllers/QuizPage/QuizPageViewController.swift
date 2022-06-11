@@ -37,8 +37,8 @@ class QuizPageViewController: UIViewController {
     func initializeDB() {
         SQLHelper.sqlObj.createDB()
         SQLHelper.sqlObj.createTable()
-        SQLHelper.sqlObj.insertAllData(quizzes: quizzes)
-        SQLHelper.sqlObj.viewData()
+        SQLHelper.sqlObj.insertAllData(quizData: quizData)
+        var result = SQLHelper.sqlObj.viewData()
     }
     
     

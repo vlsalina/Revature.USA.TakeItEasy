@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-let quizzes = [
+let quizData = [
     QuizSQLClass(id: QuizKeys.QUIZ1.rawValue, name: "SWIFT", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview"),
     QuizSQLClass(id: QuizKeys.QUIZ2.rawValue, name: "XCODE", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview"),
     QuizSQLClass(id: QuizKeys.QUIZ3.rawValue, name: "STORYBOARD", image: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview"),

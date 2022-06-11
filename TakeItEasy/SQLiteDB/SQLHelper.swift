@@ -66,6 +66,53 @@ class SQLHelper {
         print("data saved ")
     }
     
+    
+    func insertAllData(quizzes: [QuizSQLClass]) {
+        var stmt : OpaquePointer?
+        let query = "insert into quizzes (name, image) values (?,?)"
+        
+        if sqlite3_prepare(dbpointer, query, -1, &stmt, nil) != SQLITE_OK {
+            let err = String(cString: sqlite3_errmsg(dbpointer)!)
+            print("error in query creation ", err)
+        }
+        
+        for (index, quiz) in quizzes.enumerated() {
+            
+            // prepare id
+            let id = Int32(quiz.id)
+            if sqlite3_bind_int(stmt, 0, id) != SQLITE_OK {
+                let err = String(cString: sqlite3_errmsg(dbpointer)!)
+                print("error in saving id ", err)
+                
+            }
+            
+            // prepare quiz name
+            let qName : NSString = quiz.name as NSString
+            if sqlite3_bind_text(stmt, 1, qName.utf8String, -1, nil) != SQLITE_OK {
+                let err = String(cString: sqlite3_errmsg(dbpointer)!)
+                print("error in saving name ", err)
+                
+            }
+            
+            // prepare quiz image
+            let qImage : NSString = quiz.image as NSString
+            if sqlite3_bind_text(stmt, 2, qImage.utf8String, -1, nil) != SQLITE_OK {
+                
+                let err = String(cString: sqlite3_errmsg(dbpointer)!)
+                print("error in saving image ", err)
+                
+            }
+            
+            if sqlite3_step(stmt) != SQLITE_DONE {
+                let err = String(cString: sqlite3_errmsg(dbpointer)!)
+                print("error in table creation ", err)
+            }
+        }
+        
+        print("data saved ")
+    }
+    
+    
     func viewData() -> [QuizSQLClass] {
         Quizzes.removeAll()
         let query = "select * from quizzes"
@@ -86,9 +133,6 @@ class SQLHelper {
         }
         
         return Quizzes
-        
-        
-        
     }
     
     func getOneRecord(id: Int) -> QuizSQLClass {

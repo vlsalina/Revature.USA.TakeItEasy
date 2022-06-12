@@ -12,7 +12,7 @@ class QuizCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
-    var quiz : Quiz! {
+    var quiz : QuizSQLClass! {
         didSet {
             self.updateUI()
         }
@@ -20,7 +20,8 @@ class QuizCollectionViewCell: UICollectionViewCell {
     
     func updateUI() {
         if let quiz = quiz {
-            imageView.image = quiz.image
+            print(quiz.image)
+            imageView.image = UIImage(named: quiz.image)
             label.text = quiz.name
         } else {
             imageView.image = nil

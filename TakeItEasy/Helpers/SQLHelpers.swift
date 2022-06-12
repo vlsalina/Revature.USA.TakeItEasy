@@ -22,8 +22,13 @@ func getQuiz(id: Int) -> QuizSQLClass {
     return SQLiteObject.sqlObj.getOneRecord(id: id)
 }
 
+func deleteOne(id: Int) {
+    SQLiteObject.sqlObj.deleteById(id: id)
+}
+
 func deleteAllData() {
-    for (index, quiz) in quizData.enumerated() {
+    let db = getData()
+    for (index, quiz) in db.enumerated() {
         SQLiteObject.sqlObj.deleteById(id: (index + 1))
     }
     print("Deleted all records successful")
@@ -38,9 +43,21 @@ func insertAllData() {
 func initializeSQLite() {
     SQLiteObject.sqlObj.createDB()
     SQLiteObject.sqlObj.createTable()
+    
     if (!userDefaults.bool(forKey: SQLiteConstants.SQL.rawValue)) {
         insertAllData()
         userDefaults.set(true, forKey: SQLiteConstants.SQL.rawValue)
+        print("HHHHHHHHHHHH")
     }
+    
+    
+    //        if (!userDefaults.bool(forKey: SQLiteConstants.SQL.rawValue)) {
+    //            SQLiteObject.sqlObj.createTable()
+    //            insertAllData()
+    //            userDefaults.set(true, forKey: SQLiteConstants.SQL.rawValue)
+    //        }
 }
+
+
+
 

@@ -25,7 +25,6 @@ class QuestionsPageViewController: UIViewController {
         let quizPageVC = storyboard?.instantiateViewController(withIdentifier: "QuizPageVC") as! QuizPageViewController
         quizPageVC.scoreMessage = result
         present(quizPageVC, animated: true, completion: nil)
-        
     }
     
     /*

@@ -13,14 +13,33 @@ class QuestionsPageViewController: UIViewController {
     var quiz : Quiz?
     let scoreKeeperObj = ScoreKeeper()
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        initialize()
         
     }
     
+    func initialize() {
+        titleLabel.text = quiz?.name
+    }
+    
     @IBAction func submitQuiz(_ sender: Any) {
+        
+        do {
+            try validateQuestions(quiz: quiz!)
+        } catch QuestionsErrors.notAllQuestionsAnswered {
+            errorLabel.text = QuestionsConstants.notAllQuestionsAnswered.rawValue
+            return
+        } catch {
+            errorLabel.text = QuestionsConstants.unknownError.rawValue
+            return
+        }
+        
         let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
         QuizPageViewController.msg = result
         

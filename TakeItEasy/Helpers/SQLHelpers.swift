@@ -44,18 +44,11 @@ func initializeSQLite() {
     SQLiteObject.sqlObj.createDB()
     SQLiteObject.sqlObj.createTable()
     
+    // insert quiz data if it doesn't already exist in db
     if (!userDefaults.bool(forKey: SQLiteConstants.SQL.rawValue)) {
         insertAllData()
         userDefaults.set(true, forKey: SQLiteConstants.SQL.rawValue)
-        print("HHHHHHHHHHHH")
     }
-    
-    
-    //        if (!userDefaults.bool(forKey: SQLiteConstants.SQL.rawValue)) {
-    //            SQLiteObject.sqlObj.createTable()
-    //            insertAllData()
-    //            userDefaults.set(true, forKey: SQLiteConstants.SQL.rawValue)
-    //        }
 }
 
 

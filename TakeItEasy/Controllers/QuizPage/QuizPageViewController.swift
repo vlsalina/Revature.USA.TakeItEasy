@@ -15,7 +15,7 @@ class QuizPageViewController: UIViewController {
     var scoreMessage : String?
     
     var quizzes = Quiz.FetchQuizzes()
-    var database = SQLiteObject.sqlObj.getData()
+    var database : [QuizSQLClass]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,7 @@ class QuizPageViewController: UIViewController {
         
         initialize()
         initializeSQLite()
+        showData()
     }
     
     func initialize() {
@@ -35,6 +36,14 @@ class QuizPageViewController: UIViewController {
             messageBox.text = "Welcome to the Quiz Page!"
         }
     }
+    
+    func showData() {
+        database = SQLiteObject.sqlObj.getData()
+        for x in database! {
+            print(x.id, x.name)
+        }
+    }
+    
     
     
     /*
@@ -51,13 +60,13 @@ class QuizPageViewController: UIViewController {
 
 extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return database.count
+        return database!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = quizCollection.dequeueReusableCell(withReuseIdentifier: "quizCell", for: indexPath) as! QuizCollectionViewCell
         
-        cell.quiz = database[indexPath.row]
+        cell.quiz = database![indexPath.row]
         
         return cell
     }

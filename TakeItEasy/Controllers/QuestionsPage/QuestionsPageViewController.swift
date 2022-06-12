@@ -22,7 +22,7 @@ class QuestionsPageViewController: UIViewController {
     
     @IBAction func submitQuiz(_ sender: Any) {
         let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
-        QuizPageGlobals.result = result
+        QuizPageViewController.msg = result
         
         let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
         present(TabPageVC, animated: true, completion: nil)

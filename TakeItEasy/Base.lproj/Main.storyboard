@@ -354,27 +354,29 @@
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="366"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview" translatesAutoresizingMaskIntoConstraints="NO" id="pir-ZK-BYf">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-gradienta-6985047" translatesAutoresizingMaskIntoConstraints="NO" id="pir-ZK-BYf">
                                                     <rect key="frame" x="0.0" y="0.0" width="366" height="366"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="366" id="gGG-Xk-fs3"/>
                                                         <constraint firstAttribute="height" constant="366" id="ivd-wK-JbW"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EQ-Bs-xvk">
-                                                    <rect key="frame" x="99" y="140" width="162" height="86"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="72"/>
-                                                    <color key="textColor" systemColor="tintColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collections" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EQ-Bs-xvk">
+                                                    <rect key="frame" x="119.5" y="168.5" width="126.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="0EQ-Bs-xvk" firstAttribute="leading" secondItem="AAL-99-Cz4" secondAttribute="leading" constant="119.27" id="1gd-Br-V9f"/>
+                                                <constraint firstAttribute="trailing" secondItem="0EQ-Bs-xvk" secondAttribute="trailing" constant="120.23" id="Aig-cx-VbG"/>
                                                 <constraint firstAttribute="trailing" secondItem="pir-ZK-BYf" secondAttribute="trailing" id="CbB-9w-UMl"/>
+                                                <constraint firstItem="0EQ-Bs-xvk" firstAttribute="top" secondItem="AAL-99-Cz4" secondAttribute="top" constant="168.72999999999999" id="LbL-fi-p7s"/>
                                                 <constraint firstAttribute="bottom" secondItem="pir-ZK-BYf" secondAttribute="bottom" id="Lex-NY-Wml"/>
-                                                <constraint firstItem="0EQ-Bs-xvk" firstAttribute="leading" secondItem="AAL-99-Cz4" secondAttribute="leading" constant="98.859999999999999" id="UzS-56-COl"/>
                                                 <constraint firstItem="pir-ZK-BYf" firstAttribute="top" secondItem="AAL-99-Cz4" secondAttribute="top" id="XSq-dT-T66"/>
                                                 <constraint firstItem="pir-ZK-BYf" firstAttribute="leading" secondItem="AAL-99-Cz4" secondAttribute="leading" id="s5g-2y-ehx"/>
-                                                <constraint firstItem="0EQ-Bs-xvk" firstAttribute="top" secondItem="AAL-99-Cz4" secondAttribute="top" constant="140.19999999999999" id="u7O-j1-6Rq"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
@@ -434,7 +436,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyK-Po-tnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3" y="1659"/>
+            <point key="canvasLocation" x="-4.3478260869565224" y="1658.7053571428571"/>
         </scene>
         <!--Questions Page View Controller-->
         <scene sceneID="eBC-FH-Wkn">
@@ -1310,6 +1312,7 @@
         <image name="harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview" width="1280" height="618"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
+        <image name="pexels-gradienta-6985047" width="6000" height="4000"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="questionmark.square.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">

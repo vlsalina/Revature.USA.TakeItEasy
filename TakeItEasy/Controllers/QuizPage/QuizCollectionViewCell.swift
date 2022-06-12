@@ -20,7 +20,6 @@ class QuizCollectionViewCell: UICollectionViewCell {
     
     func updateUI() {
         if let quiz = quiz {
-            print(quiz.image)
             imageView.image = UIImage(named: quiz.image)
             label.text = quiz.name
         } else {

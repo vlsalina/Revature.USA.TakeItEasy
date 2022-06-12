@@ -12,8 +12,6 @@ class QuizPageViewController: UIViewController {
     @IBOutlet weak var messageBox: UITextView!
     @IBOutlet weak var quizCollection: UICollectionView!
     
-    var scoreMessage : String?
-    
     var quizzes = Quiz.FetchQuizzes()
     var database : [QuizSQLClass]?
     
@@ -30,11 +28,7 @@ class QuizPageViewController: UIViewController {
     }
     
     func initialize() {
-        if scoreMessage != nil {
-            messageBox.text = scoreMessage
-        } else {
-            messageBox.text = "Welcome to the Quiz Page!"
-        }
+        messageBox.text = QuizPageGlobals.result
     }
     
 //    func deleteAll() {

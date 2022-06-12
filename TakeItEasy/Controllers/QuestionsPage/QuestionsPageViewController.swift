@@ -22,9 +22,10 @@ class QuestionsPageViewController: UIViewController {
     
     @IBAction func submitQuiz(_ sender: Any) {
         let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
-        let quizPageVC = storyboard?.instantiateViewController(withIdentifier: "QuizPageVC") as! QuizPageViewController
-        quizPageVC.scoreMessage = result
-        present(quizPageVC, animated: true, completion: nil)
+        QuizPageGlobals.result = result
+        
+        let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
+        present(TabPageVC, animated: true, completion: nil)
     }
     
     /*

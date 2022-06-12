@@ -40,6 +40,11 @@ class QuizPageViewController: UIViewController {
         database = SQLiteObject.sqlObj.getData()
     }
     
+    func resetMsgs() {
+        QuizPageViewController.msg = QuizConstants.welcomeMsg.rawValue
+        QuizPageViewController.rewardMsg = QuizConstants.rewardMsg.rawValue
+    }
+    
     
     
     /*
@@ -51,6 +56,9 @@ class QuizPageViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func logout(_ sender: Any) {
+        resetMsgs()
+    }
     
 }
 
@@ -58,28 +66,28 @@ extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return database!.count
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = quizCollection.dequeueReusableCell(withReuseIdentifier: "quizCell", for: indexPath) as! QuizCollectionViewCell
-
+        
         cell.quiz = database![indexPath.row]
         cell.layer.cornerRadius = 15
-
+        
         return cell
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("clicked")
         let questionsVC = storyboard?.instantiateViewController(withIdentifier: "QuestionsPageVC") as! QuestionsPageViewController
         questionsVC.quiz = quizzes[indexPath.row]
         present(questionsVC, animated: true, completion: nil)
     }
-
-
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-
-
+    
+    
 }
 

@@ -872,15 +872,26 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ieL-gO-Ihf">
-                                <rect key="frame" x="20" y="68" width="374" height="37"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="l2e-HL-F0c">
+                                <rect key="frame" x="24" y="68" width="366" height="37"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eM9-E8-n37">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="329" height="37"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nu-d6-vYA">
+                                        <rect key="frame" x="329" y="0.0" width="37" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="37" id="bBR-Qa-sOy"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="arrow.backward" catalog="system"/>
+                                        <connections>
+                                            <action selector="dismiss:" destination="vwT-b5-13A" eventType="touchUpInside" id="AXa-sR-XJd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -889,14 +900,14 @@
                         <constraints>
                             <constraint firstItem="2y9-Nl-1od" firstAttribute="bottom" secondItem="WLf-Sx-zfu" secondAttribute="bottom" constant="20" id="4oM-5N-NmR"/>
                             <constraint firstItem="2y9-Nl-1od" firstAttribute="trailing" secondItem="WLf-Sx-zfu" secondAttribute="trailing" constant="20" id="Bea-iq-9xM"/>
-                            <constraint firstItem="2y9-Nl-1od" firstAttribute="trailing" secondItem="ieL-gO-Ihf" secondAttribute="trailing" constant="20" id="Cm8-xh-tEH"/>
+                            <constraint firstItem="l2e-HL-F0c" firstAttribute="top" secondItem="2y9-Nl-1od" secondAttribute="top" constant="24" id="DhA-fz-oSQ"/>
+                            <constraint firstItem="l2e-HL-F0c" firstAttribute="leading" secondItem="2y9-Nl-1od" secondAttribute="leading" constant="24" id="EoT-BI-LK3"/>
                             <constraint firstItem="WLf-Sx-zfu" firstAttribute="leading" secondItem="2y9-Nl-1od" secondAttribute="leading" constant="20" id="FhI-Ci-2bP"/>
+                            <constraint firstItem="kMh-2T-8NJ" firstAttribute="top" secondItem="l2e-HL-F0c" secondAttribute="bottom" constant="30" id="KoD-3T-fPb"/>
                             <constraint firstItem="kMh-2T-8NJ" firstAttribute="leading" secondItem="2y9-Nl-1od" secondAttribute="leading" constant="20" id="Ozo-fG-fYL"/>
-                            <constraint firstItem="ieL-gO-Ihf" firstAttribute="top" secondItem="2y9-Nl-1od" secondAttribute="top" constant="24" id="T3R-C6-Wt8"/>
+                            <constraint firstItem="2y9-Nl-1od" firstAttribute="trailing" secondItem="l2e-HL-F0c" secondAttribute="trailing" constant="24" id="ZDk-pm-r65"/>
                             <constraint firstItem="WLf-Sx-zfu" firstAttribute="top" secondItem="kMh-2T-8NJ" secondAttribute="bottom" constant="30" id="cdv-of-lwO"/>
                             <constraint firstItem="2y9-Nl-1od" firstAttribute="trailing" secondItem="kMh-2T-8NJ" secondAttribute="trailing" constant="20" id="iaJ-9S-wfM"/>
-                            <constraint firstItem="ieL-gO-Ihf" firstAttribute="leading" secondItem="2y9-Nl-1od" secondAttribute="leading" constant="20" id="lyA-mz-jOK"/>
-                            <constraint firstItem="kMh-2T-8NJ" firstAttribute="top" secondItem="ieL-gO-Ihf" secondAttribute="bottom" constant="30" id="sE8-9h-sr0"/>
                         </constraints>
                     </view>
                     <connections>
@@ -1359,6 +1370,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="apps.iphone.badge.plus" catalog="system" width="106" height="128"/>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
         <image name="harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview" width="1280" height="618"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>

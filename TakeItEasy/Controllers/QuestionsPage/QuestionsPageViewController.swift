@@ -27,6 +27,9 @@ class QuestionsPageViewController: UIViewController {
     func initialize() {
         titleLabel.text = quiz?.name
     }
+    @IBAction func dismiss(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func submitQuiz(_ sender: Any) {
         

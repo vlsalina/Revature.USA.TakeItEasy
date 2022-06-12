@@ -314,6 +314,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
                                         <connections>
+                                            <action selector="logout:" destination="kKf-V3-McW" eventType="touchUpInside" id="FcC-d8-04m"/>
                                             <segue destination="V3y-u2-S9t" kind="show" id="X4l-Cb-NcZ"/>
                                         </connections>
                                     </button>

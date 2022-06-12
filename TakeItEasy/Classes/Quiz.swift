@@ -24,7 +24,7 @@ class Quiz {
     static func FetchQuizzes() -> [Quiz] {
         return [
             // Quiz
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
+            Quiz(name: "Swift", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
                 Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
                     Choice(choice: "a"),
                     Choice(choice: "b"),
@@ -60,7 +60,7 @@ class Quiz {
             
             
             // Quiz
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
+            Quiz(name: "XCode", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
                 Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
                     Choice(choice: "a"),
                     Choice(choice: "b"),
@@ -95,7 +95,7 @@ class Quiz {
             ),
             
             // Quiz
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
+            Quiz(name: "Storyboard", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
                 Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
                     Choice(choice: "a"),
                     Choice(choice: "b"),
@@ -131,7 +131,7 @@ class Quiz {
             
             
             // Quiz
-            Quiz(name: "Quiz", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
+            Quiz(name: "Collections", image: UIImage(named: "harry_potter_wallpaper_digital_design____11_by_sefabaris713_de5yl8r-fullview")!, details: Details(questions: [
                 Question(question: "a;slfdkjas;lkfdja;sldkfjas;ldfkja;sdlfkja;sdlfkja;sdlkfja;sldfkj", choices: [
                     Choice(choice: "a"),
                     Choice(choice: "b"),

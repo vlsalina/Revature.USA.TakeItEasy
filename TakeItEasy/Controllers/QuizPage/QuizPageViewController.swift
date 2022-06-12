@@ -10,12 +10,14 @@ import UIKit
 class QuizPageViewController: UIViewController {
     
     @IBOutlet weak var messageBox: UITextView!
+    @IBOutlet weak var rewardBox: UITextView!
     @IBOutlet weak var quizCollection: UICollectionView!
     
     var quizzes = Quiz.FetchQuizzes()
     var database : [QuizSQLClass]?
     
-    static var msg = "Welcome to the Quiz page!"
+    static var msg = QuizConstants.welcomeMsg.rawValue
+    static var rewardMsg = QuizConstants.rewardMsg.rawValue
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,7 @@ class QuizPageViewController: UIViewController {
     
     func initialize() {
         messageBox.text = QuizPageViewController.msg
+        rewardBox.text = QuizPageViewController.rewardMsg
     }
     
     func connectData() {

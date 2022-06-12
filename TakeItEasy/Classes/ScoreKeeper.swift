@@ -26,8 +26,8 @@ class ScoreKeeper {
         }
     }
     
-    func percentageScore(score: Double, total: Double) -> Int {
-        let result : Double = (score / total) * 100
+    func percentageScore() -> Int {
+        let result : Double = (score / TOTAL) * 100
         return Int(result)
     }
     

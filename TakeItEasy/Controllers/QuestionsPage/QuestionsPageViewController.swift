@@ -43,6 +43,15 @@ class QuestionsPageViewController: UIViewController {
         let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
         QuizPageViewController.msg = result
         
+        let score = scoreKeeperObj.percentageScore()
+        if score <= 60 {
+            QuizPageViewController.rewardMsg = QuizConstants.scoredLow.rawValue
+        } else if (score <= 80) {
+            QuizPageViewController.rewardMsg = QuizConstants.scoredMed.rawValue
+        } else {
+            QuizPageViewController.rewardMsg = QuizConstants.scoredHigh.rawValue
+        }
+        
         let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
         present(TabPageVC, animated: true, completion: nil)
     }

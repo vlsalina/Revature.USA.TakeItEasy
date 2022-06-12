@@ -887,7 +887,7 @@
                                             <constraint firstAttribute="width" constant="37" id="bBR-Qa-sOy"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="arrow.backward" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="gray" image="arrow.backward" catalog="system"/>
                                         <connections>
                                             <action selector="dismiss:" destination="vwT-b5-13A" eventType="touchUpInside" id="AXa-sR-XJd"/>
                                         </connections>

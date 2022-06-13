@@ -117,8 +117,8 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         openedBookViewController.previewUrlString = bookPreviewUrl
         openedBookViewController.bookTitle = bookTitle
         openedBookViewController.bookID = bookId
-        //present(openedBookViewController, animated: true,  completion: nil)
-        self.navigationController?.pushViewController(openedBookViewController, animated: true)
+        present(openedBookViewController, animated: true,  completion: nil)
+        //self.navigationController?.pushViewController(openedBookViewController, animated: true)
     }
     
     func setupGeneralCell(_ generalCell : GeneralBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{

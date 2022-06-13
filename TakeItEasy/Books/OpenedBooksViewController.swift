@@ -6,23 +6,25 @@
 //
 
 import UIKit
-import PDFKit
+import WebKit
 
 class OpenedBooksViewController: UIViewController {
     @IBOutlet weak var bookView: UIView!
-    var bookFileName = ""
+    var urlString = ""
+    var previewUrlString = ""
+    var bookID = ""
+    var bookTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        openBookPDF()
-    }
-    
-    func openBookPDF(){
-        let pdfView = PDFView(frame: bookView.bounds)
-        bookView.addSubview(pdfView)
-        pdfView.autoScales = true
-        let filePath = Bundle.main.url(forResource: bookFileName, withExtension: "pdf")
-        pdfView.document = PDFDocument(url : filePath!)
+        print(bookID, bookTitle)
+        bookTitle = bookTitle.replacingOccurrences(of: " ", with: "_")
+        urlString = "https://www.google.com/books/edition/" + bookTitle + "/" + bookID + "?hl=en&gbpv=1"
+        print(urlString)
+        let newURL = URL(string : urlString)
+        let webKitView = WKWebView(frame: bookView.bounds)
+        webKitView.load(URLRequest(url: newURL!))
+        bookView.addSubview(webKitView)
     }
 
 }

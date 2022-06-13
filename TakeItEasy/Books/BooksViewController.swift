@@ -13,6 +13,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var recipesCollectionView: UICollectionView!
     
     @IBOutlet weak var searchBarTableView: UITableView!
+    var BOOK_API_KEY = "No Key"
     var searchBookData = BookData()
     var generalBookData = BookData()
     var technologyBookData = BookData()
@@ -29,9 +30,17 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         print("need to add API Key to run")
+        getKey()
         getGeneralBooks()
         getTechnologyBooks()
         getRecipeBooks()
+    }
+    
+    func getKey(){
+        if let key = ProcessInfo.processInfo.environment["GoogleBooksApi"] {
+            BOOK_API_KEY = key
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

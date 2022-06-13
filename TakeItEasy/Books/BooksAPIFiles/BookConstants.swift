@@ -7,4 +7,5 @@
 
 import Foundation
 
+//any constants used in books tab can be stored here
 //var BOOK_API_KEY = "No Key"

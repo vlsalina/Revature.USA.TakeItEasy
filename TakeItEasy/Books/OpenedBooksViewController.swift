@@ -9,6 +9,8 @@ import UIKit
 import WebKit
 
 class OpenedBooksViewController: UIViewController {
+    //using the preview url will go to the classics style google books website
+    //in order to use the new google books website (which has a more modern layout), the book title and bookid are added to a known url
     @IBOutlet weak var bookView: UIView!
     var urlString = ""
     var previewUrlString = ""

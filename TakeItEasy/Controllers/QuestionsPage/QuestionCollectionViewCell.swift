@@ -29,7 +29,9 @@ class QuestionCollectionViewCell: UICollectionViewCell {
             buttonB.setTitle(question.choices[1].choice, for: .normal)
             buttonC.setTitle(question.choices[2].choice, for: .normal)
             buttonD.setTitle(question.choices[3].choice, for: .normal)
+            
             imageView.image = question.image
+            imageView.layer.cornerRadius = 15
         }
     }
     

@@ -484,14 +484,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="questionCell" id="BIj-Yl-OsS" customClass="QuestionCollectionViewCell" customModule="TakeItEasy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="381"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="306"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tFV-Tu-VcA">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="381"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="306"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CHB-yh-xJN">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="381"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="306"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLt-yT-Yt5">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="128"/>
@@ -517,25 +517,20 @@
                                                                 <constraint firstItem="IXh-rZ-6bZ" firstAttribute="leading" secondItem="uLt-yT-Yt5" secondAttribute="leading" constant="24" id="Y0H-3R-GPa"/>
                                                                 <constraint firstAttribute="width" constant="374" id="ZTf-Xv-cgp"/>
                                                                 <constraint firstItem="axr-cS-JJi" firstAttribute="top" secondItem="uLt-yT-Yt5" secondAttribute="top" id="emb-y3-juH"/>
-                                                                <constraint firstItem="IXh-rZ-6bZ" firstAttribute="top" secondItem="uLt-yT-Yt5" secondAttribute="top" constant="49.119999999999997" id="vC3-Hc-zWP"/>
+                                                                <constraint firstItem="IXh-rZ-6bZ" firstAttribute="top" secondItem="uLt-yT-Yt5" secondAttribute="top" constant="49" id="q6C-iz-ARr"/>
                                                                 <constraint firstAttribute="trailing" secondItem="IXh-rZ-6bZ" secondAttribute="trailing" constant="24" id="yb2-r8-Lax"/>
                                                                 <constraint firstAttribute="trailing" secondItem="axr-cS-JJi" secondAttribute="trailing" id="z2g-PU-1QX"/>
                                                                 <constraint firstAttribute="bottom" secondItem="axr-cS-JJi" secondAttribute="bottom" id="zv8-t8-AkD"/>
                                                             </constraints>
                                                         </view>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="a;ksdfj;lkj;laskdfj;alskdfj;alsdkfj;alskdfja;sldkfj;alskdfja;sldkfjal;sdkfjas;ldkfja;sldkfjas;ldkfjas;ldfkj" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JIs-fm-vaA">
-                                                            <rect key="frame" x="0.0" y="140" width="374" height="75"/>
-                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="374" id="oE5-VS-ef8"/>
-                                                                <constraint firstAttribute="height" constant="75" id="sZA-1N-tX8"/>
-                                                            </constraints>
-                                                            <color key="textColor" systemColor="labelColor"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="752-4L-9PE">
+                                                            <rect key="frame" x="0.0" y="140" width="374" height="0.0"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FPp-tb-v0B">
-                                                            <rect key="frame" x="0.0" y="227" width="374" height="154"/>
+                                                            <rect key="frame" x="0.0" y="152" width="374" height="154"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chC-ww-mSp">
                                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
@@ -593,6 +588,9 @@
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="752-4L-9PE" firstAttribute="top" secondItem="uLt-yT-Yt5" secondAttribute="bottom" constant="12" id="0zq-em-nWu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="752-4L-9PE" secondAttribute="trailing" id="Vf3-aL-5I0"/>
+                                                        <constraint firstItem="752-4L-9PE" firstAttribute="leading" secondItem="CHB-yh-xJN" secondAttribute="leading" id="YFv-Sf-AJC"/>
                                                         <constraint firstAttribute="width" constant="374" id="iDC-Hk-xTK"/>
                                                         <constraint firstItem="uLt-yT-Yt5" firstAttribute="top" secondItem="CHB-yh-xJN" secondAttribute="top" id="px7-VY-htW"/>
                                                         <constraint firstItem="uLt-yT-Yt5" firstAttribute="leading" secondItem="CHB-yh-xJN" secondAttribute="leading" id="tip-8n-nsk"/>
@@ -609,12 +607,13 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
+                                            <outlet property="answerLabel" destination="IXh-rZ-6bZ" id="78Q-nt-U18"/>
                                             <outlet property="buttonA" destination="Xdy-am-wuQ" id="e7a-OY-4QE"/>
                                             <outlet property="buttonB" destination="gF1-Cp-0Lj" id="agH-FF-rCv"/>
                                             <outlet property="buttonC" destination="778-fN-f8q" id="axE-lh-cyc"/>
                                             <outlet property="buttonD" destination="e4F-eN-i9o" id="5tb-Fo-cW9"/>
                                             <outlet property="imageView" destination="axr-cS-JJi" id="nCh-gg-uDI"/>
-                                            <outlet property="questionBox" destination="JIs-fm-vaA" id="VVG-Kw-9GR"/>
+                                            <outlet property="questionLabel" destination="752-4L-9PE" id="baX-Z6-5Np"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

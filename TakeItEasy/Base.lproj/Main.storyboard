@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3y-u2-S9t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3y-u2-S9t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -1091,7 +1091,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Books" image="book.fill" catalog="system" id="FLE-0N-WCX"/>
                     <connections>
+                        <outlet property="generalCollectionView" destination="nkI-Ee-yFs" id="SrB-rz-XZa"/>
+                        <outlet property="recipesCollectionView" destination="241-HK-CJn" id="CwJ-XA-60l"/>
                         <outlet property="searchBarTableView" destination="FGE-dW-x0E" id="ify-aI-Z4h"/>
+                        <outlet property="technologyCollectionView" destination="dDd-VY-jgw" id="0Ti-Ot-fn2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FM-Yr-TxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -52,6 +52,15 @@ func validateSignUpCredentials(userid: String, email: String, password: String, 
     
 }
 
+// validate questions submission
+func validateQuestions(quiz: Quiz) throws {
+    for q in quiz.details.questions {
+        if (q.answer == nil) {
+            throw QuestionsErrors.notAllQuestionsAnswered
+        }
+    }
+}
+
 // segue helper
 func segueToVC(target: String, sender: AnyObject) {
     let storyObject = UIStoryboard(name: "Main", bundle: nil)

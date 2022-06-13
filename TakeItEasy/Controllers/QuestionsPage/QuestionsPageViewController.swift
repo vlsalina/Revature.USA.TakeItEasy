@@ -13,19 +13,50 @@ class QuestionsPageViewController: UIViewController {
     var quiz : Quiz?
     let scoreKeeperObj = ScoreKeeper()
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        initialize()
         
     }
     
+    func initialize() {
+        titleLabel.text = quiz?.name
+    }
+    @IBAction func dismiss(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func submitQuiz(_ sender: Any) {
-        let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
-        let quizPageVC = storyboard?.instantiateViewController(withIdentifier: "QuizPageVC") as! QuizPageViewController
-        quizPageVC.scoreMessage = result
-        present(quizPageVC, animated: true, completion: nil)
         
+        do {
+            try validateQuestions(quiz: quiz!)
+        } catch QuestionsErrors.notAllQuestionsAnswered {
+            errorLabel.text = QuestionsConstants.notAllQuestionsAnswered.rawValue
+            return
+        } catch {
+            errorLabel.text = QuestionsConstants.unknownError.rawValue
+            return
+        }
+        
+        let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
+        QuizPageViewController.msg = result
+        
+        let score = scoreKeeperObj.percentageScore()
+        if score <= 60 {
+            QuizPageViewController.rewardMsg = QuizConstants.scoredLow.rawValue
+        } else if (score <= 80) {
+            QuizPageViewController.rewardMsg = QuizConstants.scoredMed.rawValue
+        } else {
+            QuizPageViewController.rewardMsg = QuizConstants.scoredHigh.rawValue
+        }
+        
+        let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
+        present(TabPageVC, animated: true, completion: nil)
     }
     
     /*

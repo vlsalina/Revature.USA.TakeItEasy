@@ -10,11 +10,15 @@ import UIKit
 class QuizPageViewController: UIViewController {
     
     @IBOutlet weak var messageBox: UITextView!
+    @IBOutlet weak var rewardBox: UITextView!
     @IBOutlet weak var quizCollection: UICollectionView!
     
-    var scoreMessage : String?
-    
     var quizzes = Quiz.FetchQuizzes()
+    var database : [QuizSQLClass]?
+    
+    static var msg = QuizConstants.welcomeMsg.rawValue
+    static var rewardMsg = QuizConstants.rewardMsg.rawValue
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,15 +27,24 @@ class QuizPageViewController: UIViewController {
         quizCollection.delegate = self
         
         initialize()
+        initializeSQLite()
+        connectData()
     }
     
     func initialize() {
-        if scoreMessage != nil {
-            messageBox.text = scoreMessage
-        } else {
-            messageBox.text = "Welcome to the Quiz Page!"
-        }
+        messageBox.text = QuizPageViewController.msg
+        rewardBox.text = QuizPageViewController.rewardMsg
     }
+    
+    func connectData() {
+        database = SQLiteObject.sqlObj.getData()
+    }
+    
+    func resetMsgs() {
+        QuizPageViewController.msg = QuizConstants.welcomeMsg.rawValue
+        QuizPageViewController.rewardMsg = QuizConstants.rewardMsg.rawValue
+    }
+    
     
     
     /*
@@ -43,18 +56,22 @@ class QuizPageViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func logout(_ sender: Any) {
+        resetMsgs()
+    }
     
 }
 
 extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return quizzes.count
+        return database!.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = quizCollection.dequeueReusableCell(withReuseIdentifier: "quizCell", for: indexPath) as! QuizCollectionViewCell
         
-        cell.quiz = quizzes[indexPath.row]
+        cell.quiz = database![indexPath.row]
+        cell.layer.cornerRadius = 15
         
         return cell
     }

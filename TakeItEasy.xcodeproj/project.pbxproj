@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		617A608D2854FB11009FDFCD /* QuizData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A608C2854FB11009FDFCD /* QuizData.swift */; };
+		617A608F2854FD31009FDFCD /* QuizSQLClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A608E2854FD31009FDFCD /* QuizSQLClass.swift */; };
+		617A60912854FDA0009FDFCD /* QuizConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A60902854FDA0009FDFCD /* QuizConstants.swift */; };
+		617A60942855182E009FDFCD /* SQLiteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A60932855182E009FDFCD /* SQLiteObject.swift */; };
 		618CF5D7284FFDEB00BFF072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618CF5D6284FFDEB00BFF072 /* AppDelegate.swift */; };
 		618CF5D9284FFDEB00BFF072 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618CF5D8284FFDEB00BFF072 /* SceneDelegate.swift */; };
 		618CF5DB284FFDEB00BFF072 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618CF5DA284FFDEB00BFF072 /* ViewController.swift */; };
@@ -32,6 +36,9 @@
 		6192B0032852810700631265 /* QuestionsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192B0022852810700631265 /* QuestionsPageViewController.swift */; };
 		6192B0252852954C00631265 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192B0242852954C00631265 /* QuestionCollectionViewCell.swift */; };
 		6192B069285392D900631265 /* ScoreKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192B068285392D900631265 /* ScoreKeeper.swift */; };
+		61B9C164285559B700A8BA1C /* SQLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C163285559B700A8BA1C /* SQLHelpers.swift */; };
+		61B9C1662855602A00A8BA1C /* SQLiteConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C1652855602A00A8BA1C /* SQLiteConstants.swift */; };
+		61B9C16F285592C300A8BA1C /* QuestionsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C16E285592C300A8BA1C /* QuestionsConstants.swift */; };
 		733261AC28522E19008CBC5C /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261AB28522E19008CBC5C /* MusicViewController.swift */; };
 		733261AF28522E68008CBC5C /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261AE28522E68008CBC5C /* MusicCollectionViewCell.swift */; };
 		733261F5285555D6008CBC5C /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261F4285555D6008CBC5C /* SearchPageViewController.swift */; };
@@ -44,6 +51,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		617A608C2854FB11009FDFCD /* QuizData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizData.swift; sourceTree = "<group>"; };
+		617A608E2854FD31009FDFCD /* QuizSQLClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSQLClass.swift; sourceTree = "<group>"; };
+		617A60902854FDA0009FDFCD /* QuizConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizConstants.swift; sourceTree = "<group>"; };
+		617A60932855182E009FDFCD /* SQLiteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteObject.swift; sourceTree = "<group>"; };
 		618CF5D3284FFDEB00BFF072 /* TakeItEasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeItEasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		618CF5D6284FFDEB00BFF072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		618CF5D8284FFDEB00BFF072 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +82,9 @@
 		6192B0022852810700631265 /* QuestionsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsPageViewController.swift; sourceTree = "<group>"; };
 		6192B0242852954C00631265 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		6192B068285392D900631265 /* ScoreKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreKeeper.swift; sourceTree = "<group>"; };
+		61B9C163285559B700A8BA1C /* SQLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLHelpers.swift; sourceTree = "<group>"; };
+		61B9C1652855602A00A8BA1C /* SQLiteConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteConstants.swift; sourceTree = "<group>"; };
+		61B9C16E285592C300A8BA1C /* QuestionsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsConstants.swift; sourceTree = "<group>"; };
 		733261AB28522E19008CBC5C /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		733261AE28522E68008CBC5C /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
 		733261F4285555D6008CBC5C /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +107,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		617A608B2854FB01009FDFCD /* DataFolder */ = {
+			isa = PBXGroup;
+			children = (
+				617A608C2854FB11009FDFCD /* QuizData.swift */,
+			);
+			path = DataFolder;
+			sourceTree = "<group>";
+		};
+		617A6092285517C9009FDFCD /* SQLiteDB */ = {
+			isa = PBXGroup;
+			children = (
+				617A60932855182E009FDFCD /* SQLiteObject.swift */,
+			);
+			path = SQLiteDB;
+			sourceTree = "<group>";
+		};
 		618CF5CA284FFDEB00BFF072 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +144,8 @@
 		618CF5D5284FFDEB00BFF072 /* TakeItEasy */ = {
 			isa = PBXGroup;
 			children = (
+				617A6092285517C9009FDFCD /* SQLiteDB */,
+				617A608B2854FB01009FDFCD /* DataFolder */,
 				6192AFB72852531A00631265 /* Classes */,
 				733261AD28522E2B008CBC5C /* Music */,
 				6192AF612851812C00631265 /* Helpers */,
@@ -169,6 +201,9 @@
 				6192AF5828517F5300631265 /* MetaData.swift */,
 				6192AF5D28517FEA00631265 /* KeychainConstants.swift */,
 				6192AF8D2851AD1800631265 /* SignupConstants.swift */,
+				617A60902854FDA0009FDFCD /* QuizConstants.swift */,
+				61B9C1652855602A00A8BA1C /* SQLiteConstants.swift */,
+				61B9C16E285592C300A8BA1C /* QuestionsConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -186,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				6192AF622851813700631265 /* Helpers.swift */,
+				61B9C163285559B700A8BA1C /* SQLHelpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -212,6 +248,7 @@
 			children = (
 				6192AFB82852532800631265 /* Quiz.swift */,
 				6192B068285392D900631265 /* ScoreKeeper.swift */,
+				617A608E2854FD31009FDFCD /* QuizSQLClass.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -319,7 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A3C53C28513C3600664E96 /* TechnologyBooksCollectionViewCell.swift in Sources */,
+				617A608F2854FD31009FDFCD /* QuizSQLClass.swift in Sources */,
+				617A608D2854FB11009FDFCD /* QuizData.swift in Sources */,
+				61B9C16F285592C300A8BA1C /* QuestionsConstants.swift in Sources */,
 				6192B0252852954C00631265 /* QuestionCollectionViewCell.swift in Sources */,
+				617A60942855182E009FDFCD /* SQLiteObject.swift in Sources */,
 				6192AFBD2852536C00631265 /* QuizCollectionViewCell.swift in Sources */,
 				733261F5285555D6008CBC5C /* SearchPageViewController.swift in Sources */,
 				6192AF632851813700631265 /* Helpers.swift in Sources */,
@@ -333,17 +374,20 @@
 				6192AF4C28517C4600631265 /* LoginPageViewController.swift in Sources */,
 				84A3C53E28513C4900664E96 /* RecipeBooksCollectionViewCell.swift in Sources */,
 				618CF5DB284FFDEB00BFF072 /* ViewController.swift in Sources */,
+				617A60912854FDA0009FDFCD /* QuizConstants.swift in Sources */,
 				6192AF5C28517F9100631265 /* KeychainManager.swift in Sources */,
 				6192AFB92852532800631265 /* Quiz.swift in Sources */,
 				618CF5D7284FFDEB00BFF072 /* AppDelegate.swift in Sources */,
 				6192AFBB2852535500631265 /* QuizPageViewController.swift in Sources */,
 				618CF5D9284FFDEB00BFF072 /* SceneDelegate.swift in Sources */,
+				61B9C1662855602A00A8BA1C /* SQLiteConstants.swift in Sources */,
 				6192B0032852810700631265 /* QuestionsPageViewController.swift in Sources */,
 				6192AF5028517CDC00631265 /* DBLoginHelperClass.swift in Sources */,
 				6192AF5428517CFA00631265 /* User+CoreDataProperties.swift in Sources */,
 				618CF5E1284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld in Sources */,
 				733261AC28522E19008CBC5C /* MusicViewController.swift in Sources */,
 				6192AF66285195B800631265 /* SignupPageViewController.swift in Sources */,
+				61B9C164285559B700A8BA1C /* SQLHelpers.swift in Sources */,
 				84A3C5612851406C00664E96 /* OpenedBooksViewController.swift in Sources */,
 				6192AF5728517E4A00631265 /* LoginConstants.swift in Sources */,
 				6192AF5E28517FEA00631265 /* KeychainConstants.swift in Sources */,

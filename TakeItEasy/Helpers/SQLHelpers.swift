@@ -40,9 +40,14 @@ func insertAllData() {
     }
 }
 
+func insertResultData(name: String, date: String, score: Int) {
+    SQLiteObject.sqlObj.insertResultData(name: name as NSString, date: date as NSString, score: score as NSNumber)
+}
+
 func initializeSQLite() {
     SQLiteObject.sqlObj.createDB()
     SQLiteObject.sqlObj.createTable()
+    SQLiteObject.sqlObj.createResultsTable()
     
     // insert quiz data if it doesn't already exist in db
     if (!userDefaults.bool(forKey: SQLiteConstants.SQL.rawValue)) {

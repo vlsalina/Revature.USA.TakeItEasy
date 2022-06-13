@@ -21,12 +21,26 @@ class QuestionsPageViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         initialize()
+        dateTest()
         
     }
     
     func initialize() {
         titleLabel.text = quiz?.name
     }
+    
+    func dateTest() {
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy"
+        let yearString = dateFormatter.string(from: currentDate)
+        
+        print("*********************************")
+        print(yearString)
+        print("*********************************")
+    }
+    
+    
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -54,6 +68,8 @@ class QuestionsPageViewController: UIViewController {
         } else {
             QuizPageViewController.rewardMsg = QuizConstants.scoredHigh.rawValue
         }
+        
+        
         
         let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
         present(TabPageVC, animated: true, completion: nil)

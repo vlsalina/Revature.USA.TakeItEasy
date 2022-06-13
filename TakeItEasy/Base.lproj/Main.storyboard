@@ -924,7 +924,7 @@
         <!--Search Page-->
         <scene sceneID="jWP-9Z-f5D">
             <objects>
-                <viewController title="Search Page" modalPresentationStyle="fullScreen" id="eUS-iK-d8C" sceneMemberID="viewController">
+                <viewController title="Search Page" modalPresentationStyle="fullScreen" id="eUS-iK-d8C" customClass="SearchPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ayS-01-DDC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -184,7 +184,7 @@ class Question {
     var question : String
     var choices : [Choice]
     var correctAnswer: Choice
-    var answer : Choice?
+    var answer = Choice(choice: "")
     var image : UIImage
     
     init(question: String, choices: [Choice], correctAnswer: Choice, image: UIImage) {
@@ -199,7 +199,7 @@ class Question {
     }
     
     func displayAnswer() {
-        print(answer!.choice as String)
+        print(answer.choice as String)
     }
     
 }

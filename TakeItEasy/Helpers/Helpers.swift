@@ -55,10 +55,25 @@ func validateSignUpCredentials(userid: String, email: String, password: String, 
 // validate questions submission
 func validateQuestions(quiz: Quiz) throws {
     for q in quiz.details.questions {
-        if (q.answer == nil) {
+        if (q.answer.choice == "") {
             throw QuestionsErrors.notAllQuestionsAnswered
         }
     }
+}
+
+// get current date in yyyy-mm-dd string format
+func getDate() -> String {
+    let d = Date()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy"
+    let yearString = dateFormatter.string(from: d)
+    
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.month,.day], from: d)
+    let dayOfMonth = components.day
+    let month = components.month
+    
+    return "\(yearString)-\(month!)-\(dayOfMonth!)"
 }
 
 // segue helper

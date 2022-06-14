@@ -40,6 +40,7 @@ class QuizPageViewController: UIViewController {
         database = SQLiteObject.sqlObj.getData()
     }
     
+    
     func resetMsgs() {
         QuizPageViewController.msg = QuizConstants.welcomeMsg.rawValue
         QuizPageViewController.rewardMsg = QuizConstants.rewardMsg.rawValue

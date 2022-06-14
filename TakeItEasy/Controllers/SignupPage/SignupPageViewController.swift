@@ -9,6 +9,11 @@ import UIKit
 
 class SignupPageViewController: UIViewController, UNUserNotificationCenterDelegate {
     
+    @IBOutlet weak var otpPopupErrorText: UILabel!
+    @IBOutlet weak var otpPopup: UIView!
+    @IBOutlet weak var otpTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    
     @IBOutlet weak var mobileNo: UITextField!
     @IBOutlet weak var confirmPassword: UITextField!
     @IBOutlet weak var password: UITextField!
@@ -16,46 +21,60 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     @IBOutlet weak var userid: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
     
-    
-    // OTP components
-    @IBOutlet weak var otpPopupErrorText: UILabel!
-    @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var otpPopup: UIView!
-    @IBOutlet weak var otpTextField: UITextField!
-    
     var currentOTP = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
 //        signInButton.isHidden = true
         otpPopup.isHidden = true
         otpPopup.layer.cornerRadius = 10
         otpPopup.layer.masksToBounds = true
         UNUserNotificationCenter.current().delegate = self
-
+        // Do any additional setup after loading the view.
     }
     
-    @IBAction func closeOTPPopup(_ sender: Any) {
-        otpPopupErrorText.text = ""
-        otpPopup.isHidden = true
-        print("otp closed")
-        
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner])
     }
-    @IBAction func submitOTP(_ sender: Any) {
-        if isOTPCorrect(){
-            createUser()
-            signInButton.isHidden = false
-            otpPopup.isHidden = true
-            otpPopupErrorText.text = ""
-            print("otp matches")
+    
+    @IBAction func getOTP(_ sender: Any) {
+        var status = false
+        
+        // error handling
+        do {
+            try validateSignUpCredentials(userid: userid.text!, email: email.text!, password: password.text!, confirmPassword: confirmPassword.text!, mobileNo: mobileNo.text!)
+            status = true
         }
-        else{
-            otpPopupErrorText.text = "OTP does not match"
-            print("otp doesn't match")
+        catch SignupErrors.invalidUserId {
+            errorLabel.text = SignupConstants.invalidUserId.rawValue
         }
-
+        catch SignupErrors.invalidEmail {
+            errorLabel.text = SignupConstants.invalidEmail.rawValue
+        }
+        catch SignupErrors.invalidPassword {
+            errorLabel.text = SignupConstants.invalidPassword.rawValue
+        }
+        catch SignupErrors.invalidConfirmPassword {
+            errorLabel.text = SignupConstants.invalidConfirmPassword.rawValue
+        }
+        catch SignupErrors.invalidMobileNo {
+            errorLabel.text = SignupConstants.invalidMobileNo.rawValue
+        }
+        catch {
+            errorLabel.text = SignupConstants.unknownSignUpError.rawValue
+        }
+        
+        // MARK: - add user to database code here
+        if (status) {
+            let existingUser = DBHelperClass.dbHelper.userExists(userid: userid.text!)
+            if (existingUser) {
+                errorLabel.text = SignupConstants.duplicateEntry.rawValue
+                return
+            } else {
+                startOTPProcess()
+            }
+            
+        }
     }
     
     func createUser(){
@@ -65,11 +84,9 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
         print("user successfully signed up")
     }
     
-    func isOTPCorrect() -> Bool{
-        if currentOTP == otpTextField.text{
-            return true
-        }
-        return false
+    @IBAction func goToSignIn(_ sender: Any) {
+        //presumably this should take you to tab controller
+        print("otp is confirmed")
     }
     
     func startOTPProcess(){
@@ -131,62 +148,49 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
         }
     }
     
-    
-    @IBAction func getOTP(_ sender: Any) {
-        var status = false
-        
-        // error handling
-        do {
-            try validateSignUpCredentials(userid: userid.text!, email: email.text!, password: password.text!, confirmPassword: confirmPassword.text!, mobileNo: mobileNo.text!)
-            status = true
+    @IBAction func submitOTP(_ sender: Any) {
+        if isOTPCorrect(){
+            createUser()
+            signInButton.isHidden = false
+            otpPopup.isHidden = true
+            otpPopupErrorText.text = ""
+            print("otp matches")
         }
-        catch SignupErrors.invalidUserId {
-            errorLabel.text = SignupConstants.invalidUserId.rawValue
+        else{
+            otpPopupErrorText.text = "OTP does not match"
+            print("otp doesn't match")
         }
-        catch SignupErrors.invalidEmail {
-            errorLabel.text = SignupConstants.invalidEmail.rawValue
-        }
-        catch SignupErrors.invalidPassword {
-            errorLabel.text = SignupConstants.invalidPassword.rawValue
-        }
-        catch SignupErrors.invalidConfirmPassword {
-            errorLabel.text = SignupConstants.invalidConfirmPassword.rawValue
-        }
-        catch SignupErrors.invalidMobileNo {
-            errorLabel.text = SignupConstants.invalidMobileNo.rawValue
-        }
-        catch {
-            errorLabel.text = SignupConstants.unknownSignUpError.rawValue
-        }
-        
-        // MARK: - add user to database code here
-        if (status) {
-            let existingUser = DBHelperClass.dbHelper.userExists(userid: userid.text!)
-            if (existingUser) {
-                errorLabel.text = SignupConstants.duplicateEntry.rawValue
-                return
-            } else {
-//                errorLabel.text = SignupConstants.registered.rawValue
-//
-//                // IMPORTANT: - NEED TO HANDLE DUPLICATE ENTRY ERROR
-//                DBHelperClass.dbHelper.addUser(userid: userid.text!, password: password.text!)
-//                print("user successfully signed up")
-                startOTPProcess()
-            }
-            
-            
-        }
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
-        
     }
     
     
+    
+    @IBAction func closeOTPPopup(_ sender: Any) {
+        otpPopupErrorText.text = ""
+        otpPopup.isHidden = true
+        print("otp closed")
+    }
+    
+    func isOTPCorrect() -> Bool{
+        if currentOTP == otpTextField.text{
+            return true
+        }
+        return false
+    }
+    
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+    
+    
 }
+
+

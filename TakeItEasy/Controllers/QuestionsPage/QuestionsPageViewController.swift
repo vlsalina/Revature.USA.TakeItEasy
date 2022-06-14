@@ -21,7 +21,7 @@ class QuestionsPageViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         initialize()
-        test()
+//        test()
     }
     
     func initialize() {

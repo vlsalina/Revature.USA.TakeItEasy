@@ -168,14 +168,22 @@
 				618CF5E4284FFDEC00BFF072 /* LaunchScreen.storyboard */,
 				618CF5E7284FFDEC00BFF072 /* Info.plist */,
 				618CF5DF284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld */,
-				733261F4285555D6008CBC5C /* SearchPageViewController.swift */,
 			);
 			path = TakeItEasy;
+			sourceTree = "<group>";
+		};
+		618F375A28580A7F00132D47 /* SearchPage */ = {
+			isa = PBXGroup;
+			children = (
+				733261F4285555D6008CBC5C /* SearchPageViewController.swift */,
+			);
+			path = SearchPage;
 			sourceTree = "<group>";
 		};
 		6192AF4928517C2600631265 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				618F375A28580A7F00132D47 /* SearchPage */,
 				6192B001285280F400631265 /* QuestionsPage */,
 				6192AFB62852530700631265 /* QuizPage */,
 				6192AF64285195A500631265 /* SignupPage */,

@@ -55,7 +55,7 @@ func validateSignUpCredentials(userid: String, email: String, password: String, 
 // validate questions submission
 func validateQuestions(quiz: Quiz) throws {
     for q in quiz.details.questions {
-        if (q.answer == nil) {
+        if (q.answer.choice == "") {
             throw QuestionsErrors.notAllQuestionsAnswered
         }
     }

@@ -44,6 +44,21 @@ func insertResultData(name: String, date: String, score: Int) {
     SQLiteObject.sqlObj.insertResultData(name: name as NSString, date: date as NSString, score: score as NSNumber)
 }
 
+func getResults() -> [Result] {
+    return SQLiteObject.sqlObj.getResultsData()
+}
+
+
+//func test() {
+//    let result = SQLiteObject.sqlObj.getResultsData()
+//    print("RESULTS TABLE")
+//    print("# of results: ", result.count)
+//    for (index, x) in result.enumerated() {
+//        print("\(index) | \(x.name) | \(x.date) | \(x.score)")
+//    }
+//}
+
+
 func initializeSQLite() {
     SQLiteObject.sqlObj.createDB()
     SQLiteObject.sqlObj.createTable()

@@ -274,9 +274,16 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Submit"/>
+                                        <connections>
+                                            <action selector="submitOTP:" destination="nGp-Iq-P2l" eventType="touchUpInside" id="tP7-r1-9Pg"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78M-oq-mHt">
                                         <rect key="frame" x="22" y="8" width="195" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="195" id="GJ5-25-DXT"/>
+                                            <constraint firstAttribute="height" constant="24" id="rgN-MJ-FYe"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -347,7 +354,7 @@
                         <outlet property="mobileNo" destination="qKX-ti-1sw" id="hfu-4E-5mj"/>
                         <outlet property="otpPopup" destination="oxI-dS-d8D" id="xvq-fj-F5H"/>
                         <outlet property="otpPopupErrorText" destination="Etz-zb-h90" id="4re-2b-3KG"/>
-                        <outlet property="otpTextField" destination="fCF-CZ-KE0" id="bpP-tZ-qIh"/>
+                        <outlet property="otpTextField" destination="fCF-CZ-KE0" id="KgN-35-kIK"/>
                         <outlet property="password" destination="Zq9-f3-09e" id="ldx-Rs-4wz"/>
                         <outlet property="signInButton" destination="1ct-TB-E0y" id="iL9-PB-FLQ"/>
                         <outlet property="userid" destination="YQD-Ge-exd" id="L7F-wA-uf4"/>

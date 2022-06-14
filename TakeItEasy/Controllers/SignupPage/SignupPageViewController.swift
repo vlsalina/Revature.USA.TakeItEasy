@@ -20,8 +20,8 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     // OTP components
     @IBOutlet weak var otpPopupErrorText: UILabel!
     @IBOutlet weak var signInButton: UIButton!
-    @IBOutlet weak var otpTextField: UITextField!
     @IBOutlet weak var otpPopup: UIView!
+    @IBOutlet weak var otpTextField: UITextField!
     
     var currentOTP = ""
     
@@ -36,6 +36,13 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
         UNUserNotificationCenter.current().delegate = self
 
     }
+    
+    @IBAction func closeOTPPopup(_ sender: Any) {
+        otpPopupErrorText.text = ""
+        otpPopup.isHidden = true
+        print("otp closed")
+        
+    }
     @IBAction func submitOTP(_ sender: Any) {
         if isOTPCorrect(){
             createUser()
@@ -48,14 +55,7 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
             otpPopupErrorText.text = "OTP does not match"
             print("otp doesn't match")
         }
-        
-    }
-    
-    @IBAction func closeOTPPopup(_ sender: Any) {
-        otpPopupErrorText.text = ""
-        otpPopup.isHidden = true
-        print("otp closed")
-        
+
     }
     
     func createUser(){

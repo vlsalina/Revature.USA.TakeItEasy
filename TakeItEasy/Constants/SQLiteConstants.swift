@@ -9,4 +9,5 @@ import Foundation
 
 enum SQLiteConstants : String {
     case SQL = "sql"
+    case Results = "results"
 }

@@ -12,9 +12,11 @@ class SQLiteObject {
     static var sqlObj = SQLiteObject()
     
     var Quizzes = [QuizSQLClass]()
+    var Results = [Result]()
     
     // pointer to contain address
     var dbpointer : OpaquePointer?
+    var dbpointer2 : OpaquePointer?
     
     //var students = [Student]()
     
@@ -37,6 +39,17 @@ class SQLiteObject {
         }
     }
     
+    // create results table
+    let sqlStmt2 = "create table if not exists results (id integer primary key autoincrement, name text, date text, score integer)"
+    
+    func createResultsTable() {
+        if sqlite3_exec(dbpointer, sqlStmt2, nil, nil, nil) != SQLITE_OK {
+            let err = String(cString: sqlite3_errmsg(dbpointer)!)
+            print("error in results table creation ")
+        }
+    }
+    
+    // insert data into quizzes table
     func insertData(name: NSString, image: NSString) {
         var stmt : OpaquePointer?
         let query = "insert into quizzes (name, image) values (?,?)"
@@ -65,6 +78,48 @@ class SQLiteObject {
         
         print("data saved ")
     }
+    
+    // insert data into results table
+    func insertResultData(name: NSString, date: NSString, score: NSNumber) {
+        var stmt : OpaquePointer?
+        let query = "insert into results (name, date, score) values (?,?,?)"
+        
+        if sqlite3_prepare(dbpointer, query, -1, &stmt, nil) != SQLITE_OK {
+            let err = String(cString: sqlite3_errmsg(dbpointer)!)
+            print("printS: error in query creation ", err)
+            return
+        }
+        
+        if sqlite3_bind_text(stmt, 1, name.utf8String, -1, nil) != SQLITE_OK {
+            let err = String(cString: sqlite3_errmsg(dbpointer)!)
+            print("printS: error in saving name ", err)
+            return
+            
+        }
+        
+        if sqlite3_bind_text(stmt, 2, date.utf8String, -1, nil) != SQLITE_OK {
+            let err = String(cString: sqlite3_errmsg(dbpointer)!)
+            print("printS: error in saving date ", err)
+            return
+            
+        }
+        
+        if sqlite3_bind_int(stmt, 3, Int32(truncating: score)) != SQLITE_OK {
+            let err = String(cString: sqlite3_errmsg(dbpointer)!)
+            print("printS: error in saving score ", err)
+            return
+        }
+        
+        
+        if sqlite3_step(stmt) != SQLITE_DONE {
+            let err = String(cString: sqlite3_errmsg(dbpointer)!)
+            print("printS: error in results table creation ", err)
+            return
+        }
+        
+        print("printS: result data saved ")
+    }
+    
     
     
     func insertAllData(quizData: [QuizSQLClass]) {
@@ -139,6 +194,29 @@ class SQLiteObject {
         }
         
         return Quizzes
+    }
+    
+    func getResultsData() -> [Result] {
+         Results.removeAll()
+        let query = "select * from results"
+        var stmt : OpaquePointer?
+        
+        if sqlite3_prepare(dbpointer, query, -1, &stmt, nil) != SQLITE_OK {
+            let err = String(cString: sqlite3_errmsg(dbpointer)!)
+            print("error in resuts table creation ", err)
+            return Results
+        }
+        
+        while(sqlite3_step(stmt) == SQLITE_ROW) {
+            //let id = sqlite3_column_int(stmt, 0)
+            let name = String(cString: sqlite3_column_text(stmt, 1))
+            let date = String(cString: sqlite3_column_text(stmt, 2))
+            let score = sqlite3_column_int(stmt, 3)
+            
+            Results.append(Result(name: name, date: date, score: Int(score)))
+        }
+        
+        return Results
     }
     
     func getOneRecord(id: Int) -> QuizSQLClass {

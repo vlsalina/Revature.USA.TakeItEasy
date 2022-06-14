@@ -61,6 +61,21 @@ func validateQuestions(quiz: Quiz) throws {
     }
 }
 
+// get current date in yyyy-mm-dd string format
+func getDate() -> String {
+    let d = Date()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy"
+    let yearString = dateFormatter.string(from: d)
+    
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([.month,.day], from: d)
+    let dayOfMonth = components.day
+    let month = components.month
+    
+    return "\(yearString)-\(month!)-\(dayOfMonth!)"
+}
+
 // segue helper
 func segueToVC(target: String, sender: AnyObject) {
     let storyObject = UIStoryboard(name: "Main", bundle: nil)

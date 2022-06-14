@@ -18,6 +18,9 @@
 		618CF5E1284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 618CF5DF284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld */; };
 		618CF5E3284FFDEC00BFF072 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 618CF5E2284FFDEC00BFF072 /* Assets.xcassets */; };
 		618CF5E6284FFDEC00BFF072 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 618CF5E4284FFDEC00BFF072 /* LaunchScreen.storyboard */; };
+		618F37592857D27000132D47 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F37582857D27000132D47 /* Result.swift */; };
+		618F375D28580DD900132D47 /* ResultsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F375C28580DD900132D47 /* ResultsPageViewController.swift */; };
+		618F375F28580FED00132D47 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F375E28580FED00132D47 /* ResultsTableViewCell.swift */; };
 		6192AF4C28517C4600631265 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF4B28517C4600631265 /* LoginPageViewController.swift */; };
 		6192AF5028517CDC00631265 /* DBLoginHelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF4F28517CDC00631265 /* DBLoginHelperClass.swift */; };
 		6192AF5328517CFA00631265 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF5128517CFA00631265 /* User+CoreDataClass.swift */; };
@@ -66,6 +69,9 @@
 		618CF5E2284FFDEC00BFF072 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		618CF5E5284FFDEC00BFF072 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		618CF5E7284FFDEC00BFF072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		618F37582857D27000132D47 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		618F375C28580DD900132D47 /* ResultsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPageViewController.swift; sourceTree = "<group>"; };
+		618F375E28580FED00132D47 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		6192AF4B28517C4600631265 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		6192AF4F28517CDC00631265 /* DBLoginHelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBLoginHelperClass.swift; sourceTree = "<group>"; };
 		6192AF5128517CFA00631265 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -166,14 +172,32 @@
 				618CF5E4284FFDEC00BFF072 /* LaunchScreen.storyboard */,
 				618CF5E7284FFDEC00BFF072 /* Info.plist */,
 				618CF5DF284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld */,
-				733261F4285555D6008CBC5C /* SearchPageViewController.swift */,
 			);
 			path = TakeItEasy;
+			sourceTree = "<group>";
+		};
+		618F375A28580A7F00132D47 /* SearchPage */ = {
+			isa = PBXGroup;
+			children = (
+				733261F4285555D6008CBC5C /* SearchPageViewController.swift */,
+			);
+			path = SearchPage;
+			sourceTree = "<group>";
+		};
+		618F375B28580DC000132D47 /* ResultsPage */ = {
+			isa = PBXGroup;
+			children = (
+				618F375C28580DD900132D47 /* ResultsPageViewController.swift */,
+				618F375E28580FED00132D47 /* ResultsTableViewCell.swift */,
+			);
+			path = ResultsPage;
 			sourceTree = "<group>";
 		};
 		6192AF4928517C2600631265 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				618F375B28580DC000132D47 /* ResultsPage */,
+				618F375A28580A7F00132D47 /* SearchPage */,
 				6192B001285280F400631265 /* QuestionsPage */,
 				6192AFB62852530700631265 /* QuizPage */,
 				6192AF64285195A500631265 /* SignupPage */,
@@ -253,6 +277,7 @@
 				6192AFB82852532800631265 /* Quiz.swift */,
 				6192B068285392D900631265 /* ScoreKeeper.swift */,
 				617A608E2854FD31009FDFCD /* QuizSQLClass.swift */,
+				618F37582857D27000132D47 /* Result.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -385,7 +410,9 @@
 				6192AF5328517CFA00631265 /* User+CoreDataClass.swift in Sources */,
 				845A19C728577FB6005013EA /* BookDataTypes.swift in Sources */,
 				849C70C6285262D800452F1F /* SearchBarTableViewCell.swift in Sources */,
+				618F37592857D27000132D47 /* Result.swift in Sources */,
 				84A3C53428513BB300664E96 /* BooksViewController.swift in Sources */,
+				618F375F28580FED00132D47 /* ResultsTableViewCell.swift in Sources */,
 				6192AF8E2851AD1800631265 /* SignupConstants.swift in Sources */,
 				6192AF4C28517C4600631265 /* LoginPageViewController.swift in Sources */,
 				84A3C53E28513C4900664E96 /* RecipeBooksCollectionViewCell.swift in Sources */,
@@ -408,6 +435,7 @@
 				6192AF5728517E4A00631265 /* LoginConstants.swift in Sources */,
 				6192AF5E28517FEA00631265 /* KeychainConstants.swift in Sources */,
 				733261AF28522E68008CBC5C /* MusicCollectionViewCell.swift in Sources */,
+				618F375D28580DD900132D47 /* ResultsPageViewController.swift in Sources */,
 				6192AF5928517F5300631265 /* MetaData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

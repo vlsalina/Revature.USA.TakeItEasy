@@ -9,4 +9,5 @@ import UIKit
 
 class MusicCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var albumImage: UIImageView!
 }

@@ -21,12 +21,13 @@ class QuestionsPageViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         initialize()
-        
+//        test()
     }
     
     func initialize() {
         titleLabel.text = quiz?.name
     }
+    
     @IBAction func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -54,6 +55,9 @@ class QuestionsPageViewController: UIViewController {
         } else {
             QuizPageViewController.rewardMsg = QuizConstants.scoredHigh.rawValue
         }
+        
+        // save result to database
+        insertResultData(name: quiz!.name, date: getDate(), score: scoreKeeperObj.percentageScore())
         
         let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
         present(TabPageVC, animated: true, completion: nil)

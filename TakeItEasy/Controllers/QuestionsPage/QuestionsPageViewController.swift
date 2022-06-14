@@ -16,6 +16,8 @@ class QuestionsPageViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var errorLabel: UILabel!
     
+    static var flag = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,8 +84,10 @@ extension QuestionsPageViewController : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = questoinCollection.dequeueReusableCell(withReuseIdentifier: "questionCell", for: indexPath) as! QuestionCollectionViewCell
+        let q = quiz?.details.questions[indexPath.row]
         
-        cell.question = quiz?.details.questions[indexPath.row]
+        cell.answerLabel.text = q!.answer.choice
+        cell.question = q
         return cell
     }
     

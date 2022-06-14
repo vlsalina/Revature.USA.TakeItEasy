@@ -38,15 +38,19 @@ class QuestionCollectionViewCell: UICollectionViewCell {
     
     @IBAction func chooseA(_ sender: Any) {
         question.chooseAction(a: question.choices[0])
+        answerLabel.text = question.answer.choice
     }
     @IBAction func chooseB(_ sender: Any) {
         question.chooseAction(a: question.choices[1])
+        answerLabel.text = question.answer.choice
     }
     @IBAction func chooseC(_ sender: Any) {
         question.chooseAction(a: question.choices[2])
+        answerLabel.text = question.answer.choice
     }
     @IBAction func chooseD(_ sender: Any) {
         question.chooseAction(a: question.choices[3])
+        answerLabel.text = question.answer.choice
     }
     
     

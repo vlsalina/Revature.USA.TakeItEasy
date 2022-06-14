@@ -20,7 +20,7 @@ class ScoreKeeper {
     
     private func getScoreHelper(submittedQuiz: Quiz) {
         for x in submittedQuiz.details.questions {
-            if (x.correctAnswer.choice == x.answer?.choice) {
+            if (x.correctAnswer.choice == x.answer.choice) {
                 score = score + 1
             }
         }

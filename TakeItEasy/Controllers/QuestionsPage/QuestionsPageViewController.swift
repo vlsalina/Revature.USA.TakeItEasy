@@ -23,7 +23,7 @@ class QuestionsPageViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         initialize()
-//        test()
+        //        test()
     }
     
     func initialize() {
@@ -36,8 +36,11 @@ class QuestionsPageViewController: UIViewController {
     
     @IBAction func submitQuiz(_ sender: Any) {
         
+        var flag = false
+        
         do {
             try validateQuestions(quiz: quiz!)
+            flag = true
         } catch QuestionsErrors.notAllQuestionsAnswered {
             errorLabel.text = QuestionsConstants.notAllQuestionsAnswered.rawValue
             return
@@ -46,23 +49,28 @@ class QuestionsPageViewController: UIViewController {
             return
         }
         
-        let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
-        QuizPageViewController.msg = result
-        
-        let score = scoreKeeperObj.percentageScore()
-        if score <= 60 {
-            QuizPageViewController.rewardMsg = QuizConstants.scoredLow.rawValue
-        } else if (score <= 80) {
-            QuizPageViewController.rewardMsg = QuizConstants.scoredMed.rawValue
+        if (flag) {
+            let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
+            QuizPageViewController.msg = result
+            
+            let score = scoreKeeperObj.percentageScore()
+            if score <= 60 {
+                QuizPageViewController.rewardMsg = QuizConstants.scoredLow.rawValue
+            } else if (score <= 80) {
+                QuizPageViewController.rewardMsg = QuizConstants.scoredMed.rawValue
+            } else {
+                QuizPageViewController.rewardMsg = QuizConstants.scoredHigh.rawValue
+            }
+            
+            // save result to database
+            insertResultData(name: quiz!.name, date: getDate(), score: scoreKeeperObj.percentageScore())
+            
+            let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
+            present(TabPageVC, animated: true, completion: nil)
+            
         } else {
-            QuizPageViewController.rewardMsg = QuizConstants.scoredHigh.rawValue
+            errorLabel.text = QuestionsConstants.notAllQuestionsAnswered.rawValue
         }
-        
-        // save result to database
-        insertResultData(name: quiz!.name, date: getDate(), score: scoreKeeperObj.percentageScore())
-        
-        let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
-        present(TabPageVC, animated: true, completion: nil)
     }
     
     /*

@@ -21,6 +21,9 @@
 		618F37592857D27000132D47 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F37582857D27000132D47 /* Result.swift */; };
 		618F375D28580DD900132D47 /* ResultsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F375C28580DD900132D47 /* ResultsPageViewController.swift */; };
 		618F375F28580FED00132D47 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F375E28580FED00132D47 /* ResultsTableViewCell.swift */; };
+		6190101E285AA6B90047B2A6 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 6190101C285AA6B90047B2A6 /* index.html */; };
+		6190101F285AA6B90047B2A6 /* handler.js in Resources */ = {isa = PBXBuildFile; fileRef = 6190101D285AA6B90047B2A6 /* handler.js */; };
+		61901021285AA7EF0047B2A6 /* GooglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61901020285AA7EF0047B2A6 /* GooglePageViewController.swift */; };
 		6192AF4C28517C4600631265 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF4B28517C4600631265 /* LoginPageViewController.swift */; };
 		6192AF5028517CDC00631265 /* DBLoginHelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF4F28517CDC00631265 /* DBLoginHelperClass.swift */; };
 		6192AF5328517CFA00631265 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF5128517CFA00631265 /* User+CoreDataClass.swift */; };
@@ -72,6 +75,9 @@
 		618F37582857D27000132D47 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		618F375C28580DD900132D47 /* ResultsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPageViewController.swift; sourceTree = "<group>"; };
 		618F375E28580FED00132D47 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
+		6190101C285AA6B90047B2A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		6190101D285AA6B90047B2A6 /* handler.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handler.js; sourceTree = "<group>"; };
+		61901020285AA7EF0047B2A6 /* GooglePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePageViewController.swift; sourceTree = "<group>"; };
 		6192AF4B28517C4600631265 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		6192AF4F28517CDC00631265 /* DBLoginHelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBLoginHelperClass.swift; sourceTree = "<group>"; };
 		6192AF5128517CFA00631265 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -154,6 +160,7 @@
 		618CF5D5284FFDEB00BFF072 /* TakeItEasy */ = {
 			isa = PBXGroup;
 			children = (
+				6190101B285AA6460047B2A6 /* Resources */,
 				617A6092285517C9009FDFCD /* SQLiteDB */,
 				617A608B2854FB01009FDFCD /* DataFolder */,
 				6192AFB72852531A00631265 /* Classes */,
@@ -180,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				733261F4285555D6008CBC5C /* SearchPageViewController.swift */,
+				61901020285AA7EF0047B2A6 /* GooglePageViewController.swift */,
 			);
 			path = SearchPage;
 			sourceTree = "<group>";
@@ -191,6 +199,15 @@
 				618F375E28580FED00132D47 /* ResultsTableViewCell.swift */,
 			);
 			path = ResultsPage;
+			sourceTree = "<group>";
+		};
+		6190101B285AA6460047B2A6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6190101D285AA6B90047B2A6 /* handler.js */,
+				6190101C285AA6B90047B2A6 /* index.html */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		6192AF4928517C2600631265 /* Controllers */ = {
@@ -382,6 +399,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				618CF5E6284FFDEC00BFF072 /* LaunchScreen.storyboard in Resources */,
+				6190101E285AA6B90047B2A6 /* index.html in Resources */,
+				6190101F285AA6B90047B2A6 /* handler.js in Resources */,
 				618CF5E3284FFDEC00BFF072 /* Assets.xcassets in Resources */,
 				618CF5DE284FFDEB00BFF072 /* Main.storyboard in Resources */,
 			);
@@ -404,6 +423,7 @@
 				6192AFBD2852536C00631265 /* QuizCollectionViewCell.swift in Sources */,
 				733261F5285555D6008CBC5C /* SearchPageViewController.swift in Sources */,
 				6192AF632851813700631265 /* Helpers.swift in Sources */,
+				61901021285AA7EF0047B2A6 /* GooglePageViewController.swift in Sources */,
 				84A3C53628513BF200664E96 /* GeneralBooksCollectionViewCell.swift in Sources */,
 				6192AF60285180B700631265 /* RememberMeHelper.swift in Sources */,
 				6192B069285392D900631265 /* ScoreKeeper.swift in Sources */,

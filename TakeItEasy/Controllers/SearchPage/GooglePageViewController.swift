@@ -1,18 +1,27 @@
 //
-//  SearchPageViewController.swift
+//  GooglePageViewController.swift
 //  TakeItEasy
 //
-//  Created by Matt Caulder on 6/11/22.
+//  Created by Vincent Salinas on 6/15/22.
 //
 
 import UIKit
 import WebKit
 
-class SearchPageViewController: UIViewController {
+class GooglePageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Do any additional setup after loading the view.
+        openGoogle()
+    }
+    
+    func openGoogle() {
+        let webKitView = WKWebView()
+        let newUrl = URL(string: "https://www.google.com")!
+        webKitView.load(URLRequest(url: newUrl))
+        view = webKitView
     }
     
     /*

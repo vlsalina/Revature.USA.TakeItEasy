@@ -20,6 +20,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     public var myTime: Int = 0
     public var timer = Timer()
     
+    public var mp3Url:String = ""
     public var playlistIDVar = "10436707122"
     //playbackbuttons
     let playPauseButton = UIButton()
@@ -29,27 +30,12 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     //allows audio
     var player:AVPlayer?
     var playerItem:AVPlayerItem?
+    var songIsPlaying:Bool = false
     
     // progressbar
     @IBOutlet var progressBar: UIProgressView!
     @IBOutlet var startTime:UILabel!
     @IBOutlet var resultTime:UILabel!
-    
-    // label name
-    private let songNameLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
-    }()
-    private let artistNameLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playlist.songTitles.count
@@ -57,15 +43,29 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        
-       
+        mp3Url = playlist.mp3URLs[indexPath.row]
+        print(mp3Url)
+        position = indexPath.row
+        if(songIsPlaying){
+            player?.pause()
+            playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
+            songIsPlaying = false
+        }
+        configure()
                
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "musicCell", for: indexPath) as! MusicCollectionViewCell
         
-
+        cell.layer.cornerRadius = 22
+        //cell.albumImage.image = UIImage(named:"1")
+        cell.layer.masksToBounds = true
+        cell.cellSongName!.text = playlist.songTitles[indexPath.row]
+        cell.cellArtistName!.text = playlist.artistNames[indexPath.row]
+        cell.cellAlbumName!.text = playlist.albumTitles[indexPath.row]
+        musicLoadURLImage(urlString: self.playlist.coverURLs[indexPath.row], musicCell: cell)
+        
         return cell
     }
     
@@ -73,7 +73,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
+        getMusicData(playlistID: playlistIDVar)
         drawButtons()
         
     }
@@ -92,13 +92,14 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
                         print("decoding")
                         let musicData = try decoder.decode(Tracks.self, from: data!)
                         for song in musicData.data!{
+                            print(song.preview!)
                             self.playlist.songTitles.append(song.title!)
                             self.playlist.albumTitles.append(song.album!.title!)
                             self.playlist.artistNames.append(song.artist!.name!)
                             self.playlist.mp3URLs.append(song.preview!)
                             self.playlist.coverURLs.append(song.album!.cover_medium!)
                         }
-                        print(self.playlist.mp3URLs)
+                        self.configure()
                         DispatchQueue.main.async {
                             self.musicCollectionView.reloadData() //reload collections or table views inside DispatchQueue.main.async
                         }
@@ -114,8 +115,8 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
 
         }
     func configure(){
-        getMusicData(playlistID: playlistIDVar)
-        let url = URL(string: "https://cdns-preview-4.dzcdn.net/stream/c-4956811d065e816988a60e767ad34cb2-6.mp3")
+        //getMusicData(playlistID: playlistIDVar)
+        let url = URL(string: self.playlist.mp3URLs[position])
         playerItem = AVPlayerItem(url:url!)
         player = AVPlayer(playerItem:playerItem!)
         let playerLayer = AVPlayerLayer(player:player!)
@@ -180,12 +181,16 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     }
     //play pause functionaility
     @objc func didPressPlayPauseButton(){
-        if (player?.rate == 0){
-            player!.play()
-            playPauseButton.setBackgroundImage(UIImage(systemName:"pause.fill"), for: .normal)
-        } else{
-            player!.pause()
-            playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
+        if(playlist.songTitles.count > 0){
+            if (player?.rate == 0 && !songIsPlaying){
+                player!.play()
+                songIsPlaying = true
+                playPauseButton.setBackgroundImage(UIImage(systemName:"pause.fill"), for: .normal)
+            } else if (songIsPlaying){
+                player!.pause()
+                songIsPlaying = false
+                playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
+            }
         }
     }
     
@@ -195,6 +200,27 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         if let player = player{
             player.pause()
         }
+    }
+    func musicLoadURLImage(urlString: String, musicCell : MusicCollectionViewCell){
+        //if json data didn't contain url thumbnail data, don't load image
+        let urlRequest = URL(string: urlString)
+        if urlRequest == nil{
+            print("url does not exist")
+            return
+        }
+        print("url exists")
+        //start datatask
+        let dataTask = URLSession.shared.dataTask(with: urlRequest!, completionHandler: { data, response, error in
+            if error == nil && data != nil{
+                DispatchQueue.main.async {
+                    musicCell.albumImage.image = UIImage(data: data!)
+                }
+            }
+            else{
+                print("error loading web image")
+            }
+        })
+        dataTask.resume()
     }
     // converts seconds to minutes for timer functionality
     func secondsToMinutes(seconds: Int) ->(Int, Int){
@@ -209,7 +235,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
 //            let time = secondsToMinutes(seconds:myTime + 1)
 //            startTime.text = String(format:"%02d",time.0) + ":" + String(format: "%02d",time.1)
 //
-//            guard let total = player?.actionAtItemEnd else{
+//            guard let total = player?.duration else{
 //                return
 //            }
 //            progressBar.setProgress(Float(myTime)*Float(1/total.rawValue),animated:true)
@@ -221,7 +247,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
 
 extension MusicViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 300)
+        return CGSize(width: 400, height: 400)
     }
 
 }

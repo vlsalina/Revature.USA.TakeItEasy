@@ -84,4 +84,10 @@ func segueToVC(target: String, sender: AnyObject) {
 }
 
 
+// round corners
+func roundedCorners(_ param: inout UIView) {
+    param.layer.cornerRadius = 15
+}
+
+
 

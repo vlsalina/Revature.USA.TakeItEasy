@@ -20,6 +20,7 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var userid: UITextField!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var box1: UIView!
     
     var currentOTP = ""
     
@@ -31,6 +32,11 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
         otpPopup.layer.masksToBounds = true
         UNUserNotificationCenter.current().delegate = self
         // Do any additional setup after loading the view.
+        initialize()
+    }
+    
+    func initialize() {
+        roundedCorners(&box1)
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {

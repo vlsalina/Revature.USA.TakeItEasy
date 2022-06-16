@@ -928,6 +928,22 @@
             </objects>
             <point key="canvasLocation" x="938" y="2435"/>
         </scene>
+        <!--Forum Page-->
+        <scene sceneID="0PU-hg-5qw">
+            <objects>
+                <viewController title="Forum Page" id="bsD-MS-beD" customClass="ForumPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ex8-72-gHC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="CxB-mk-nbR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JUq-dF-qXp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i6A-3P-ECS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="2435"/>
+        </scene>
         <!--Search Page-->
         <scene sceneID="jWP-9Z-f5D">
             <objects>
@@ -1004,6 +1020,9 @@
                                                 <rect key="frame" x="0.0" y="74.5" width="366" height="200.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Forums"/>
+                                                <connections>
+                                                    <segue destination="bsD-MS-beD" kind="show" id="1vz-f2-hzC"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

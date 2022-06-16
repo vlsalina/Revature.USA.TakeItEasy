@@ -55,6 +55,7 @@
 		733261AC28522E19008CBC5C /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261AB28522E19008CBC5C /* MusicViewController.swift */; };
 		733261AF28522E68008CBC5C /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261AE28522E68008CBC5C /* MusicCollectionViewCell.swift */; };
 		733261F5285555D6008CBC5C /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261F4285555D6008CBC5C /* SearchPageViewController.swift */; };
+		733262DB2859277A008CBC5C /* MusicDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733262DA2859277A008CBC5C /* MusicDataTypes.swift */; };
 		845A19C728577FB6005013EA /* BookDataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A19C628577FB6005013EA /* BookDataTypes.swift */; };
 		845A19C9285780EA005013EA /* BookConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845A19C8285780EA005013EA /* BookConstants.swift */; };
 		849C70C6285262D800452F1F /* SearchBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C70C5285262D800452F1F /* SearchBarTableViewCell.swift */; };
@@ -116,6 +117,7 @@
 		733261AB28522E19008CBC5C /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		733261AE28522E68008CBC5C /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
 		733261F4285555D6008CBC5C /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
+		733262DA2859277A008CBC5C /* MusicDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDataTypes.swift; sourceTree = "<group>"; };
 		845A19C628577FB6005013EA /* BookDataTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataTypes.swift; sourceTree = "<group>"; };
 		845A19C8285780EA005013EA /* BookConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookConstants.swift; sourceTree = "<group>"; };
 		849C70C5285262D800452F1F /* SearchBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarTableViewCell.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 			children = (
 				733261AB28522E19008CBC5C /* MusicViewController.swift */,
 				733261AE28522E68008CBC5C /* MusicCollectionViewCell.swift */,
+				733262DA2859277A008CBC5C /* MusicDataTypes.swift */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				618CF5D9284FFDEB00BFF072 /* SceneDelegate.swift in Sources */,
 				61B9C1662855602A00A8BA1C /* SQLiteConstants.swift in Sources */,
 				6192B0032852810700631265 /* QuestionsPageViewController.swift in Sources */,
+				733262DB2859277A008CBC5C /* MusicDataTypes.swift in Sources */,
 				6192AF5028517CDC00631265 /* DBLoginHelperClass.swift in Sources */,
 				6192AF5428517CFA00631265 /* User+CoreDataProperties.swift in Sources */,
 				618CF5E1284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld in Sources */,

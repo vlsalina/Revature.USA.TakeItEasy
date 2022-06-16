@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css"></style>
+    <title>WebKit Demo</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body style="background-color: grey">
+    <h1>Login Page</h1>
+
+    <form class="form-signin" role="form">
+      <div class="form-content">
+        <label for="email" class="form-email">Sign In</label>
+        <br />
+        <input
+          type="email"
+          id="email"
+          class="form-control"
+          placeholder="Email"
+          required
+          autofocus
+        />
+        <br />
+        <input
+          type="password"
+          id="password"
+          class="form-control"
+          placeholder="Password"
+          required
+        />
+        <br />
+
+        <button type="button" onClick="sendLoginAction()">Login</button>
+      </div>
+    </form>
+    <script type="text/javascript" src="handler.js"></script>
+  </body>
+</html>

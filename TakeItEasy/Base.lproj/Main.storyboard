@@ -912,10 +912,10 @@
             </objects>
             <point key="canvasLocation" x="-4.3478260869565224" y="2434.8214285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--Google Page View Controller-->
         <scene sceneID="fdF-DL-vqt">
             <objects>
-                <viewController id="Cu1-AL-BaC" sceneMemberID="viewController">
+                <viewController id="Cu1-AL-BaC" customClass="GooglePageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ag3-dg-tDa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -957,8 +957,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZSL-Cu-JFp">
-                                <rect key="frame" x="173.03428888506278" y="344.17989865105528" width="72.5" height="74"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZSL-Cu-JFp">
+                                <rect key="frame" x="173" y="344" width="72.5" height="74"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt6-iS-fob">
                                         <rect key="frame" x="0.0" y="0.0" width="72.5" height="31"/>
@@ -974,14 +974,19 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Forums"/>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="wlV-cI-Stg"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4nR-W3-g3T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ZSL-Cu-JFp" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="173.03" id="0W1-aI-qd6"/>
                             <constraint firstItem="Qle-R4-uLz" firstAttribute="top" secondItem="4nR-W3-g3T" secondAttribute="top" constant="24" id="dEC-3N-4X8"/>
                             <constraint firstItem="Qle-R4-uLz" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="24" id="pdT-Bf-MfM"/>
                             <constraint firstItem="4nR-W3-g3T" firstAttribute="trailing" secondItem="Qle-R4-uLz" secondAttribute="trailing" constant="24" id="uNa-Rp-n9V"/>
+                            <constraint firstItem="ZSL-Cu-JFp" firstAttribute="top" secondItem="Qle-R4-uLz" secondAttribute="bottom" constant="289.18000000000001" id="yRW-Zv-GV2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="Q8e-UD-VlV">

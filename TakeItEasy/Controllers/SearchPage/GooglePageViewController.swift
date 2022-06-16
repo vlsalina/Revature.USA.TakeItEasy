@@ -14,15 +14,14 @@ class GooglePageViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        openGoogle()
-    }
-    
-    func openGoogle() {
         let webKitView = WKWebView()
         let newUrl = URL(string: "https://www.google.com")!
         webKitView.load(URLRequest(url: newUrl))
         view = webKitView
+        
+        
     }
+    
     
     /*
      // MARK: - Navigation

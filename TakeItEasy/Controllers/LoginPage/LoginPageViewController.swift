@@ -37,6 +37,7 @@ class LoginPageViewController: UIViewController {
             passwordField.text = ""
             rememberMe.isOn = false
         }
+        roundedCorners(&box1)
     }
     
     

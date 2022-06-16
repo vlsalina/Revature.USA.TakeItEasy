@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7q6-K2-sXA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3y-u2-S9t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -768,7 +768,9 @@
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdy-am-wuQ">
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
-                                                                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                                                <color key="baseBackgroundColor" name="logo"/>
+                                                                            </buttonConfiguration>
                                                                             <connections>
                                                                                 <action selector="chooseA:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="S67-Ln-IVs"/>
                                                                             </connections>
@@ -781,7 +783,9 @@
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gF1-Cp-0Lj">
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
-                                                                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                                                <color key="baseBackgroundColor" name="logo"/>
+                                                                            </buttonConfiguration>
                                                                             <connections>
                                                                                 <action selector="chooseB:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="oAl-2Z-PPu"/>
                                                                             </connections>
@@ -794,7 +798,9 @@
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="778-fN-f8q">
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
-                                                                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                                                <color key="baseBackgroundColor" name="logo"/>
+                                                                            </buttonConfiguration>
                                                                             <connections>
                                                                                 <action selector="chooseC:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="1RD-8k-zjW"/>
                                                                             </connections>
@@ -807,7 +813,9 @@
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-eN-i9o">
                                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="31"/>
                                                                             <state key="normal" title="Button"/>
-                                                                            <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                                            <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                                                <color key="baseBackgroundColor" name="logo"/>
+                                                                            </buttonConfiguration>
                                                                             <connections>
                                                                                 <action selector="chooseD:" destination="BIj-Yl-OsS" eventType="touchUpInside" id="HFD-CY-1Zn"/>
                                                                             </connections>
@@ -1182,7 +1190,9 @@
                         <viewLayoutGuide key="safeArea" id="pYT-mk-H87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Music" selectedImage="music.note" catalog="system" id="WP5-Ul-kxX"/>
+                    <tabBarItem key="tabBarItem" title="Music" image="music.note" catalog="system" selectedImage="music.note" id="WP5-Ul-kxX">
+                        <color key="badgeColor" name="logo"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="holder" destination="Xza-LF-xz1" id="wBO-5j-8xr"/>
                         <outlet property="musicCollectionView" destination="9ts-GJ-Pfb" id="MRS-Fx-270"/>
@@ -1203,16 +1213,16 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="2w0-gE-lx3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" systemColor="tintColor"/>
-                        <color key="selectedImageTintColor" systemColor="tintColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                        <color key="selectedImageTintColor" name="logo"/>
                     </tabBar>
                     <connections>
-                        <segue destination="kKf-V3-McW" kind="relationship" relationship="viewControllers" id="SnV-ZW-BuE"/>
-                        <segue destination="eUS-iK-d8C" kind="relationship" relationship="viewControllers" id="EK1-Hf-pH9"/>
-                        <segue destination="7q6-K2-sXA" kind="relationship" relationship="viewControllers" id="VRB-RK-Cjp"/>
-                        <segue destination="iNa-Xt-3mv" kind="relationship" relationship="viewControllers" id="gCu-5T-CU7"/>
-                        <segue destination="FKN-Hg-gu6" kind="relationship" relationship="viewControllers" id="kai-ak-0cE"/>
+                        <segue destination="7q6-K2-sXA" kind="relationship" relationship="viewControllers" id="ybY-hJ-9R8"/>
+                        <segue destination="iNa-Xt-3mv" kind="relationship" relationship="viewControllers" id="C4r-9b-H6O"/>
+                        <segue destination="FKN-Hg-gu6" kind="relationship" relationship="viewControllers" id="UrS-gX-ADn"/>
+                        <segue destination="kKf-V3-McW" kind="relationship" relationship="viewControllers" id="lcy-3J-Nvu"/>
+                        <segue destination="eUS-iK-d8C" kind="relationship" relationship="viewControllers" id="8nf-jY-bQq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEC-iO-hCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1616,7 +1626,9 @@
                                 <rect key="frame" x="298" y="128" width="96" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Save"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save">
+                                    <color key="baseBackgroundColor" name="logo"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="saveEdit:" destination="iDr-ab-lDi" eventType="touchUpInside" id="aDw-vG-gN7"/>
                                 </connections>
@@ -1625,7 +1637,9 @@
                                 <rect key="frame" x="20" y="723" width="374" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Record"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Record">
+                                    <color key="baseBackgroundColor" name="logo"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="recordNote:" destination="iDr-ab-lDi" eventType="touchUpInside" id="Csd-Pd-9mP"/>
                                 </connections>
@@ -1651,11 +1665,11 @@
             </objects>
             <point key="canvasLocation" x="4201" y="759"/>
         </scene>
-        <!--Item-->
+        <!--Notes-->
         <scene sceneID="WRs-Iz-dT3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FKN-Hg-gu6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="w8W-ZS-Hbh"/>
+                    <tabBarItem key="tabBarItem" title="Notes" image="note.text" catalog="system" id="w8W-ZS-Hbh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yd2-cH-I3w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
@@ -1672,7 +1686,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1s6-qj-ZBV"/>
+        <segue reference="X4l-Cb-NcZ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="6000" height="4000"/>
@@ -1681,6 +1695,7 @@
         <image name="cloud_icon" width="2048" height="2048"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="music.note" catalog="system" width="97" height="128"/>
+        <image name="note.text" catalog="system" width="128" height="106"/>
         <image name="pexels-gradienta-6985047" width="6000" height="4000"/>
         <image name="questionmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>

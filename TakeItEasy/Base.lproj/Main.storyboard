@@ -957,28 +957,28 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="93m-DQ-5hC">
-                                <rect key="frame" x="24" y="345" width="366" height="152"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wfP-wy-Ud2">
+                                <rect key="frame" x="24" y="79" width="366" height="580"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qYk-Wl-375">
-                                        <rect key="frame" x="0.0" y="0.0" width="175.5" height="152"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="275"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qu-KY-kHv">
-                                                <rect key="frame" x="0.0" y="0.0" width="175.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take It Easy and surf the web right inside the app!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doQ-FW-gU8">
-                                                <rect key="frame" x="0.0" y="45" width="175.5" height="61"/>
+                                                <rect key="frame" x="0.0" y="45" width="366" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt6-iS-fob">
-                                                <rect key="frame" x="0.0" y="121" width="175.5" height="31"/>
+                                                <rect key="frame" x="0.0" y="101" width="366" height="174"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Google"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Google"/>
                                                 <connections>
                                                     <segue destination="Cu1-AL-BaC" kind="show" id="LmJ-dP-oaF"/>
                                                 </connections>
@@ -986,43 +986,40 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KTF-Tz-avs">
-                                        <rect key="frame" x="190.5" y="0.0" width="175.5" height="152"/>
+                                        <rect key="frame" x="0.0" y="305" width="366" height="275"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qE-Oy-dIY">
-                                                <rect key="frame" x="0.0" y="0.0" width="175.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or come check out our forum site!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-wG-bbF">
-                                                <rect key="frame" x="0.0" y="42" width="175.5" height="41"/>
+                                                <rect key="frame" x="0.0" y="42" width="366" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTO-me-qmD">
-                                                <rect key="frame" x="0.0" y="95" width="175.5" height="57"/>
+                                                <rect key="frame" x="0.0" y="74.5" width="366" height="200.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Forums"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Forums"/>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="qYk-Wl-375" firstAttribute="leading" secondItem="93m-DQ-5hC" secondAttribute="leading" id="2jj-VL-YbR"/>
-                                    <constraint firstItem="KTF-Tz-avs" firstAttribute="leading" secondItem="qYk-Wl-375" secondAttribute="trailing" id="2lQ-sP-gas"/>
-                                    <constraint firstItem="qYk-Wl-375" firstAttribute="top" secondItem="93m-DQ-5hC" secondAttribute="top" id="MBJ-eJ-c0X"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4nR-W3-g3T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="wfP-wy-Ud2" firstAttribute="top" secondItem="Qle-R4-uLz" secondAttribute="bottom" constant="24" id="MHb-ZG-Fnx"/>
                             <constraint firstItem="Qle-R4-uLz" firstAttribute="top" secondItem="4nR-W3-g3T" secondAttribute="top" constant="24" id="dEC-3N-4X8"/>
-                            <constraint firstItem="93m-DQ-5hC" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="24" id="mr7-su-4aH"/>
+                            <constraint firstAttribute="trailing" secondItem="wfP-wy-Ud2" secondAttribute="trailing" constant="24" id="gzY-Vn-pOZ"/>
+                            <constraint firstItem="4nR-W3-g3T" firstAttribute="bottom" secondItem="wfP-wy-Ud2" secondAttribute="bottom" constant="100" id="p6Y-vd-7YW"/>
                             <constraint firstItem="Qle-R4-uLz" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="24" id="pdT-Bf-MfM"/>
                             <constraint firstItem="4nR-W3-g3T" firstAttribute="trailing" secondItem="Qle-R4-uLz" secondAttribute="trailing" constant="24" id="uNa-Rp-n9V"/>
-                            <constraint firstItem="4nR-W3-g3T" firstAttribute="trailing" secondItem="93m-DQ-5hC" secondAttribute="trailing" constant="24" id="xb0-Y4-DmU"/>
+                            <constraint firstItem="wfP-wy-Ud2" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="24" id="yaC-vp-5FN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="Q8e-UD-VlV">

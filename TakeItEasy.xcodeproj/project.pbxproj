@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B8A87E4285B8B9100CC078F /* NotePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A87E0285B8B9100CC078F /* NotePage.swift */; };
+		4B8A87E5285B8B9100CC078F /* NoteTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A87E1285B8B9100CC078F /* NoteTable.swift */; };
+		4B8A87E6285B8B9100CC078F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A87E2285B8B9100CC078F /* Helper.swift */; };
+		4B8A87E7285B8B9100CC078F /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A87E3285B8B9100CC078F /* NoteCell.swift */; };
+		4B8A87EA285B8C1600CC078F /* NoteBook+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A87E8285B8C1600CC078F /* NoteBook+CoreDataClass.swift */; };
+		4B8A87EB285B8C1600CC078F /* NoteBook+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A87E9285B8C1600CC078F /* NoteBook+CoreDataProperties.swift */; };
 		617A608D2854FB11009FDFCD /* QuizData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A608C2854FB11009FDFCD /* QuizData.swift */; };
 		617A608F2854FD31009FDFCD /* QuizSQLClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A608E2854FD31009FDFCD /* QuizSQLClass.swift */; };
 		617A60912854FDA0009FDFCD /* QuizConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A60902854FDA0009FDFCD /* QuizConstants.swift */; };
@@ -60,6 +66,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B8A87E0285B8B9100CC078F /* NotePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotePage.swift; sourceTree = "<group>"; };
+		4B8A87E1285B8B9100CC078F /* NoteTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteTable.swift; sourceTree = "<group>"; };
+		4B8A87E2285B8B9100CC078F /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		4B8A87E3285B8B9100CC078F /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		4B8A87E8285B8C1600CC078F /* NoteBook+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteBook+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4B8A87E9285B8C1600CC078F /* NoteBook+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteBook+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		617A608C2854FB11009FDFCD /* QuizData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizData.swift; sourceTree = "<group>"; };
 		617A608E2854FD31009FDFCD /* QuizSQLClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSQLClass.swift; sourceTree = "<group>"; };
 		617A60902854FDA0009FDFCD /* QuizConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizConstants.swift; sourceTree = "<group>"; };
@@ -125,6 +137,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B8A87DF285B8B7800CC078F /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				4B8A87E2285B8B9100CC078F /* Helper.swift */,
+				4B8A87E3285B8B9100CC078F /* NoteCell.swift */,
+				4B8A87E0285B8B9100CC078F /* NotePage.swift */,
+				4B8A87E1285B8B9100CC078F /* NoteTable.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
 		617A608B2854FB01009FDFCD /* DataFolder */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +167,8 @@
 		618CF5CA284FFDEB00BFF072 = {
 			isa = PBXGroup;
 			children = (
+				4B8A87E8285B8C1600CC078F /* NoteBook+CoreDataClass.swift */,
+				4B8A87E9285B8C1600CC078F /* NoteBook+CoreDataProperties.swift */,
 				6192AF5128517CFA00631265 /* User+CoreDataClass.swift */,
 				6192AF5228517CFA00631265 /* User+CoreDataProperties.swift */,
 				618CF5D5284FFDEB00BFF072 /* TakeItEasy */,
@@ -162,6 +187,7 @@
 		618CF5D5284FFDEB00BFF072 /* TakeItEasy */ = {
 			isa = PBXGroup;
 			children = (
+				4B8A87DF285B8B7800CC078F /* Note */,
 				6190101B285AA6460047B2A6 /* Resources */,
 				617A6092285517C9009FDFCD /* SQLiteDB */,
 				617A608B2854FB01009FDFCD /* DataFolder */,
@@ -433,16 +459,20 @@
 				6192B069285392D900631265 /* ScoreKeeper.swift in Sources */,
 				6192AF5328517CFA00631265 /* User+CoreDataClass.swift in Sources */,
 				845A19C728577FB6005013EA /* BookDataTypes.swift in Sources */,
+				4B8A87E5285B8B9100CC078F /* NoteTable.swift in Sources */,
 				849C70C6285262D800452F1F /* SearchBarTableViewCell.swift in Sources */,
+				4B8A87E7285B8B9100CC078F /* NoteCell.swift in Sources */,
 				618F37592857D27000132D47 /* Result.swift in Sources */,
 				84A3C53428513BB300664E96 /* BooksViewController.swift in Sources */,
 				618F375F28580FED00132D47 /* ResultsTableViewCell.swift in Sources */,
 				6192AF8E2851AD1800631265 /* SignupConstants.swift in Sources */,
+				4B8A87E6285B8B9100CC078F /* Helper.swift in Sources */,
 				6192AF4C28517C4600631265 /* LoginPageViewController.swift in Sources */,
 				84A3C53E28513C4900664E96 /* RecipeBooksCollectionViewCell.swift in Sources */,
 				618CF5DB284FFDEB00BFF072 /* ViewController.swift in Sources */,
 				617A60912854FDA0009FDFCD /* QuizConstants.swift in Sources */,
 				6192AF5C28517F9100631265 /* KeychainManager.swift in Sources */,
+				4B8A87EA285B8C1600CC078F /* NoteBook+CoreDataClass.swift in Sources */,
 				6192AFB92852532800631265 /* Quiz.swift in Sources */,
 				618CF5D7284FFDEB00BFF072 /* AppDelegate.swift in Sources */,
 				6192AFBB2852535500631265 /* QuizPageViewController.swift in Sources */,
@@ -454,10 +484,12 @@
 				618CF5E1284FFDEB00BFF072 /* TakeItEasy.xcdatamodeld in Sources */,
 				733261AC28522E19008CBC5C /* MusicViewController.swift in Sources */,
 				6192AF66285195B800631265 /* SignupPageViewController.swift in Sources */,
+				4B8A87EB285B8C1600CC078F /* NoteBook+CoreDataProperties.swift in Sources */,
 				61B9C164285559B700A8BA1C /* SQLHelpers.swift in Sources */,
 				84A3C5612851406C00664E96 /* OpenedBooksViewController.swift in Sources */,
 				6192AF5728517E4A00631265 /* LoginConstants.swift in Sources */,
 				6192AF5E28517FEA00631265 /* KeychainConstants.swift in Sources */,
+				4B8A87E4285B8B9100CC078F /* NotePage.swift in Sources */,
 				733261AF28522E68008CBC5C /* MusicCollectionViewCell.swift in Sources */,
 				618F375D28580DD900132D47 /* ResultsPageViewController.swift in Sources */,
 				6192AF5928517F5300631265 /* MetaData.swift in Sources */,

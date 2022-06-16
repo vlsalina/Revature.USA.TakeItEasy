@@ -26,3 +26,19 @@ struct Album : Codable{
     var title : String?
     var cover_medium : String?
 }
+
+class Playlist{
+    var songTitles : [String] = []
+    var albumTitles : [String] = []
+    var artistNames : [String] = []
+    var mp3URLs : [String] = []
+    var coverURLs : [String] = []
+    
+    func resetData(){
+        songTitles = []
+        albumTitles = []
+        artistNames = []
+        mp3URLs = []
+        coverURLs = []
+    }
+}

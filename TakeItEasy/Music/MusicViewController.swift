@@ -9,22 +9,26 @@ import UIKit
 import AVFoundation
 class MusicViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
     //declare variables
-    var songs = [Song]()
+    var playlist = Playlist()
     //button view
+    @IBOutlet weak var musicCollectionView: UICollectionView!
+    
     @IBOutlet var holder:UIView!
     
-    public var position:Int = 4
+    public var position:Int = 0
     //timers
     public var myTime: Int = 0
     public var timer = Timer()
     
+    public var playlistIDVar = "10436707122"
     //playbackbuttons
     let playPauseButton = UIButton()
     let backButton = UIButton()
     let forwardButton = UIButton()
     
     //allows audio
-    var player:AVAudioPlayer?
+    var player:AVPlayer?
+    var playerItem:AVPlayerItem?
     
     // progressbar
     @IBOutlet var progressBar: UIProgressView!
@@ -48,19 +52,20 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return songs.count
+        return playlist.songTitles.count
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        let position = indexPath.row
-        print(position)
+        
+       
                
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "musicCell", for: indexPath)
-        cell.backgroundColor = UIColor.red
+        var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "musicCell", for: indexPath) as! MusicCollectionViewCell
+        
+
         return cell
     }
     
@@ -68,33 +73,54 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureSongs()
         configure()
         drawButtons()
-        drawSlider()
+        
     }
+    func getMusicData(playlistID : String){
+            let urlRequest = URL(string: "https://api.deezer.com/playlist/" + playlistID + "/tracks")
+            if urlRequest == nil{
+                print("url does not exist")
+                return
+            }
+            print("url exists")
+            let dataTask = URLSession.shared.dataTask(with: urlRequest!, completionHandler: { data, response, error in
+                print("dataTask")
+                if error == nil && data != nil{
+                    let decoder = JSONDecoder()
+                    do{
+                        print("decoding")
+                        let musicData = try decoder.decode(Tracks.self, from: data!)
+                        for song in musicData.data!{
+                            self.playlist.songTitles.append(song.title!)
+                            self.playlist.albumTitles.append(song.album!.title!)
+                            self.playlist.artistNames.append(song.artist!.name!)
+                            self.playlist.mp3URLs.append(song.preview!)
+                            self.playlist.coverURLs.append(song.album!.cover_medium!)
+                        }
+                        print(self.playlist.mp3URLs)
+                        DispatchQueue.main.async {
+                            self.musicCollectionView.reloadData() //reload collections or table views inside DispatchQueue.main.async
+                        }
+                    }
+                    catch{
+                        print("error")
+                    }
+                }
+                print("finished dataTask")
+
+            })
+            dataTask.resume()
+
+        }
     func configure(){
-//        let song = songs[position]
-//        let urlString = Bundle.main.path(forResource: song.trackName, ofType: "mp3")
-//        do{
-//            try AVAudioSession.sharedInstance().setMode(.default)
-//            try AVAudioSession.sharedInstance().setActive(true,options:.notifyOthersOnDeactivation)
-//            guard let urlString = urlString else{
-//                return
-//            }
-//            player = try AVAudioPlayer(contentsOf:URL(string:urlString)!)
-//            guard let player = player else{
-//                return
-//            }
-//            player.volume = 0.5
-//
-//            player.play()
-//            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-//            let time = secondsToMinutes(seconds: Int(player.duration))
-//            resultTime.text = String(format: "%02d", time.0) + ":" + String(format: "%02d", time.1)
-//            }catch{
-//           print("Error")
-//            }
+        getMusicData(playlistID: playlistIDVar)
+        let url = URL(string: "https://cdns-preview-4.dzcdn.net/stream/c-4956811d065e816988a60e767ad34cb2-6.mp3")
+        playerItem = AVPlayerItem(url:url!)
+        player = AVPlayer(playerItem:playerItem!)
+        let playerLayer = AVPlayerLayer(player:player!)
+        playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
+        self.view.layer.addSublayer(playerLayer)
     }
     //Draws buttons in my Holder View
     func drawButtons(){
@@ -124,31 +150,16 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         backButton.addTarget(self, action: #selector(didPressBackButton), for: .touchUpInside)
         forwardButton.addTarget(self, action: #selector(didPressForwardButton), for: .touchUpInside)
     }
-    //draw slider function
-    func drawSlider(){
-        let slider = UISlider(frame:CGRect(x: 20, y: holder.frame.size.height-60, width: holder.frame.size.width-40, height: -150))
-        holder.addSubview(slider)
-        slider.value=0.5
-        slider.addTarget(self, action: #selector(didSlideSlider(_:)), for: .valueChanged)
-        
-        holder.addSubview(slider)
-    }
-    // volume slider
-    @objc func didSlideSlider(_ slider: UISlider){
-        let value = slider.value
-        player?.volume = value
-        
-    }
     // last song
     @objc func didPressBackButton(){
-        if position < songs.count - 1 {
+        if position < playlist.songTitles.count - 1 {
+            print("backbutton")
             position = position + 1
-            player?.stop()
+            player?.pause()
             progressBar.setProgress(0.0, animated: true)
             myTime = 0
             startTime.text = "00:00"
             timer.invalidate()
-                    
             configure()
         }
 
@@ -158,29 +169,23 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         print("nextbutton")
         if position > 0 {
             position = position - 1
-            player?.stop()
+            player?.pause()
             progressBar.setProgress(0.0, animated: true)
-                    myTime = 0
-                    startTime.text = "00:00"
-                    timer.invalidate()
-                    configure()
+            myTime = 0
+            startTime.text = "00:00"
+            timer.invalidate()
+            configure()
         }
         
     }
     //play pause functionaility
     @objc func didPressPlayPauseButton(){
-        if (player?.isPlaying != true){
-            print("pauseButton")
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
-            player?.play()
-            playPauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
-
-        }else{
-            player?.pause()
-            timer.invalidate()
-            print("playbutton")
+        if (player?.rate == 0){
+            player!.play()
+            playPauseButton.setBackgroundImage(UIImage(systemName:"pause.fill"), for: .normal)
+        } else{
+            player!.pause()
             playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
-            
         }
     }
     
@@ -188,7 +193,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if let player = player{
-            player.stop()
+            player.pause()
         }
     }
     // converts seconds to minutes for timer functionality
@@ -198,18 +203,18 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     //function to update time
     @objc func updateTime(){
        
-        if(startTime.text! != resultTime.text!){
-            myTime  = myTime + 1
-            
-            let time = secondsToMinutes(seconds:myTime + 1)
-            startTime.text = String(format:"%02d",time.0) + ":" + String(format: "%02d",time.1)
-            
-            guard let total = player?.duration else{
-                return
-            }
-            progressBar.setProgress(Float(myTime)*Float(1/total),animated:true)
-        }
-        
+//        if(startTime.text! != resultTime.text!){
+//            myTime  = myTime + 1
+//
+//            let time = secondsToMinutes(seconds:myTime + 1)
+//            startTime.text = String(format:"%02d",time.0) + ":" + String(format: "%02d",time.1)
+//
+//            guard let total = player?.actionAtItemEnd else{
+//                return
+//            }
+//            progressBar.setProgress(Float(myTime)*Float(1/total.rawValue),animated:true)
+//        }
+//
     }
 }
 
@@ -218,21 +223,8 @@ extension MusicViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 300, height: 300)
     }
-    func configureSongs(){
-        songs.append(Song(name: "As You Fade Away", artistName: "NEFFEX", imageName: "1", trackName: "s1"))
-        songs.append(Song(name: "Enough", artistName: "NEFFEX", imageName: "2", trackName: "s2"))
-        songs.append(Song(name: "Get Through", artistName: "NEFFEX", imageName: "3", trackName: "s3"))
-        songs.append(Song(name: "Good Day (Wake Up)", artistName: "NEFFEX", imageName: "4", trackName: "s4"))
-        songs.append(Song(name: "Go!", artistName: "NEFFEX", imageName: "5", trackName: "s5"))
-
-    }
 
 }
 
-struct Song {
-    let name: String
-    let artistName: String
-    let imageName: String
-    let trackName: String
-}
+
 

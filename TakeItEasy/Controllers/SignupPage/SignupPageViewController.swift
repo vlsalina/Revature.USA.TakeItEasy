@@ -37,6 +37,7 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     
     func initialize() {
         roundedCorners(&box1)
+        roundedCorners(&otpPopup)
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {

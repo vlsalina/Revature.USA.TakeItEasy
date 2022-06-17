@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  TakeItEasy
 //
-//  Created by Vincent Salinas on 6/8/22.
+//  Created by Vincent Salinas on 6/16/22.
 //
 //
 
@@ -16,8 +16,10 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var userid: String?
     @NSManaged public var password: String?
+    @NSManaged public var userid: String?
+    @NSManaged public var email: String?
+    @NSManaged public var mobile: String?
 
 }
 

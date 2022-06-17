@@ -9,8 +9,5 @@ import UIKit
 
 class MusicCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var cellSongName: UILabel!
-    @IBOutlet weak var cellArtistName: UILabel!
-    @IBOutlet weak var cellAlbumName: UILabel!
     @IBOutlet weak var albumImage: UIImageView!
 }

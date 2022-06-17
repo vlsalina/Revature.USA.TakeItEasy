@@ -20,13 +20,14 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     public var myTime: Int = 0
     public var timer = Timer()
     
-    public var mp3Url:String = ""
     public var playlistIDVar = "10436707122"
     //playbackbuttons
     let playPauseButton = UIButton()
-    let backButton = UIButton()
-    let forwardButton = UIButton()
+//    let backButton = UIButton()
+//    let forwardButton = UIButton()
     
+    @IBOutlet weak var songNameLabel: UILabel!
+    @IBOutlet weak var artistNameLabel: UILabel!
     //allows audio
     var player:AVPlayer?
     var playerItem:AVPlayerItem?
@@ -36,20 +37,26 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     @IBOutlet var progressBar: UIProgressView!
     @IBOutlet var startTime:UILabel!
     @IBOutlet var resultTime:UILabel!
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playlist.songTitles.count
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        mp3Url = playlist.mp3URLs[indexPath.row]
-        print(mp3Url)
         position = indexPath.row
+        songNameLabel!.text = playlist.songTitles[indexPath.row]
+        artistNameLabel!.text = playlist.artistNames[indexPath.row]
+        //albumNameLabel!.text= playlist.albumTitles[indexPath.row]
         if(songIsPlaying){
             player?.pause()
             playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
             songIsPlaying = false
+//            if(!songIsPlaying){
+//                print("song is playing")
+//                player?.play()
+//                playPauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
+//                songIsPlaying = true
+//            }
         }
         configure()
                
@@ -57,13 +64,10 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "musicCell", for: indexPath) as! MusicCollectionViewCell
-        
-        cell.layer.cornerRadius = 22
+        //cell.backgroundColor = UIColor(named:"logo")
+        cell.layer.cornerRadius = 3
         //cell.albumImage.image = UIImage(named:"1")
-        cell.layer.masksToBounds = true
-        cell.cellSongName!.text = playlist.songTitles[indexPath.row]
-        cell.cellArtistName!.text = playlist.artistNames[indexPath.row]
-        cell.cellAlbumName!.text = playlist.albumTitles[indexPath.row]
+        //cell.layer.masksToBounds = true
         musicLoadURLImage(urlString: self.playlist.coverURLs[indexPath.row], musicCell: cell)
         
         return cell
@@ -74,6 +78,9 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         getMusicData(playlistID: playlistIDVar)
+        progressBar.tintColor = UIColor(named:"logo")
+        progressBar.backgroundColor = UIColor(named: "inner-bg")
+        
         drawButtons()
         
     }
@@ -127,58 +134,58 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     func drawButtons(){
         //set button position
         let size:CGFloat = 80
-        playPauseButton.frame = CGRect(x: (holder.frame.size.width - size)/2.0, y: 200, width: size, height: size)
-        forwardButton.frame = CGRect(x: holder.frame.size.width - size - 20, y: 200, width: size, height: size)
-        backButton.frame = CGRect(x: 20, y: 200, width: size, height: size)
+        playPauseButton.frame = CGRect(x: (holder.frame.size.width - size)/2.0, y: 350, width: size, height: size)
+//        forwardButton.frame = CGRect(x: holder.frame.size.width - size - 20, y: 200, width: size, height: size)
+//        backButton.frame = CGRect(x: 20, y: 200, width: size, height: size)
         
         // set button image
         playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
-        forwardButton.setBackgroundImage(UIImage(systemName: "forward.fill"), for: .normal)
-        backButton.setBackgroundImage(UIImage(systemName: "backward.fill"), for: .normal)
-        
+//        forwardButton.setBackgroundImage(UIImage(systemName: "forward.fill"), for: .normal)
+//        backButton.setBackgroundImage(UIImage(systemName: "backward.fill"), for: .normal)
+//
         //set button color
-        playPauseButton.tintColor = .blue
-        backButton.tintColor = .blue
-        forwardButton.tintColor = .blue
+        playPauseButton.tintColor = UIColor(named:"logo")
+//        backButton.tintColor = .blue
+//        forwardButton.tintColor = .blue
         
         //set button
         holder.addSubview(playPauseButton)
-        holder.addSubview(forwardButton)
-        holder.addSubview(backButton)
+//        holder.addSubview(forwardButton)
+//        holder.addSubview(backButton)
         
         // calls button functionality
         playPauseButton.addTarget(self, action: #selector(didPressPlayPauseButton), for: .touchUpInside)
-        backButton.addTarget(self, action: #selector(didPressBackButton), for: .touchUpInside)
-        forwardButton.addTarget(self, action: #selector(didPressForwardButton), for: .touchUpInside)
+//        backButton.addTarget(self, action: #selector(didPressBackButton), for: .touchUpInside)
+//        forwardButton.addTarget(self, action: #selector(didPressForwardButton), for: .touchUpInside)
     }
     // last song
-    @objc func didPressBackButton(){
-        if position < playlist.songTitles.count - 1 {
-            print("backbutton")
-            position = position + 1
-            player?.pause()
-            progressBar.setProgress(0.0, animated: true)
-            myTime = 0
-            startTime.text = "00:00"
-            timer.invalidate()
-            configure()
-        }
-
-    }
-    //next song
-    @objc func didPressForwardButton(){
-        print("nextbutton")
-        if position > 0 {
-            position = position - 1
-            player?.pause()
-            progressBar.setProgress(0.0, animated: true)
-            myTime = 0
-            startTime.text = "00:00"
-            timer.invalidate()
-            configure()
-        }
-        
-    }
+//    @objc func didPressBackButton(){
+//        if position < playlist.songTitles.count - 1 {
+//            print("backbutton")
+//            position = position + 1
+//            player?.pause()
+//            progressBar.setProgress(0.0, animated: true)
+//            myTime = 0
+//            startTime.text = "00:00"
+//            timer.invalidate()
+//            configure()
+//        }
+//
+//    }
+//    //next song
+//    @objc func didPressForwardButton(){
+//        print("nextbutton")
+//        if position > 0 {
+//            position = position - 1
+//            player?.pause()
+//            progressBar.setProgress(0.0, animated: true)
+//            myTime = 0
+//            startTime.text = "00:00"
+//            timer.invalidate()
+//            configure()
+//        }
+//
+//    }
     //play pause functionaility
     @objc func didPressPlayPauseButton(){
         if(playlist.songTitles.count > 0){
@@ -247,7 +254,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
 
 extension MusicViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 400, height: 400)
+        return CGSize(width: 355, height: 355)
     }
 
 }

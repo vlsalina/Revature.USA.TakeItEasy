@@ -63,7 +63,7 @@ class QuizPageViewController: UIViewController {
     }
     
     @objc func toResultsPage() {
-        segueToVC(target: "ResultsPage", sender: self)
+        segueToVC(target: "ResultsPageNC", sender: self)
     }
     
     

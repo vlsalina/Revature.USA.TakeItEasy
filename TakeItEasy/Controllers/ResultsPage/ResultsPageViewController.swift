@@ -18,12 +18,25 @@ class ResultsPageViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         resultsTable.dataSource = self
-        initialize()
+        configureNavbar()
     }
     
-    func initialize() {
-        print("# of results: ", results.count)
+    func configureNavbar() {
+        let userid = userDefaults.string(forKey: "currentUserName")
+        self.navigationItem.title = userid
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Quiz", style: .done, target: self, action: #selector(toResultsPage))
     }
+    
+    @objc func logoutAction() {
+        userLoggedOut()
+        dismiss(animated: true)
+    }
+    
+    @objc func toResultsPage() {
+        dismiss(animated: true)
+    }
+    
     
     /*
      // MARK: - Navigation

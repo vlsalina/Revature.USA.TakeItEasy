@@ -20,13 +20,14 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     public var myTime: Int = 0
     public var timer = Timer()
     
-    public var mp3Url:String = ""
     public var playlistIDVar = "10436707122"
     //playbackbuttons
     let playPauseButton = UIButton()
 //    let backButton = UIButton()
 //    let forwardButton = UIButton()
     
+    @IBOutlet weak var songNameLabel: UILabel!
+    @IBOutlet weak var artistNameLabel: UILabel!
     //allows audio
     var player:AVPlayer?
     var playerItem:AVPlayerItem?
@@ -36,20 +37,26 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     @IBOutlet var progressBar: UIProgressView!
     @IBOutlet var startTime:UILabel!
     @IBOutlet var resultTime:UILabel!
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return playlist.songTitles.count
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        mp3Url = playlist.mp3URLs[indexPath.row]
-        print(mp3Url)
         position = indexPath.row
+        songNameLabel!.text = playlist.songTitles[indexPath.row]
+        artistNameLabel!.text = playlist.artistNames[indexPath.row]
+        //albumNameLabel!.text= playlist.albumTitles[indexPath.row]
         if(songIsPlaying){
             player?.pause()
             playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
             songIsPlaying = false
+//            if(!songIsPlaying){
+//                print("song is playing")
+//                player?.play()
+//                playPauseButton.setBackgroundImage(UIImage(systemName: "pause.fill"), for: .normal)
+//                songIsPlaying = true
+//            }
         }
         configure()
                
@@ -57,7 +64,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "musicCell", for: indexPath) as! MusicCollectionViewCell
-        cell.backgroundColor = UIColor(named:"logo")
+        //cell.backgroundColor = UIColor(named:"logo")
         cell.layer.cornerRadius = 3
         //cell.albumImage.image = UIImage(named:"1")
         //cell.layer.masksToBounds = true
@@ -71,6 +78,9 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         getMusicData(playlistID: playlistIDVar)
+        progressBar.tintColor = UIColor(named:"logo")
+        progressBar.backgroundColor = UIColor(named: "inner-bg")
+        
         drawButtons()
         
     }
@@ -124,7 +134,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     func drawButtons(){
         //set button position
         let size:CGFloat = 80
-        playPauseButton.frame = CGRect(x: (holder.frame.size.width - size)/2.0, y: 200, width: size, height: size)
+        playPauseButton.frame = CGRect(x: (holder.frame.size.width - size)/2.0, y: 350, width: size, height: size)
 //        forwardButton.frame = CGRect(x: holder.frame.size.width - size - 20, y: 200, width: size, height: size)
 //        backButton.frame = CGRect(x: 20, y: 200, width: size, height: size)
         
@@ -242,12 +252,12 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
 }
 
 
-//extension MusicViewController : UICollectionViewDelegateFlowLayout{
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: 375, height: 375)
-//    }
-//
-//}
+extension MusicViewController : UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 355, height: 355)
+    }
+
+}
 
 
 

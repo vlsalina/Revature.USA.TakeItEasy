@@ -78,6 +78,10 @@ class LoginPageViewController: UIViewController {
                 print("login successful")
                 errorLabel.text = ""
                 self.performSegue(withIdentifier: "TabSegue1", sender: self)
+                
+                // save current user details
+                userDefaults.set(CurrentUser(name: existingUser.userid!, email: existingUser.email!, mobile: existingUser.mobile!), forKey: "currentUser")
+                
             } else {
                 print("login unsuccessful")
                 errorLabel.text = LoginConstants.invalidLoginCredentails.rawValue

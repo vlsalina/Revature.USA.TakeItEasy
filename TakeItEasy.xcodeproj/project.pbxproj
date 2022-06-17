@@ -49,6 +49,7 @@
 		6192B0032852810700631265 /* QuestionsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192B0022852810700631265 /* QuestionsPageViewController.swift */; };
 		6192B0252852954C00631265 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192B0242852954C00631265 /* QuestionCollectionViewCell.swift */; };
 		6192B069285392D900631265 /* ScoreKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192B068285392D900631265 /* ScoreKeeper.swift */; };
+		61B628F7285C1EA600B73A02 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B628F6285C1EA600B73A02 /* CurrentUser.swift */; };
 		61B9C164285559B700A8BA1C /* SQLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C163285559B700A8BA1C /* SQLHelpers.swift */; };
 		61B9C1662855602A00A8BA1C /* SQLiteConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C1652855602A00A8BA1C /* SQLiteConstants.swift */; };
 		61B9C16F285592C300A8BA1C /* QuestionsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C16E285592C300A8BA1C /* QuestionsConstants.swift */; };
@@ -111,6 +112,7 @@
 		6192B0022852810700631265 /* QuestionsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsPageViewController.swift; sourceTree = "<group>"; };
 		6192B0242852954C00631265 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		6192B068285392D900631265 /* ScoreKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreKeeper.swift; sourceTree = "<group>"; };
+		61B628F6285C1EA600B73A02 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		61B9C163285559B700A8BA1C /* SQLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLHelpers.swift; sourceTree = "<group>"; };
 		61B9C1652855602A00A8BA1C /* SQLiteConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteConstants.swift; sourceTree = "<group>"; };
 		61B9C16E285592C300A8BA1C /* QuestionsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsConstants.swift; sourceTree = "<group>"; };
@@ -326,6 +328,7 @@
 				6192B068285392D900631265 /* ScoreKeeper.swift */,
 				617A608E2854FD31009FDFCD /* QuizSQLClass.swift */,
 				618F37582857D27000132D47 /* Result.swift */,
+				61B628F6285C1EA600B73A02 /* CurrentUser.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				617A60912854FDA0009FDFCD /* QuizConstants.swift in Sources */,
 				6192AF5C28517F9100631265 /* KeychainManager.swift in Sources */,
 				4B8A87EA285B8C1600CC078F /* NoteBook+CoreDataClass.swift in Sources */,
+				61B628F7285C1EA600B73A02 /* CurrentUser.swift in Sources */,
 				6192AFB92852532800631265 /* Quiz.swift in Sources */,
 				618CF5D7284FFDEB00BFF072 /* AppDelegate.swift in Sources */,
 				6192AFBB2852535500631265 /* QuizPageViewController.swift in Sources */,

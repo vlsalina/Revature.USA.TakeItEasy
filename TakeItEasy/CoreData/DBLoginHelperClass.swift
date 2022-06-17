@@ -16,12 +16,14 @@ class DBHelperClass {
     
     let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
     
-    func addUser(userid: String, password: String) {
+    func addUser(userid: String, password: String, email: String, mobile: String) {
         
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: context!) as! User
         
         user.userid = userid
         user.password = password
+        user.email = email
+        user.mobile = mobile
         
         do {
             try context?.save()

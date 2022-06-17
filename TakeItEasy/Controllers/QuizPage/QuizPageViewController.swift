@@ -12,6 +12,8 @@ class QuizPageViewController: UIViewController {
     @IBOutlet weak var messageBox: UITextView!
     @IBOutlet weak var rewardBox: UITextView!
     @IBOutlet weak var quizCollection: UICollectionView!
+    @IBOutlet weak var navbar: UINavigationBar!
+    @IBOutlet weak var navbarItem: UINavigationItem!
     
     var quizzes = Quiz.FetchQuizzes()
     var database : [QuizSQLClass]?
@@ -29,6 +31,7 @@ class QuizPageViewController: UIViewController {
         initialize()
         initializeSQLite()
         connectData()
+        configureNavbar()
     }
     
     func initialize() {
@@ -44,6 +47,23 @@ class QuizPageViewController: UIViewController {
     func resetMsgs() {
         QuizPageViewController.msg = QuizConstants.welcomeMsg.rawValue
         QuizPageViewController.rewardMsg = QuizConstants.rewardMsg.rawValue
+    }
+    
+    func configureNavbar() {
+        let userid = userDefaults.string(forKey: "currentUserName")
+        self.navigationItem.title = userid
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Results", style: .done, target: self, action: #selector(toResultsPage))
+    }
+    
+    @objc func logoutAction() {
+        resetMsgs()
+        userLoggedOut()
+        dismiss(animated: true)
+    }
+    
+    @objc func toResultsPage() {
+        segueToVC(target: "ResultsPage", sender: self)
     }
     
     

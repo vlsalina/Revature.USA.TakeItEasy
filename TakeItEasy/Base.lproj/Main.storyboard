@@ -397,34 +397,6 @@
                                 <rect key="frame" x="-1" y="-69" width="416" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-QC-AIZ" userLabel="Navigation Bar">
-                                <rect key="frame" x="24" y="24" width="366" height="31"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UE-Cw-XvC">
-                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Results"/>
-                                        <connections>
-                                            <segue destination="56W-1e-b9c" kind="show" id="cVo-SQ-JLf"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWw-OX-Hjb">
-                                        <rect key="frame" x="142" y="0.0" width="78.5" height="31"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8H-6D-LA9">
-                                        <rect key="frame" x="290.5" y="0.0" width="75.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
-                                        <connections>
-                                            <action selector="logout:" destination="kKf-V3-McW" eventType="touchUpInside" id="FcC-d8-04m"/>
-                                            <segue destination="V3y-u2-S9t" kind="show" id="X4l-Cb-NcZ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="thN-9I-9dm" userLabel="Search Bar">
                                 <rect key="frame" x="24" y="105" width="366" height="34"/>
                                 <subviews>
@@ -538,12 +510,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="top" secondItem="wN1-Oe-ynx" secondAttribute="bottom" constant="33" id="61o-xg-ou5"/>
-                            <constraint firstItem="fM8-QC-AIZ" firstAttribute="top" secondItem="guy-au-SsR" secondAttribute="top" constant="24" id="7Fc-zI-kDG"/>
-                            <constraint firstItem="thN-9I-9dm" firstAttribute="top" secondItem="fM8-QC-AIZ" secondAttribute="bottom" constant="50" id="8Bh-wX-ijn"/>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="9cP-NT-td5"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="bottom" secondItem="CY1-W8-zSm" secondAttribute="bottom" constant="63" id="Bh1-9Z-kSE"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="CY1-W8-zSm" secondAttribute="trailing" constant="24" id="Fb6-vl-Koz"/>
-                            <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="fM8-QC-AIZ" secondAttribute="trailing" constant="24" id="GRQ-hb-4mr"/>
                             <constraint firstItem="thN-9I-9dm" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="H57-Y0-ZNE"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="wN1-Oe-ynx" secondAttribute="trailing" constant="24" id="Hch-e0-r6c"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="bottom" secondItem="CY1-W8-zSm" secondAttribute="bottom" constant="63" id="NiJ-Lv-bxr"/>
@@ -551,15 +520,12 @@
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="SvP-8z-YQl"/>
                             <constraint firstItem="wN1-Oe-ynx" firstAttribute="top" secondItem="thN-9I-9dm" secondAttribute="bottom" constant="30" id="bVz-87-6Cx"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="CY1-W8-zSm" secondAttribute="trailing" constant="24" id="oMJ-NF-yg0"/>
-                            <constraint firstItem="fM8-QC-AIZ" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="p4M-Xq-N6o"/>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="top" secondItem="wN1-Oe-ynx" secondAttribute="bottom" constant="33" id="pHb-7u-CeV"/>
                             <constraint firstItem="wN1-Oe-ynx" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="rOZ-jZ-eiS"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="thN-9I-9dm" secondAttribute="trailing" constant="24" id="tvs-21-ged"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Quiz" image="questionmark.square.fill" catalog="system" selectedImage="questionmark.square.fill" id="tMI-ZU-iiS">
-                        <color key="badgeColor" systemColor="tintColor"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="uMP-g1-Alu"/>
                     <connections>
                         <outlet property="messageBox" destination="EVc-do-FIW" id="IAc-Mw-9Of"/>
                         <outlet property="quizCollection" destination="wN1-Oe-ynx" id="hiD-TS-Vwb"/>
@@ -568,7 +534,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyK-Po-tnT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4.3478260869565224" y="1658.7053571428571"/>
+            <point key="canvasLocation" x="905.79710144927549" y="1658.7053571428571"/>
         </scene>
         <!--Results Page-->
         <scene sceneID="Xlv-ko-co0">
@@ -1080,7 +1046,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3P-sp-weR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847.826086956522" y="1658.7053571428571"/>
+            <point key="canvasLocation" x="2757.971014492754" y="1658.7053571428571"/>
         </scene>
         <!--Music Page-->
         <scene sceneID="W5A-Bm-RPE">
@@ -1191,7 +1157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVq-Im-Q0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3752.1739130434785" y="1524.7767857142856"/>
+            <point key="canvasLocation" x="4662.3188405797109" y="1524.7767857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EDq-5B-LL8">
@@ -1209,7 +1175,7 @@
                         <segue destination="uXD-xx-gka" kind="relationship" relationship="viewControllers" id="ybY-hJ-9R8"/>
                         <segue destination="oR6-Xh-hvd" kind="relationship" relationship="viewControllers" id="C4r-9b-H6O"/>
                         <segue destination="FKN-Hg-gu6" kind="relationship" relationship="viewControllers" id="UrS-gX-ADn"/>
-                        <segue destination="kKf-V3-McW" kind="relationship" relationship="viewControllers" id="lcy-3J-Nvu"/>
+                        <segue destination="Nxz-im-2YB" kind="relationship" relationship="viewControllers" id="lcy-3J-Nvu"/>
                         <segue destination="COz-4k-iVS" kind="relationship" relationship="viewControllers" id="8nf-jY-bQq"/>
                     </connections>
                 </tabBarController>
@@ -1437,7 +1403,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FM-Yr-TxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5492.753623188406" y="1658.7053571428571"/>
+            <point key="canvasLocation" x="6402.898550724638" y="1658.7053571428571"/>
         </scene>
         <!--Opened Books View Controller-->
         <scene sceneID="XAN-tP-DZi">
@@ -1702,7 +1668,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2Y-zl-92i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4582.608695652174" y="1658.7053571428571"/>
+            <point key="canvasLocation" x="5492.753623188406" y="1658.7053571428571"/>
         </scene>
         <!--Music-->
         <scene sceneID="rQX-PM-VWc">
@@ -1723,7 +1689,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mq8-ee-EkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2842.0289855072465" y="1524.7767857142856"/>
+            <point key="canvasLocation" x="3752.1739130434785" y="1524.7767857142856"/>
         </scene>
         <!--Search-->
         <scene sceneID="vzQ-Iy-Eor">
@@ -1744,12 +1710,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSf-e7-Hzs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937.68115942028987" y="1658.7053571428571"/>
+            <point key="canvasLocation" x="1847.826086956522" y="1658.7053571428571"/>
+        </scene>
+        <!--Quiz-->
+        <scene sceneID="T0E-Vc-qSx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nxz-im-2YB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Quiz" image="questionmark.square.fill" catalog="system" selectedImage="questionmark.square.fill" id="tMI-ZU-iiS">
+                        <color key="badgeColor" systemColor="tintColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YgO-0t-A03">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kKf-V3-McW" kind="relationship" relationship="rootViewController" id="0bx-bi-5L4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3W-xc-Gu3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4.3478260869565224" y="1658.7053571428571"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="1s6-qj-ZBV"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="6000" height="4000"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>

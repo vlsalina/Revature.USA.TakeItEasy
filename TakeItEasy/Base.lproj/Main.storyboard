@@ -911,7 +911,7 @@
             <objects>
                 <viewController id="Cu1-AL-BaC" customClass="GooglePageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ag3-dg-tDa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ZPX-nW-ihq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -927,7 +927,7 @@
             <objects>
                 <viewController title="Forum Page" id="bsD-MS-beD" customClass="ForumPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ex8-72-gHC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CxB-mk-nbR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -946,32 +946,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Qle-R4-uLz" userLabel="Navigation Bar">
-                                <rect key="frame" x="24" y="24" width="366" height="31"/>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekC-K3-vYA">
+                                <rect key="frame" x="0.0" y="32" width="414" height="56"/>
+                                <items>
+                                    <navigationItem id="mUI-nr-8Tj"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="wfP-wy-Ud2">
+                                <rect key="frame" x="24" y="132" width="366" height="571"/>
                                 <subviews>
-                                    <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dN6-XR-iNA">
-                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO3-es-Zy2">
-                                        <rect key="frame" x="144" y="0.0" width="78.5" height="31"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igb-y3-2CF">
-                                        <rect key="frame" x="290.5" y="0.0" width="75.5" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Log Out"/>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wfP-wy-Ud2">
-                                <rect key="frame" x="24" y="79" width="366" height="580"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qYk-Wl-375">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="275"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qYk-Wl-375">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="268"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qu-KY-kHv">
                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
@@ -985,8 +970,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt6-iS-fob">
-                                                <rect key="frame" x="0.0" y="101" width="366" height="174"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt6-iS-fob">
+                                                <rect key="frame" x="0.0" y="101" width="366" height="167"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Google"/>
                                                 <connections>
@@ -995,8 +980,8 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KTF-Tz-avs">
-                                        <rect key="frame" x="0.0" y="305" width="366" height="275"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KTF-Tz-avs">
+                                        <rect key="frame" x="0.0" y="303" width="366" height="268"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qE-Oy-dIY">
                                                 <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
@@ -1010,8 +995,8 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTO-me-qmD">
-                                                <rect key="frame" x="0.0" y="74.5" width="366" height="200.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTO-me-qmD">
+                                                <rect key="frame" x="0.0" y="74.5" width="366" height="193.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Forums"/>
                                                 <connections>
@@ -1026,22 +1011,23 @@
                         <viewLayoutGuide key="safeArea" id="4nR-W3-g3T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="wfP-wy-Ud2" firstAttribute="top" secondItem="Qle-R4-uLz" secondAttribute="bottom" constant="24" id="MHb-ZG-Fnx"/>
-                            <constraint firstItem="Qle-R4-uLz" firstAttribute="top" secondItem="4nR-W3-g3T" secondAttribute="top" constant="24" id="dEC-3N-4X8"/>
+                            <constraint firstItem="wfP-wy-Ud2" firstAttribute="top" secondItem="ekC-K3-vYA" secondAttribute="bottom" constant="50" id="8nV-I9-bkH"/>
+                            <constraint firstItem="4nR-W3-g3T" firstAttribute="trailing" secondItem="wfP-wy-Ud2" secondAttribute="trailing" constant="24" id="Kgm-Zk-zbd"/>
+                            <constraint firstItem="4nR-W3-g3T" firstAttribute="bottom" secondItem="wfP-wy-Ud2" secondAttribute="bottom" constant="50" id="N4k-sy-yP7"/>
                             <constraint firstAttribute="trailing" secondItem="wfP-wy-Ud2" secondAttribute="trailing" constant="24" id="gzY-Vn-pOZ"/>
-                            <constraint firstItem="4nR-W3-g3T" firstAttribute="bottom" secondItem="wfP-wy-Ud2" secondAttribute="bottom" constant="100" id="p6Y-vd-7YW"/>
-                            <constraint firstItem="Qle-R4-uLz" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="24" id="pdT-Bf-MfM"/>
-                            <constraint firstItem="4nR-W3-g3T" firstAttribute="trailing" secondItem="Qle-R4-uLz" secondAttribute="trailing" constant="24" id="uNa-Rp-n9V"/>
+                            <constraint firstItem="ekC-K3-vYA" firstAttribute="top" secondItem="ayS-01-DDC" secondAttribute="top" constant="32" id="iou-nc-XXe"/>
+                            <constraint firstItem="wfP-wy-Ud2" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="24" id="rVF-k5-WC8"/>
                             <constraint firstItem="wfP-wy-Ud2" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="24" id="yaC-vp-5FN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="Q8e-UD-VlV">
-                        <color key="badgeColor" systemColor="tintColor"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="xKI-WB-ryO"/>
+                    <connections>
+                        <outlet property="navbar" destination="ekC-K3-vYA" id="Wbv-NY-Rsc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3P-sp-weR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847.826086956522" y="1658.7053571428571"/>
+            <point key="canvasLocation" x="2757.971014492754" y="1658.7053571428571"/>
         </scene>
         <!--Music Page-->
         <scene sceneID="W5A-Bm-RPE">
@@ -1177,7 +1163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVq-Im-Q0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2842.0289855072465" y="1524.7767857142856"/>
+            <point key="canvasLocation" x="3752.1739130434785" y="1524.7767857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="EDq-5B-LL8">
@@ -1196,7 +1182,7 @@
                         <segue destination="iNa-Xt-3mv" kind="relationship" relationship="viewControllers" id="C4r-9b-H6O"/>
                         <segue destination="FKN-Hg-gu6" kind="relationship" relationship="viewControllers" id="UrS-gX-ADn"/>
                         <segue destination="XMN-v4-Tkf" kind="relationship" relationship="viewControllers" id="lcy-3J-Nvu"/>
-                        <segue destination="eUS-iK-d8C" kind="relationship" relationship="viewControllers" id="8nf-jY-bQq"/>
+                        <segue destination="8lF-Ew-a6f" kind="relationship" relationship="viewControllers" id="8nf-jY-bQq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEC-iO-hCH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1432,7 +1418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FM-Yr-TxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3672.4637681159425" y="1658.7053571428571"/>
+            <point key="canvasLocation" x="4582.608695652174" y="1658.7053571428571"/>
         </scene>
         <!--Opened Books View Controller-->
         <scene sceneID="XAN-tP-DZi">
@@ -1678,6 +1664,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Cq-FY-Jlf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4.3478260869565224" y="1658.7053571428571"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="uuJ-fs-9VS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8lF-Ew-a6f" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="Q8e-UD-VlV">
+                        <color key="badgeColor" systemColor="tintColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="akG-X5-N8m">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eUS-iK-d8C" kind="relationship" relationship="rootViewController" id="v0K-dr-cEj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5SZ-WT-e4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1847.826086956522" y="1658.7053571428571"/>
         </scene>
     </scenes>
     <resources>

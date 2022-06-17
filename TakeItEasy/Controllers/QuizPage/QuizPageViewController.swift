@@ -58,6 +58,7 @@ class QuizPageViewController: UIViewController {
     
     @objc func logoutAction() {
         resetMsgs()
+        userLoggedOut()
         dismiss(animated: true)
     }
     

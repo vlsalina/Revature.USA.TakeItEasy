@@ -95,5 +95,11 @@ func userLoggedIn(existingUser: User) {
     userDefaults.set(existingUser.mobile!, forKey: "currentUserMobile")
 }
 
+func userLoggedOut() {
+    userDefaults.removeObject(forKey: "currentUserName")
+    userDefaults.removeObject(forKey: "currentUserEmail")
+    userDefaults.removeObject(forKey: "currentUserMobile")
+}
+
 
 

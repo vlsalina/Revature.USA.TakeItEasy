@@ -10,9 +10,23 @@ import WebKit
 
 class SearchPageViewController: UIViewController {
     
+    @IBOutlet weak var navbar: UINavigationBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureNavbar()
+    }
+    
+    func configureNavbar() {
+        let userid = userDefaults.string(forKey: "currentUserName")
+        self.navigationItem.title = userid
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
+    }
+    
+    @objc func logoutAction() {
+        userLoggedOut()
+        dismiss(animated: true)
     }
     
     

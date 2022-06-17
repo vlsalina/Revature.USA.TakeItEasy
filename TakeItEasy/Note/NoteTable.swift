@@ -8,7 +8,7 @@
 import UIKit
 
 class NoteTable: UIViewController {
-
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,7 +23,8 @@ class NoteTable: UIViewController {
         //this is like the gift box opened and u know whats inside
         notes = Helper.helper.getNote()
         filter = notes
-
+        configureNavbar()
+        
         tableView.reloadData()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +40,18 @@ class NoteTable: UIViewController {
         print("view did appear")
     }
     
+    func configureNavbar() {
+        let userid = userDefaults.string(forKey: "currentUserName")
+        self.navigationItem.title = userid
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
+    }
+    
+    @objc func logoutAction() {
+        userLoggedOut()
+        dismiss(animated: true)
+    }
+    
+    
     @IBAction func addRow(_ sender: Any) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let notePage = storyBoard.instantiateViewController(withIdentifier: "notePage") as! NotePage
@@ -48,7 +61,7 @@ class NoteTable: UIViewController {
         
     }
     
-
+    
 }
 extension NoteTable : UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
     
@@ -97,7 +110,7 @@ extension NoteTable : UITableViewDelegate, UITableViewDataSource, UISearchBarDel
         tableView.reloadData()
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-
+        
         guard editingStyle == .delete
         else { return }
         let noteToDelete = notes.remove(at: indexPath.row)

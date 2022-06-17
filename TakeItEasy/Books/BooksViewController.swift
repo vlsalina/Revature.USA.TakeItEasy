@@ -37,7 +37,21 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         getGeneralBooks()
         getTechnologyBooks()
         getRecipeBooks()
+        configureNavbar()
     }
+    
+    // nav bar
+    func configureNavbar() {
+        let userid = userDefaults.string(forKey: "currentUserName")
+        self.navigationItem.title = userid
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
+    }
+    
+    @objc func logoutAction() {
+        userLoggedOut()
+        dismiss(animated: true)
+    }
+    
     
     func getKey(){
         //key is stored using xcodes local environment variables
@@ -87,7 +101,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         }
         searchBarTableView.reloadData() //reload collection view to show updated result
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //return row size based on book data titles array size for each collection
         //restoration identifiers are set in main storyboard
@@ -131,7 +145,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         case "RecipesCollectionView":
             goToOpenedBookViewController(bookTitle : recipeBookData.titles[indexPath.item], bookId: recipeBookData.ids[indexPath.item], bookPreviewUrl: generalBookData.previewUrls[indexPath.item])
         default:
-           print("no item")
+            print("no item")
         }
     }
     
@@ -153,7 +167,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
         generalCell.backgroundColor = .systemGray //set background color for all cells in this collection
         return setCornerRadiusForCell(generalCell)
     }
-
+    
     func setupTechnologyCell(_ technologyCell : TechnologyBooksCollectionViewCell, _ indexPath : IndexPath) -> UICollectionViewCell{
         //add book title and image to cell for technology book
         technologyCell.bookLabel.text = technologyBookData.titles[indexPath.item]
@@ -238,8 +252,8 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
                             self.allBooks.previewUrls.append(book.volumeInfo!.previewLink!)
                         }
                         switch update {
-                        //need to update the corresponing collection view based on enum value
-                        //in order to update ui elements from datatask, dispatch queue.main.async must be used
+                            //need to update the corresponing collection view based on enum value
+                            //in order to update ui elements from datatask, dispatch queue.main.async must be used
                         case .generalCollection:
                             DispatchQueue.main.async {
                                 self.generalCollectionView.reloadData() //update general collection view

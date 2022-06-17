@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3y-u2-S9t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3y-u2-S9t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -1233,7 +1233,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="7q6-K2-sXA" kind="relationship" relationship="viewControllers" id="ybY-hJ-9R8"/>
-                        <segue destination="iNa-Xt-3mv" kind="relationship" relationship="viewControllers" id="C4r-9b-H6O"/>
+                        <segue destination="oR6-Xh-hvd" kind="relationship" relationship="viewControllers" id="C4r-9b-H6O"/>
                         <segue destination="FKN-Hg-gu6" kind="relationship" relationship="viewControllers" id="UrS-gX-ADn"/>
                         <segue destination="kKf-V3-McW" kind="relationship" relationship="viewControllers" id="lcy-3J-Nvu"/>
                         <segue destination="eUS-iK-d8C" kind="relationship" relationship="viewControllers" id="8nf-jY-bQq"/>
@@ -1243,7 +1243,7 @@
             </objects>
             <point key="canvasLocation" x="722" y="850"/>
         </scene>
-        <!--Books-->
+        <!--Books View Controller-->
         <scene sceneID="rCl-qE-J8p">
             <objects>
                 <viewController id="iNa-Xt-3mv" customClass="BooksViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
@@ -1449,18 +1449,11 @@
                                     <outlet property="delegate" destination="iNa-Xt-3mv" id="hbA-vT-uke"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPx-Lk-08G">
-                                <rect key="frame" x="-1" y="61" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Title" id="VZm-8l-MI7"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bTB-p7-7a3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Books" image="book.fill" catalog="system" id="FLE-0N-WCX"/>
+                    <navigationItem key="navigationItem" id="OG0-Gx-lbB"/>
                     <connections>
                         <outlet property="generalCollectionView" destination="nkI-Ee-yFs" id="SrB-rz-XZa"/>
                         <outlet property="recipesCollectionView" destination="241-HK-CJn" id="CwJ-XA-60l"/>
@@ -1470,7 +1463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5FM-Yr-TxT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2762.3188405797105" y="1658.7053571428571"/>
+            <point key="canvasLocation" x="3672.4637681159425" y="1658.7053571428571"/>
         </scene>
         <!--Opened Books View Controller-->
         <scene sceneID="XAN-tP-DZi">
@@ -1717,6 +1710,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ie5-t5-6jK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2491" y="759"/>
+        </scene>
+        <!--Books-->
+        <scene sceneID="b6o-QM-7Tb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oR6-Xh-hvd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Books" image="book.fill" catalog="system" id="FLE-0N-WCX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aOb-So-7Ph">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iNa-Xt-3mv" kind="relationship" relationship="rootViewController" id="uuw-LP-oep"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2Y-zl-92i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2762.3188405797105" y="1658.7053571428571"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

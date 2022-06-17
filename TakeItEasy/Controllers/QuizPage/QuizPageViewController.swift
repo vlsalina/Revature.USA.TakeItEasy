@@ -50,7 +50,8 @@ class QuizPageViewController: UIViewController {
     }
     
     func configureNavbar() {
-        self.navigationItem.title = "Username"
+        let userid = userDefaults.string(forKey: "currentUserName")
+        self.navigationItem.title = userid
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Results", style: .done, target: self, action: #selector(toResultsPage))
     }

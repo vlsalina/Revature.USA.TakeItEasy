@@ -89,5 +89,11 @@ func roundedCorners(_ param: inout UIView) {
     param.layer.cornerRadius = 15
 }
 
+func userLoggedIn(existingUser: User) {
+    userDefaults.set(existingUser.userid!, forKey: "currentUserName")
+    userDefaults.set(existingUser.email!, forKey: "currentUserEmail")
+    userDefaults.set(existingUser.mobile!, forKey: "currentUserMobile")
+}
+
 
 

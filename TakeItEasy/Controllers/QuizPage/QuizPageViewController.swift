@@ -21,6 +21,8 @@ class QuizPageViewController: UIViewController {
     static var msg = QuizConstants.welcomeMsg.rawValue
     static var rewardMsg = QuizConstants.rewardMsg.rawValue
     static var toShowResults = false
+    static var alertTitle = ""
+    static var alertMsg = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,8 +125,11 @@ extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewD
 
 extension QuizPageViewController {
     func showAlert() {
-        let alert = UIAlertController(title: "title", message: "message", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+        let alert = UIAlertController(title: QuizPageViewController.alertTitle, message: QuizPageViewController.alertMsg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in
+            QuizPageViewController.alertTitle = ""
+            QuizPageViewController.alertMsg = ""
+        }))
         present(alert, animated: true)
     }
 }

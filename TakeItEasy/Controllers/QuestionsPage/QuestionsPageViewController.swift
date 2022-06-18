@@ -52,14 +52,18 @@ class QuestionsPageViewController: UIViewController {
         if (flag) {
             let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
             QuizPageViewController.msg = result
+            QuizPageViewController.alertTitle = result
             
             let score = scoreKeeperObj.percentageScore()
             if score <= 60 {
                 QuizPageViewController.rewardMsg = QuizConstants.scoredLow.rawValue
+                QuizPageViewController.alertMsg = QuizConstants.scoredLow.rawValue
             } else if (score <= 80) {
                 QuizPageViewController.rewardMsg = QuizConstants.scoredMed.rawValue
+                QuizPageViewController.alertMsg = QuizConstants.scoredLow.rawValue
             } else {
                 QuizPageViewController.rewardMsg = QuizConstants.scoredHigh.rawValue
+                QuizPageViewController.alertMsg = QuizConstants.scoredHigh.rawValue
             }
             
             // save result to database

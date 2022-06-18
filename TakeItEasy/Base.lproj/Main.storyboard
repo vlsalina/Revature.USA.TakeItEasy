@@ -912,7 +912,7 @@
             <objects>
                 <viewController id="Cu1-AL-BaC" customClass="GooglePageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ag3-dg-tDa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_light_dark" translatesAutoresizingMaskIntoConstraints="NO" id="ZBP-Bz-8xz">
@@ -934,7 +934,7 @@
             <objects>
                 <viewController title="Forum Page" id="bsD-MS-beD" customClass="ForumPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ex8-72-gHC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_light_dark" translatesAutoresizingMaskIntoConstraints="NO" id="VSJ-Wo-slj">
@@ -963,72 +963,9 @@
                                 <rect key="frame" x="-1" y="-69" width="416" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="wfP-wy-Ud2">
-                                <rect key="frame" x="24" y="106" width="366" height="553"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qYk-Wl-375">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="261.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Qu-KY-kHv">
-                                                <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take It Easy and surf the web right inside the app!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doQ-FW-gU8">
-                                                <rect key="frame" x="0.0" y="45" width="366" height="41"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kt6-iS-fob">
-                                                <rect key="frame" x="0.0" y="101" width="366" height="160.5"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Google"/>
-                                                <connections>
-                                                    <segue destination="Cu1-AL-BaC" kind="show" id="LmJ-dP-oaF"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KTF-Tz-avs">
-                                        <rect key="frame" x="0.0" y="291.5" width="366" height="261.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forums" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qE-Oy-dIY">
-                                                <rect key="frame" x="0.0" y="0.0" width="366" height="30"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or come check out our forum site!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-wG-bbF">
-                                                <rect key="frame" x="0.0" y="42" width="366" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTO-me-qmD">
-                                                <rect key="frame" x="0.0" y="74.5" width="366" height="187"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Forums"/>
-                                                <connections>
-                                                    <segue destination="bsD-MS-beD" kind="show" id="1vz-f2-hzC"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4nR-W3-g3T"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="4nR-W3-g3T" firstAttribute="bottom" secondItem="wfP-wy-Ud2" secondAttribute="bottom" constant="100" id="IJp-cT-cxg"/>
-                            <constraint firstItem="4nR-W3-g3T" firstAttribute="trailing" secondItem="wfP-wy-Ud2" secondAttribute="trailing" constant="24" id="Syj-UA-gTS"/>
-                            <constraint firstItem="wfP-wy-Ud2" firstAttribute="top" secondItem="4nR-W3-g3T" secondAttribute="top" constant="50" id="eFO-9y-05f"/>
-                            <constraint firstItem="wfP-wy-Ud2" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="24" id="feJ-GE-AGE"/>
-                            <constraint firstAttribute="trailing" secondItem="wfP-wy-Ud2" secondAttribute="trailing" constant="24" id="gzY-Vn-pOZ"/>
-                            <constraint firstItem="wfP-wy-Ud2" firstAttribute="leading" secondItem="4nR-W3-g3T" secondAttribute="leading" constant="24" id="yaC-vp-5FN"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AAJ-nU-E7q"/>
                 </viewController>
@@ -1753,7 +1690,7 @@
         <image name="questionmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <namedColor name="color-swtich">
-            <color red="0.64200001959999997" green="0.60699999329999998" blue="0.96899998190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.64200001955032349" green="0.60699999332427979" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="logo">
             <color red="0.64200001955032349" green="0.60699999332427979" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

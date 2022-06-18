@@ -63,15 +63,20 @@ class QuestionsPageViewController: UIViewController {
             }
             
             // save result to database
-            insertResultData(name: quiz!.name, date: getDate(), score: scoreKeeperObj.percentageScore())
+//            insertResultData(name: quiz!.name, date: getDate(), score: scoreKeeperObj.percentageScore())
             
-            let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
-            present(TabPageVC, animated: true, completion: nil)
+            QuizPageViewController.toShowResults = true
+            
+            dismiss(animated: true)
+//            let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
+//            present(TabPageVC, animated: true, completion: nil)
             
         } else {
             errorLabel.text = QuestionsConstants.notAllQuestionsAnswered.rawValue
         }
     }
+    
+    
     
     /*
      // MARK: - Navigation

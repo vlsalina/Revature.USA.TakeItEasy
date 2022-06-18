@@ -20,6 +20,7 @@ class QuizPageViewController: UIViewController {
     
     static var msg = QuizConstants.welcomeMsg.rawValue
     static var rewardMsg = QuizConstants.rewardMsg.rawValue
+    static var toShowResults = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,11 @@ class QuizPageViewController: UIViewController {
         initializeSQLite()
         connectData()
         configureNavbar()
+        showResults()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showResults()
     }
     
     func initialize() {
@@ -44,6 +50,12 @@ class QuizPageViewController: UIViewController {
         database = SQLiteObject.sqlObj.getData()
     }
     
+    func showResults() {
+        if QuizPageViewController.toShowResults {
+            showAlert()
+            QuizPageViewController.toShowResults = false
+        }
+    }
     
     func resetMsgs() {
         QuizPageViewController.msg = QuizConstants.welcomeMsg.rawValue
@@ -78,10 +90,6 @@ class QuizPageViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    @IBAction func logout(_ sender: Any) {
-        resetMsgs()
-    }
-    
 }
 
 extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewDelegate {
@@ -111,5 +119,13 @@ extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewD
     }
     
     
+}
+
+extension QuizPageViewController {
+    func showAlert() {
+        let alert = UIAlertController(title: "title", message: "message", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+        present(alert, animated: true)
+    }
 }
 

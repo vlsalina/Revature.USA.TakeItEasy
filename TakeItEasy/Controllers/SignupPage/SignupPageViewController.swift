@@ -58,6 +58,9 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
         catch SignupErrors.invalidEmail {
             errorLabel.text = SignupConstants.invalidEmail.rawValue
         }
+        catch SignupErrors.invalidEmailFormat {
+            errorLabel.text = SignupConstants.invalidEmailFormat.rawValue
+        }
         catch SignupErrors.invalidPassword {
             errorLabel.text = SignupConstants.invalidPassword.rawValue
         }

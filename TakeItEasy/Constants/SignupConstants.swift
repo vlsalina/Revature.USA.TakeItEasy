@@ -10,6 +10,7 @@ import Foundation
 enum SignupErrors : Error {
     case invalidUserId
     case invalidEmail
+    case invalidEmailFormat
     case invalidPassword
     case invalidConfirmPassword
     case passwordsDoNotMatch
@@ -20,6 +21,7 @@ enum SignupErrors : Error {
 enum SignupConstants : String {
     case invalidUserId = "Invalid userid"
     case invalidEmail = "Invalid email"
+    case invalidEmailFormat = "Please provide valid email format"
     case invalidPassword = "Invalid password"
     case invalidConfirmPassword = "Invalid confirm password"
     case passwordsDoNotMatch = "Passwords do not match"

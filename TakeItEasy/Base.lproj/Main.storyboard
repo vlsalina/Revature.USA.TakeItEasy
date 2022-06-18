@@ -256,7 +256,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="selectedMenuItemTextColor" catalog="System" colorSpace="catalog"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="sSF-pl-POB" secondAttribute="bottom" constant="30" id="Bcg-bu-5qA"/>
                                     <constraint firstAttribute="width" constant="315" id="CZa-Aw-EMf"/>

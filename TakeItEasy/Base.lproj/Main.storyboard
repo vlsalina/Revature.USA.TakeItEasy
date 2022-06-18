@@ -412,7 +412,7 @@
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wN1-Oe-ynx" userLabel="Quiz Collection View">
                                 <rect key="frame" x="24" y="169" width="366" height="366"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="color-swtich"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="366" id="AUt-Uz-MKT"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="366" id="PXb-i1-vbE"/>
@@ -1750,6 +1750,9 @@
         <image name="pexels-gradienta-6985047" width="6000" height="4000"/>
         <image name="questionmark.square.fill" catalog="system" width="128" height="114"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <namedColor name="color-swtich">
+            <color red="0.64200001959999997" green="0.60699999329999998" blue="0.96899998190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="logo">
             <color red="0.64200001955032349" green="0.60699999332427979" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

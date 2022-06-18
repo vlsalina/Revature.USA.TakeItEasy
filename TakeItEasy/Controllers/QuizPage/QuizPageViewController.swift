@@ -37,6 +37,7 @@ class QuizPageViewController: UIViewController {
     func initialize() {
         messageBox.text = QuizPageViewController.msg
         rewardBox.text = QuizPageViewController.rewardMsg
+        quizCollection.layer.cornerRadius = 15
     }
     
     func connectData() {

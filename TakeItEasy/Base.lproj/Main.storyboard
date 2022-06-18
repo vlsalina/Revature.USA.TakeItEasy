@@ -397,19 +397,6 @@
                                 <rect key="frame" x="-1" y="-69" width="416" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="thN-9I-9dm" userLabel="Search Bar">
-                                <rect key="frame" x="24" y="105" width="366" height="34"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Xt-xo-iw7">
-                                        <rect key="frame" x="0.0" y="0.5" width="20.5" height="32.5"/>
-                                    </imageView>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kf-ps-P08">
-                                        <rect key="frame" x="32.5" y="0.0" width="333.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wN1-Oe-ynx" userLabel="Quiz Collection View">
                                 <rect key="frame" x="24" y="169" width="366" height="366"/>
                                 <color key="backgroundColor" name="color-swtich"/>
@@ -505,6 +492,10 @@
                                     <constraint firstAttribute="width" constant="366" id="itK-r8-Znf"/>
                                 </constraints>
                             </stackView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-sY-h05">
+                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="guy-au-SsR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -512,17 +503,17 @@
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="top" secondItem="wN1-Oe-ynx" secondAttribute="bottom" constant="33" id="61o-xg-ou5"/>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="9cP-NT-td5"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="bottom" secondItem="CY1-W8-zSm" secondAttribute="bottom" constant="63" id="Bh1-9Z-kSE"/>
+                            <constraint firstItem="dsV-sY-h05" firstAttribute="top" secondItem="guy-au-SsR" secondAttribute="top" id="Ct2-Sj-dk1"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="CY1-W8-zSm" secondAttribute="trailing" constant="24" id="Fb6-vl-Koz"/>
-                            <constraint firstItem="thN-9I-9dm" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="H57-Y0-ZNE"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="wN1-Oe-ynx" secondAttribute="trailing" constant="24" id="Hch-e0-r6c"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="bottom" secondItem="CY1-W8-zSm" secondAttribute="bottom" constant="63" id="NiJ-Lv-bxr"/>
                             <constraint firstItem="wN1-Oe-ynx" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="P9l-fs-2gA"/>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="SvP-8z-YQl"/>
-                            <constraint firstItem="wN1-Oe-ynx" firstAttribute="top" secondItem="thN-9I-9dm" secondAttribute="bottom" constant="30" id="bVz-87-6Cx"/>
+                            <constraint firstAttribute="trailing" secondItem="dsV-sY-h05" secondAttribute="trailing" id="ZCM-dt-hxL"/>
+                            <constraint firstItem="dsV-sY-h05" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" id="l3X-Ax-Hyp"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="CY1-W8-zSm" secondAttribute="trailing" constant="24" id="oMJ-NF-yg0"/>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="top" secondItem="wN1-Oe-ynx" secondAttribute="bottom" constant="33" id="pHb-7u-CeV"/>
                             <constraint firstItem="wN1-Oe-ynx" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="rOZ-jZ-eiS"/>
-                            <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="thN-9I-9dm" secondAttribute="trailing" constant="24" id="tvs-21-ged"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uMP-g1-Alu"/>
@@ -1060,14 +1051,18 @@
                                     <outlet property="delegate" destination="7q6-K2-sXA" id="yTF-kW-Lsz"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OdU-Xn-4C3">
-                                <rect key="frame" x="-1" y="125" width="415" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OdU-Xn-4C3">
+                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pYT-mk-H87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="OdU-Xn-4C3" secondAttribute="trailing" id="SA3-ny-yIM"/>
+                            <constraint firstItem="OdU-Xn-4C3" firstAttribute="leading" secondItem="pYT-mk-H87" secondAttribute="leading" id="UNX-dV-Lu1"/>
+                            <constraint firstItem="OdU-Xn-4C3" firstAttribute="top" secondItem="pYT-mk-H87" secondAttribute="top" id="fni-f6-Uga"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LiL-Uh-StX"/>
                     <connections>
@@ -1120,14 +1115,6 @@
                                 <rect key="frame" x="-1" y="-69" width="416" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YZX-YW-Fhj">
-                                <rect key="frame" x="0.0" y="127" width="413" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="iNa-Xt-3mv" id="8co-dm-Zcd"/>
-                                </connections>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="TechnologyCollectionView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dDd-VY-jgw">
                                 <rect key="frame" x="9" y="430" width="396" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1314,9 +1301,21 @@
                                     <outlet property="delegate" destination="iNa-Xt-3mv" id="hbA-vT-uke"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YZX-YW-Fhj">
+                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="iNa-Xt-3mv" id="8co-dm-Zcd"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bTB-p7-7a3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bTB-p7-7a3" firstAttribute="trailing" secondItem="YZX-YW-Fhj" secondAttribute="trailing" id="3Gn-60-L3n"/>
+                            <constraint firstItem="YZX-YW-Fhj" firstAttribute="leading" secondItem="bTB-p7-7a3" secondAttribute="leading" id="biL-Td-skC"/>
+                            <constraint firstItem="YZX-YW-Fhj" firstAttribute="top" secondItem="bTB-p7-7a3" secondAttribute="top" id="hPe-zW-9RE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OG0-Gx-lbB"/>
                     <connections>
@@ -1396,11 +1395,30 @@
                                 <rect key="frame" x="0.0" y="171" width="414" height="601"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="dLE-qH-4Id">
+                                <stackView key="tableHeaderView" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" id="nxg-L7-d2c">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                </searchBar>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LR9-uF-Kua">
+                                            <rect key="frame" x="0.0" y="0.0" width="207" height="44"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSZ-h8-Bt4">
+                                            <rect key="frame" x="207" y="0.0" width="207" height="44"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="tinted">
+                                                <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="large"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="heavy"/>
+                                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="addRow:" destination="n2O-PJ-pLW" eventType="touchUpInside" id="Nxz-xX-JjM"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="9c4-c3-7If" customClass="NoteCell" customModule="TakeItEasy" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88.5" width="414" height="101"/>
@@ -1464,20 +1482,11 @@
                                     <outlet property="delegate" destination="n2O-PJ-pLW" id="BBm-9E-fzS"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSZ-h8-Bt4">
-                                <rect key="frame" x="354" y="123" width="45" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted">
-                                    <imageReference key="image" image="square.and.pencil" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="heavy"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="addRow:" destination="n2O-PJ-pLW" eventType="touchUpInside" id="Nxz-xX-JjM"/>
-                                </connections>
-                            </button>
+                            <searchBar contentMode="redraw" id="dLE-qH-4Id">
+                                <rect key="frame" x="-1" y="111" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bUn-E8-nhs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

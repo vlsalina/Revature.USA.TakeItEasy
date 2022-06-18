@@ -34,12 +34,24 @@ func validateSignUpCredentials(userid: String, email: String, password: String, 
         throw SignupErrors.invalidEmail
     }
     
+    guard (isValidEmail(email)) else {
+        throw SignupErrors.invalidEmailFormat
+    }
+    
     guard (!password.isEmpty) else {
         throw SignupErrors.invalidPassword
     }
     
+    guard (isValidPassword(password)) else {
+        throw SignupErrors.invalidPasswordFormat
+    }
+    
     guard (!confirmPassword.isEmpty) else {
         throw SignupErrors.invalidConfirmPassword
+    }
+    
+    guard (isValidPassword(confirmPassword)) else {
+        throw SignupErrors.invalidPasswordFormat
     }
     
     guard (!mobileNo.isEmpty) else {
@@ -51,6 +63,25 @@ func validateSignUpCredentials(userid: String, email: String, password: String, 
     }
     
 }
+
+// validate email format
+func isValidEmail(_ email: String) -> Bool {
+    let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    
+    let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+    return emailPred.evaluate(with: email)
+}
+
+// ^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$
+
+// validate password format
+func isValidPassword(_ password: String) -> Bool {
+    let passwordRegEx = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{6}$"
+    
+    let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
+    return passwordPred.evaluate(with: password)
+}
+
 
 // validate questions submission
 func validateQuestions(quiz: Quiz) throws {

@@ -52,26 +52,35 @@ class QuestionsPageViewController: UIViewController {
         if (flag) {
             let result = scoreKeeperObj.formatToString(submittedQuiz: quiz!)
             QuizPageViewController.msg = result
+            QuizPageViewController.alertTitle = result
             
             let score = scoreKeeperObj.percentageScore()
             if score <= 60 {
                 QuizPageViewController.rewardMsg = QuizConstants.scoredLow.rawValue
+                QuizPageViewController.alertMsg = QuizConstants.scoredLow.rawValue
             } else if (score <= 80) {
                 QuizPageViewController.rewardMsg = QuizConstants.scoredMed.rawValue
+                QuizPageViewController.alertMsg = QuizConstants.scoredLow.rawValue
             } else {
                 QuizPageViewController.rewardMsg = QuizConstants.scoredHigh.rawValue
+                QuizPageViewController.alertMsg = QuizConstants.scoredHigh.rawValue
             }
             
             // save result to database
-            insertResultData(name: quiz!.name, date: getDate(), score: scoreKeeperObj.percentageScore())
+//            insertResultData(name: quiz!.name, date: getDate(), score: scoreKeeperObj.percentageScore())
             
-            let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
-            present(TabPageVC, animated: true, completion: nil)
+            QuizPageViewController.toShowResults = true
+            
+            dismiss(animated: true)
+//            let TabPageVC = storyboard?.instantiateViewController(withIdentifier: "TabPageVC") as! UITabBarController
+//            present(TabPageVC, animated: true, completion: nil)
             
         } else {
             errorLabel.text = QuestionsConstants.notAllQuestionsAnswered.rawValue
         }
     }
+    
+    
     
     /*
      // MARK: - Navigation

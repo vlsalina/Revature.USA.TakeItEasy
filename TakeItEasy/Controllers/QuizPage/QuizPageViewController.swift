@@ -20,6 +20,9 @@ class QuizPageViewController: UIViewController {
     
     static var msg = QuizConstants.welcomeMsg.rawValue
     static var rewardMsg = QuizConstants.rewardMsg.rawValue
+    static var toShowResults = false
+    static var alertTitle = ""
+    static var alertMsg = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +35,29 @@ class QuizPageViewController: UIViewController {
         initializeSQLite()
         connectData()
         configureNavbar()
+        showResults()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        showResults()
     }
     
     func initialize() {
         messageBox.text = QuizPageViewController.msg
         rewardBox.text = QuizPageViewController.rewardMsg
+        quizCollection.layer.cornerRadius = 15
     }
     
     func connectData() {
         database = SQLiteObject.sqlObj.getData()
     }
     
+    func showResults() {
+        if QuizPageViewController.toShowResults {
+            showAlert()
+            QuizPageViewController.toShowResults = false
+        }
+    }
     
     func resetMsgs() {
         QuizPageViewController.msg = QuizConstants.welcomeMsg.rawValue
@@ -63,7 +78,7 @@ class QuizPageViewController: UIViewController {
     }
     
     @objc func toResultsPage() {
-        segueToVC(target: "ResultsPage", sender: self)
+        segueToVC(target: "ResultsPageNC", sender: self)
     }
     
     
@@ -77,10 +92,6 @@ class QuizPageViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    @IBAction func logout(_ sender: Any) {
-        resetMsgs()
-    }
-    
 }
 
 extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewDelegate {
@@ -110,5 +121,16 @@ extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewD
     }
     
     
+}
+
+extension QuizPageViewController {
+    func showAlert() {
+        let alert = UIAlertController(title: QuizPageViewController.alertTitle, message: QuizPageViewController.alertMsg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: { action in
+            QuizPageViewController.alertTitle = ""
+            QuizPageViewController.alertMsg = ""
+        }))
+        present(alert, animated: true)
+    }
 }
 

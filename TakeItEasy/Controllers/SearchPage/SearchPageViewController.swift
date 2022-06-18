@@ -15,12 +15,17 @@ class SearchPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let webKitView = WKWebView()
+        let newUrl = URL(string: "https://www.google.com")!
+        webKitView.load(URLRequest(url: newUrl))
+        view = webKitView
         configureNavbar()
     }
     
     func configureNavbar() {
         let userid = userDefaults.string(forKey: "currentUserName")
         self.navigationItem.title = userid
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
     }
     

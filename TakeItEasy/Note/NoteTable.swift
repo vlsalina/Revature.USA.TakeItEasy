@@ -76,6 +76,7 @@ extension NoteTable : UITableViewDelegate, UITableViewDataSource, UISearchBarDel
         
         cell.noteTitle.text = notes[indexPath.row].title
         cell.noteDesc.text = notes[indexPath.row].desc
+        cell.layer.cornerRadius = 15
         
         cell.timeLabel.text = dateFormatter.string(from: notes[indexPath.row].createdAt!)
         cell.timeLabel.textColor = UIColor.systemGray

@@ -26,7 +26,7 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        signInButton.isHidden = true
+        //        signInButton.isHidden = true
         otpPopup.isHidden = true
         otpPopup.layer.cornerRadius = 10
         otpPopup.layer.masksToBounds = true
@@ -64,8 +64,14 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
         catch SignupErrors.invalidPassword {
             errorLabel.text = SignupConstants.invalidPassword.rawValue
         }
+        catch SignupErrors.invalidPasswordFormat {
+            errorLabel.text = SignupConstants.invalidPasswordFormat.rawValue
+        }
         catch SignupErrors.invalidConfirmPassword {
             errorLabel.text = SignupConstants.invalidConfirmPassword.rawValue
+        }
+        catch SignupErrors.invalidConfirmPasswordFormat {
+            errorLabel.text = SignupConstants.invalidPasswordFormat.rawValue
         }
         catch SignupErrors.invalidMobileNo {
             errorLabel.text = SignupConstants.invalidMobileNo.rawValue

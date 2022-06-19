@@ -457,7 +457,7 @@
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="CY1-W8-zSm" userLabel="Details View">
-                                <rect key="frame" x="24" y="498.5" width="366" height="128"/>
+                                <rect key="frame" x="24" y="525.5" width="366" height="128"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EVc-do-FIW">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="50"/>
@@ -490,18 +490,17 @@
                                     <constraint firstItem="2eR-Xq-ogc" firstAttribute="top" secondItem="EVc-do-FIW" secondAttribute="bottom" constant="8" symbolic="YES" id="TPA-Yk-bkv"/>
                                     <constraint firstItem="EVc-do-FIW" firstAttribute="leading" secondItem="CY1-W8-zSm" secondAttribute="leading" id="YlG-D5-Onf"/>
                                     <constraint firstItem="2eR-Xq-ogc" firstAttribute="leading" secondItem="CY1-W8-zSm" secondAttribute="leading" id="bgh-0t-QTG"/>
-                                    <constraint firstAttribute="width" constant="366" id="itK-r8-Znf"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="guy-au-SsR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="CY1-W8-zSm" secondAttribute="trailing" constant="24" id="GyV-Sg-PG4"/>
                             <constraint firstItem="wN1-Oe-ynx" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="P9l-fs-2gA"/>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="SvP-8z-YQl"/>
                             <constraint firstItem="wN1-Oe-ynx" firstAttribute="top" secondItem="guy-au-SsR" secondAttribute="top" constant="79.280000000000001" id="ZaW-zf-wqa"/>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="top" secondItem="wN1-Oe-ynx" secondAttribute="bottom" constant="60" id="lBC-Rm-dQ2"/>
-                            <constraint firstItem="CY1-W8-zSm" firstAttribute="top" secondItem="wN1-Oe-ynx" secondAttribute="bottom" constant="33" id="pHb-7u-CeV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uMP-g1-Alu"/>

@@ -48,7 +48,7 @@ class NoteTable: UIViewController {
     
     @objc func logoutAction() {
         userLoggedOut()
-        dismiss(animated: true)
+        segueToVC(target: SIDs.LoginPageVC.rawValue, sender: self)
     }
     
     
@@ -70,7 +70,9 @@ extension NoteTable : UITableViewDelegate, UITableViewDataSource, UISearchBarDel
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.backgroundColor = UIColor.clear
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NoteCell
+        cell.backgroundColor = UIColor.clear
         var dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/YY"
         

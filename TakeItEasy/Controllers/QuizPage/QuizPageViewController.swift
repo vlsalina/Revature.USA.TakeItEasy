@@ -7,13 +7,24 @@
 
 import UIKit
 
+//class ResultsVC: UIViewController {
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        view.backgroundColor = UIColor(named: "quiz-results-bgc")
+//    }
+//}
+
 class QuizPageViewController: UIViewController {
+    
     
     @IBOutlet weak var messageBox: UITextView!
     @IBOutlet weak var rewardBox: UITextView!
     @IBOutlet weak var quizCollection: UICollectionView!
     @IBOutlet weak var navbar: UINavigationBar!
     @IBOutlet weak var navbarItem: UINavigationItem!
+    
+    let searchController = UISearchController()
+    let possibleSearches = ["Swift", "XCode", "Storyboard", "Collections"]
     
     var quizzes = Quiz.FetchQuizzes()
     var database : [QuizSQLClass]?
@@ -30,6 +41,8 @@ class QuizPageViewController: UIViewController {
         // Do any additional setup after loading the view.
         quizCollection.dataSource = self
         quizCollection.delegate = self
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
         
         initialize()
         initializeSQLite()
@@ -75,10 +88,11 @@ class QuizPageViewController: UIViewController {
         resetMsgs()
         userLoggedOut()
         dismiss(animated: true)
+        segueToVC(target: SIDs.LoginPageVC.rawValue, sender: self)
     }
     
     @objc func toResultsPage() {
-        segueToVC(target: "ResultsPageNC", sender: self)
+        segueToVC(target: SIDs.ResultsPageNC.rawValue, sender: self)
     }
     
     
@@ -121,6 +135,35 @@ extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewD
     }
     
     
+}
+
+extension QuizPageViewController : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        
+        if (!text.isEmpty) {
+            database = database!.filter { x in
+                if x.name.lowercased().starts(with: text.lowercased()) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            quizzes = quizzes.filter { x in
+                if x.name.lowercased().starts(with: text.lowercased()) {
+                   return true
+                } else {
+                   return false
+                }
+            }
+        } else {
+            database = SQLiteObject.sqlObj.getData()
+            quizzes = Quiz.FetchQuizzes()
+        }
+        quizCollection.reloadData()
+    }
 }
 
 extension QuizPageViewController {

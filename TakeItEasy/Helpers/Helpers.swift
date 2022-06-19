@@ -114,6 +114,13 @@ func segueToVC(target: String, sender: AnyObject) {
     sender.present(targetVC, animated: true, completion: nil)
 }
 
+// get target
+func getTarget(target: String) -> UIViewController {
+    let storyObject = UIStoryboard(name: "Main", bundle: nil)
+    let targetVC = storyObject.instantiateViewController(withIdentifier: target)
+    return targetVC
+}
+
 
 // round corners
 func roundedCorners(_ param: inout UIView) {

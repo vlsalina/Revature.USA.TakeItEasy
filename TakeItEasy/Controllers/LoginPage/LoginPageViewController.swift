@@ -10,8 +10,21 @@ import UIKit
 class LoginPageViewController: UIViewController {
     
     @IBOutlet weak var box1: UIView!
-    @IBOutlet weak var useridField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var useridField: UITextField! {
+        didSet {
+            let placeholderText = NSAttributedString(string: "Username",
+                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+            useridField.attributedPlaceholder = placeholderText
+        }
+    }
+    @IBOutlet weak var passwordField: UITextField! {
+        didSet {
+            let placeholderText = NSAttributedString(string: "Password",
+                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+            passwordField.attributedPlaceholder = placeholderText
+        }
+        
+    }
     @IBOutlet weak var rememberMe: UISwitch!
     @IBOutlet weak var errorLabel: UILabel!
     
@@ -38,6 +51,9 @@ class LoginPageViewController: UIViewController {
             rememberMe.isOn = false
         }
         roundedCorners(&box1)
+        
+        addBorderColor(&useridField)
+        addBorderColor(&passwordField)
     }
     
     
@@ -103,3 +119,4 @@ class LoginPageViewController: UIViewController {
      */
     
 }
+

@@ -9,17 +9,17 @@ import UIKit
 
 class QuizPageViewController: UIViewController {
     
+    
     @IBOutlet weak var messageBox: UITextView!
     @IBOutlet weak var rewardBox: UITextView!
     @IBOutlet weak var quizCollection: UICollectionView!
     @IBOutlet weak var navbar: UINavigationBar!
     @IBOutlet weak var navbarItem: UINavigationItem!
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var searchResults: UITableView!
+    
+    let searchController = UISearchController()
     
     var quizzes = Quiz.FetchQuizzes()
     var database : [QuizSQLClass]?
-    var searchArray = [QuizSQLClass]()
     
     static var msg = QuizConstants.welcomeMsg.rawValue
     static var rewardMsg = QuizConstants.rewardMsg.rawValue
@@ -33,6 +33,8 @@ class QuizPageViewController: UIViewController {
         // Do any additional setup after loading the view.
         quizCollection.dataSource = self
         quizCollection.delegate = self
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
         
         initialize()
         initializeSQLite()
@@ -126,17 +128,13 @@ extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewD
     
 }
 
-extension QuizPageViewController : UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return searchArray.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = searchResults.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchTableViewCell
+extension QuizPageViewController : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
         
-        cell.nameLabel = searchArray[indexPath.row].name
-        
-        return cell
+        print(text)
     }
     
     

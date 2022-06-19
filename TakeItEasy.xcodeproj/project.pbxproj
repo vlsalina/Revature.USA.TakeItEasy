@@ -50,7 +50,6 @@
 		6192B0252852954C00631265 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192B0242852954C00631265 /* QuestionCollectionViewCell.swift */; };
 		6192B069285392D900631265 /* ScoreKeeper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192B068285392D900631265 /* ScoreKeeper.swift */; };
 		61B628F7285C1EA600B73A02 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B628F6285C1EA600B73A02 /* CurrentUser.swift */; };
-		61B62907285E9C0C00B73A02 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B62906285E9C0C00B73A02 /* SearchTableViewCell.swift */; };
 		61B9C164285559B700A8BA1C /* SQLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C163285559B700A8BA1C /* SQLHelpers.swift */; };
 		61B9C1662855602A00A8BA1C /* SQLiteConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C1652855602A00A8BA1C /* SQLiteConstants.swift */; };
 		61B9C16F285592C300A8BA1C /* QuestionsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C16E285592C300A8BA1C /* QuestionsConstants.swift */; };
@@ -114,7 +113,6 @@
 		6192B0242852954C00631265 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		6192B068285392D900631265 /* ScoreKeeper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreKeeper.swift; sourceTree = "<group>"; };
 		61B628F6285C1EA600B73A02 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
-		61B62906285E9C0C00B73A02 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		61B9C163285559B700A8BA1C /* SQLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLHelpers.swift; sourceTree = "<group>"; };
 		61B9C1652855602A00A8BA1C /* SQLiteConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteConstants.swift; sourceTree = "<group>"; };
 		61B9C16E285592C300A8BA1C /* QuestionsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsConstants.swift; sourceTree = "<group>"; };
@@ -319,7 +317,6 @@
 			children = (
 				6192AFBA2852535500631265 /* QuizPageViewController.swift */,
 				6192AFBC2852536C00631265 /* QuizCollectionViewCell.swift */,
-				61B62906285E9C0C00B73A02 /* SearchTableViewCell.swift */,
 			);
 			path = QuizPage;
 			sourceTree = "<group>";
@@ -460,7 +457,6 @@
 				845A19C9285780EA005013EA /* BookConstants.swift in Sources */,
 				6192AFBD2852536C00631265 /* QuizCollectionViewCell.swift in Sources */,
 				733261F5285555D6008CBC5C /* SearchPageViewController.swift in Sources */,
-				61B62907285E9C0C00B73A02 /* SearchTableViewCell.swift in Sources */,
 				6192AF632851813700631265 /* Helpers.swift in Sources */,
 				61901021285AA7EF0047B2A6 /* GooglePageViewController.swift in Sources */,
 				61901023285AAEE10047B2A6 /* ForumPageViewController.swift in Sources */,

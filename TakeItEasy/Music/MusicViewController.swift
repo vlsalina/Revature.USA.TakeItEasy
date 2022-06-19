@@ -161,6 +161,9 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         self.view.layer.addSublayer(playerLayer)
         
         
+        resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
+        
+        
         // Timer
 //        let duration = player?.currentItem?.duration //{
 //            print(duration)
@@ -207,7 +210,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         if(playlist.songTitles.count > 0){
             if (player?.rate == 0 && !songIsPlaying){
                 player!.play()
-                print(CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
+                print("GET SECONDS: ", CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
                 songIsPlaying = true
                 playPauseButton.setBackgroundImage(UIImage(systemName:"pause.fill"), for: .normal)
             } else if (songIsPlaying){

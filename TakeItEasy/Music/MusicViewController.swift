@@ -162,13 +162,16 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         
         // Timer
-        if let duration = player?.currentItem?.duration{
-        let seconds = CMTimeGetSeconds(duration)
-            print(seconds)
-            let secondsText = Float64(seconds).truncatingRemainder(dividingBy: 60)
-            let minutesText = Float64(seconds) / 60
-            resultTime.text = "\(minutesText):\(secondsText)"
-        }
+//        let duration = player?.currentItem?.duration //{
+//            print(duration)
+//            let seconds = CMTimeGetSeconds(duration)
+//            let secondsText = Float64(seconds).truncatingRemainder(dividingBy: 60)
+//            let minutesText = Float64(seconds) / 60
+//            resultTime.text = "\(minutesText):\(secondsText)"
+//        }
+//        print("DURATION: ", duration)
+            
+            
         if(!self.initialLabel){
             self.songNameLabel!.text = self.playlist.songTitles[0]
             self.artistNameLabel!.text = self.playlist.artistNames[0]
@@ -182,11 +185,11 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         //set button position
         let size:CGFloat = 50
         playPauseButton.frame = CGRect(x: (holder.frame.size.width - size)/2.0, y: 300, width: size, height: size)
-       
+        
         
         // set button image
         playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
-       
+        
         //set button color
         playPauseButton.tintColor = UIColor(named:"logo")
         
@@ -196,7 +199,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         // calls button functionality
         playPauseButton.addTarget(self, action: #selector(didPressPlayPauseButton), for: .touchUpInside)
         timeSlider.addTarget(self, action: #selector(sliderDidSlide), for: .valueChanged)
-      
+        
     }
     
     //play pause functionaility
@@ -204,6 +207,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         if(playlist.songTitles.count > 0){
             if (player?.rate == 0 && !songIsPlaying){
                 player!.play()
+                print(CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
                 songIsPlaying = true
                 playPauseButton.setBackgroundImage(UIImage(systemName:"pause.fill"), for: .normal)
             } else if (songIsPlaying){

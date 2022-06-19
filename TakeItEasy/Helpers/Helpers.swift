@@ -122,8 +122,8 @@ func roundedCorners(_ param: inout UIView) {
 
 func userLoggedIn(existingUser: User) {
     userDefaults.set(existingUser.userid!, forKey: "currentUserName")
-    userDefaults.set(existingUser.email!, forKey: "currentUserEmail")
-    userDefaults.set(existingUser.mobile!, forKey: "currentUserMobile")
+//    userDefaults.set(existingUser.email!, forKey: "currentUserEmail")
+//    userDefaults.set(existingUser.mobile!, forKey: "currentUserMobile")
 }
 
 func userLoggedOut() {

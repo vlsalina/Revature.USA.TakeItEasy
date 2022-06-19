@@ -891,6 +891,21 @@
             </objects>
             <point key="canvasLocation" x="905.79710144927549" y="2434.8214285714284"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="yFL-l2-nBx">
+            <objects>
+                <viewController storyboardIdentifier="SearchResultsVC" id="Qzl-Cq-jhk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zos-iI-vfL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="No2-OA-DhR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Daf-tf-CK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848" y="2435"/>
+        </scene>
         <!--Search Page-->
         <scene sceneID="jWP-9Z-f5D">
             <objects>

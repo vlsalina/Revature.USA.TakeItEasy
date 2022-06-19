@@ -451,8 +451,8 @@
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
-                                    <outlet property="dataSource" destination="kKf-V3-McW" id="1qV-LZ-fOQ"/>
-                                    <outlet property="delegate" destination="kKf-V3-McW" id="OAT-mH-28y"/>
+                                    <outlet property="dataSource" destination="kKf-V3-McW" id="a8u-gp-GHb"/>
+                                    <outlet property="delegate" destination="kKf-V3-McW" id="nlE-Yt-xyW"/>
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="CY1-W8-zSm" userLabel="Details View">
@@ -492,10 +492,6 @@
                                     <constraint firstAttribute="width" constant="366" id="itK-r8-Znf"/>
                                 </constraints>
                             </stackView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-sY-h05">
-                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="guy-au-SsR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -503,14 +499,11 @@
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="top" secondItem="wN1-Oe-ynx" secondAttribute="bottom" constant="33" id="61o-xg-ou5"/>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="9cP-NT-td5"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="bottom" secondItem="CY1-W8-zSm" secondAttribute="bottom" constant="63" id="Bh1-9Z-kSE"/>
-                            <constraint firstItem="dsV-sY-h05" firstAttribute="top" secondItem="guy-au-SsR" secondAttribute="top" id="Ct2-Sj-dk1"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="CY1-W8-zSm" secondAttribute="trailing" constant="24" id="Fb6-vl-Koz"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="wN1-Oe-ynx" secondAttribute="trailing" constant="24" id="Hch-e0-r6c"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="bottom" secondItem="CY1-W8-zSm" secondAttribute="bottom" constant="63" id="NiJ-Lv-bxr"/>
                             <constraint firstItem="wN1-Oe-ynx" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="P9l-fs-2gA"/>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="SvP-8z-YQl"/>
-                            <constraint firstAttribute="trailing" secondItem="dsV-sY-h05" secondAttribute="trailing" id="ZCM-dt-hxL"/>
-                            <constraint firstItem="dsV-sY-h05" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" id="l3X-Ax-Hyp"/>
                             <constraint firstItem="guy-au-SsR" firstAttribute="trailing" secondItem="CY1-W8-zSm" secondAttribute="trailing" constant="24" id="oMJ-NF-yg0"/>
                             <constraint firstItem="CY1-W8-zSm" firstAttribute="top" secondItem="wN1-Oe-ynx" secondAttribute="bottom" constant="33" id="pHb-7u-CeV"/>
                             <constraint firstItem="wN1-Oe-ynx" firstAttribute="leading" secondItem="guy-au-SsR" secondAttribute="leading" constant="24" id="rOZ-jZ-eiS"/>
@@ -898,49 +891,20 @@
             </objects>
             <point key="canvasLocation" x="905.79710144927549" y="2434.8214285714284"/>
         </scene>
-        <!--Google Page View Controller-->
-        <scene sceneID="fdF-DL-vqt">
+        <!--View Controller-->
+        <scene sceneID="yFL-l2-nBx">
             <objects>
-                <viewController id="Cu1-AL-BaC" customClass="GooglePageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ag3-dg-tDa">
+                <viewController storyboardIdentifier="SearchResultsVC" id="Qzl-Cq-jhk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zos-iI-vfL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_light_dark" translatesAutoresizingMaskIntoConstraints="NO" id="ZBP-Bz-8xz">
-                                <rect key="frame" x="-1" y="-27" width="416" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="ZPX-nW-ihq"/>
+                        <viewLayoutGuide key="safeArea" id="No2-OA-DhR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HLM-9r-Bg3"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k3H-ZN-qtx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Daf-tf-CK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1847.826086956522" y="2434.8214285714284"/>
-        </scene>
-        <!--Forum Page-->
-        <scene sceneID="0PU-hg-5qw">
-            <objects>
-                <viewController title="Forum Page" id="bsD-MS-beD" customClass="ForumPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ex8-72-gHC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_light_dark" translatesAutoresizingMaskIntoConstraints="NO" id="VSJ-Wo-slj">
-                                <rect key="frame" x="-1" y="-27" width="416" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="CxB-mk-nbR"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="JUq-dF-qXp"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i6A-3P-ECS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2842.0289855072465" y="2434.8214285714284"/>
+            <point key="canvasLocation" x="1848" y="2435"/>
         </scene>
         <!--Search Page-->
         <scene sceneID="jWP-9Z-f5D">

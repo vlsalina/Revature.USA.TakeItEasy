@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FKN-Hg-gu6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V3y-u2-S9t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -962,10 +962,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XsK-lq-NUx">
-                                        <rect key="frame" x="52" y="286" width="327" height="4"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGE-qM-6fi">
                                         <rect key="frame" x="52" y="298" width="39" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -980,6 +976,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PlN-tV-Xix">
+                                        <rect key="frame" x="50" y="264" width="331" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </slider>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="songName" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT5-jV-eVp">
                                         <rect key="frame" x="52" y="153" width="296" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -990,8 +990,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OdU-Xn-4C3">
+                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="7q6-K2-sXA" id="AYb-iU-l5m"/>
+                                </connections>
+                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="MusicCollectionView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9ts-GJ-Pfb">
-                                <rect key="frame" x="-2" y="206" width="414" height="408"/>
+                                <rect key="frame" x="-1" y="152" width="414" height="408"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="50" id="xws-5C-xgJ">
@@ -1010,7 +1017,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHs-8p-9ul">
-                                                    <rect key="frame" x="13" y="8" width="380" height="299"/>
+                                                    <rect key="frame" x="13" y="0.0" width="380" height="299"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -1026,10 +1033,6 @@
                                     <outlet property="delegate" destination="7q6-K2-sXA" id="yTF-kW-Lsz"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OdU-Xn-4C3">
-                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pYT-mk-H87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1044,10 +1047,11 @@
                         <outlet property="artistNameLabel" destination="cCg-pL-D0b" id="taS-gd-jj6"/>
                         <outlet property="holder" destination="Xza-LF-xz1" id="wBO-5j-8xr"/>
                         <outlet property="musicCollectionView" destination="9ts-GJ-Pfb" id="MRS-Fx-270"/>
-                        <outlet property="progressBar" destination="XsK-lq-NUx" id="loP-gY-mI3"/>
+                        <outlet property="musicSB" destination="OdU-Xn-4C3" id="9EV-oj-2wR"/>
                         <outlet property="resultTime" destination="MWW-Ou-cqC" id="P7V-ej-XHY"/>
                         <outlet property="songNameLabel" destination="bT5-jV-eVp" id="sZN-Gw-XbL"/>
                         <outlet property="startTime" destination="RGE-qM-6fi" id="riY-JA-pRp"/>
+                        <outlet property="timeSlider" destination="PlN-tV-Xix" id="12o-Eg-QpC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVq-Im-Q0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1684,7 +1688,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1s6-qj-ZBV"/>
+        <segue reference="g5l-ss-vHL"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="6000" height="4000"/>

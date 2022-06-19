@@ -37,27 +37,54 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     // searchBar variables
     @IBOutlet weak var musicSB: UISearchBar!
-    var allSongs = Playlist()
+    var filter : Bool = false
     var filteredSongs = Playlist()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        musicSB.delegate = self
         getMusicData(playlistID: playlistIDVar)
         drawButtons()
         configureNavbar()
         
     }
-    
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredSongs.songTitles = []
+        
+        if searchText == ""{
+            filteredSongs = playlist
+        }
+        for i in playlist.songTitles{
+            if i.lowercased().contains(searchText.lowercased()){
+                filteredSongs.songTitles.append(i)
+            }
+        }
+        musicCollectionView.reloadData()
+        if(searchText != "\n"){
+            filter = true
+        } else{
+            filter = false
+        }
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return playlist.songTitles.count
+        if !filteredSongs.songTitles.isEmpty{
+            return filteredSongs.songTitles.count
+        } else {
+            return filter ? 0 : playlist.songTitles.count
+        }
         
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        var sTitles = playlist.songTitles[indexPath.row]
+        if !filteredSongs.songTitles.isEmpty{
+            sTitles = filteredSongs.songTitles[indexPath.row]
+        }
+        
+        
         position = indexPath.row
-        songNameLabel!.text = playlist.songTitles[indexPath.row]
+        songNameLabel!.text = sTitles
         artistNameLabel!.text = playlist.artistNames[indexPath.row]
         if(songIsPlaying){
             player?.pause()
@@ -84,7 +111,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     @objc func logoutAction() {
         userLoggedOut()
-        segueToVC(target: SIDs.LoginPageVC.rawValue, sender: self)
+        dismiss(animated: true)
     }
     
     
@@ -109,6 +136,11 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
                         self.playlist.artistNames.append(song.artist!.name!)
                         self.playlist.mp3URLs.append(song.preview!)
                         self.playlist.coverURLs.append(song.album!.cover_medium!)
+                        if(!self.initialLabel){
+                            self.songNameLabel!.text = self.playlist.songTitles[0]
+                            self.artistNameLabel!.text = self.playlist.artistNames[0]
+                            self.initialLabel = true
+                        }
                     }
                     self.configure()
                     DispatchQueue.main.async {
@@ -133,16 +165,14 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
         self.view.layer.addSublayer(playerLayer)
         
-        if(!initialLabel){
-            songNameLabel!.text = playlist.songTitles[0]
-            artistNameLabel!.text = playlist.artistNames[0]
-            initialLabel = true
-        }
+        
+        // Timer
         if let duration = player?.currentItem?.duration{
         let seconds = CMTimeGetSeconds(duration)
             print(seconds)
-            let secondsText = seconds.truncatingRemainder(dividingBy: 60)
-            resultTime.text = "00:\(secondsText)"
+            let secondsText = Float64(seconds).truncatingRemainder(dividingBy: 60)
+            let minutesText = Float64(seconds) / 60
+            resultTime.text = "\(minutesText):\(secondsText)"
         }
         
         
@@ -165,6 +195,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         
         // calls button functionality
         playPauseButton.addTarget(self, action: #selector(didPressPlayPauseButton), for: .touchUpInside)
+        timeSlider.addTarget(self, action: #selector(sliderDidSlide), for: .valueChanged)
       
     }
     
@@ -182,7 +213,18 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             }
         }
     }
-    
+    @objc func sliderDidSlide(){
+        print(timeSlider.value)
+        
+        if let duration = player?.currentItem?.duration{
+            let totalSeconds = CMTimeGetSeconds(duration)
+            let value = Float64(timeSlider.value) * totalSeconds
+            let seekTime = CMTime(value: Int64(value), timescale: 1)
+            player?.seek(to: seekTime, completionHandler: {(completedSeek) in
+                
+            })
+        }
+    }
     // if view closes music will stop too
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -220,6 +262,7 @@ extension MusicViewController : UICollectionViewDelegateFlowLayout{
     }
     
 }
+
 
 
 

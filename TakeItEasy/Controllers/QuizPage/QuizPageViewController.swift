@@ -14,9 +14,12 @@ class QuizPageViewController: UIViewController {
     @IBOutlet weak var quizCollection: UICollectionView!
     @IBOutlet weak var navbar: UINavigationBar!
     @IBOutlet weak var navbarItem: UINavigationItem!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchResults: UITableView!
     
     var quizzes = Quiz.FetchQuizzes()
     var database : [QuizSQLClass]?
+    var searchArray = [QuizSQLClass]()
     
     static var msg = QuizConstants.welcomeMsg.rawValue
     static var rewardMsg = QuizConstants.rewardMsg.rawValue
@@ -118,6 +121,22 @@ extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewD
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
+    }
+    
+    
+}
+
+extension QuizPageViewController : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = searchResults.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchTableViewCell
+        
+        cell.nameLabel = searchArray[indexPath.row].name
+        
+        return cell
     }
     
     

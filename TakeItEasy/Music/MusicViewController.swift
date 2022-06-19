@@ -279,8 +279,16 @@ extension MusicViewController {
     @objc func updateTime() {
         //        status.text = audioPlayer?.currentTime.description
         //        progress.progress = Float(audioPlayer!.currentTime) / Float(audioPlayer!.duration)
-        print(CMTimeGetSeconds((player?.currentTime())!))
+        //        print(CMTimeGetSeconds((player?.currentTime())!))
         startTime.text = formatTimeFor(seconds: CMTimeGetSeconds((player?.currentTime())!))
+        
+        // set slider
+        var currentTime = Float(CMTimeGetSeconds((player?.currentTime())!)) / Float(CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
+        
+        print("\(currentTime)%")
+        timeSlider.setValue(currentTime, animated: true)
+        
+        
     }
 }
 

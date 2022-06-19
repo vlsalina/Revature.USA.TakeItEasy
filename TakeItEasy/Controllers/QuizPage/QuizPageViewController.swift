@@ -88,10 +88,11 @@ class QuizPageViewController: UIViewController {
         resetMsgs()
         userLoggedOut()
         dismiss(animated: true)
+        segueToVC(target: SIDs.LoginPageVC.rawValue, sender: self)
     }
     
     @objc func toResultsPage() {
-        segueToVC(target: "ResultsPageNC", sender: self)
+        segueToVC(target: SIDs.ResultsPageNC.rawValue, sender: self)
     }
     
     

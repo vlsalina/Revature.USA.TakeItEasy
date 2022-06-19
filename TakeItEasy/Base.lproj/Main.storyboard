@@ -14,7 +14,7 @@
         <!--Login Page View Controller-->
         <scene sceneID="EJm-Ht-SBB">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="V3y-u2-S9t" customClass="LoginPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginPageVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="V3y-u2-S9t" customClass="LoginPageViewController" customModule="TakeItEasy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b3s-l7-9My">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -398,36 +398,35 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="wN1-Oe-ynx" userLabel="Quiz Collection View">
-                                <rect key="frame" x="24" y="169" width="366" height="366"/>
+                                <rect key="frame" x="24" y="205" width="366" height="330"/>
                                 <color key="backgroundColor" name="color-swtich"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="366" id="AUt-Uz-MKT"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="366" id="PXb-i1-vbE"/>
-                                    <constraint firstAttribute="height" constant="366" id="d0J-9u-wF2"/>
+                                    <constraint firstAttribute="height" constant="330" id="qWn-gg-89A"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5UJ-ys-74q">
-                                    <size key="itemSize" width="366" height="366"/>
+                                    <size key="itemSize" width="330" height="330"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quizCell" id="ClF-6T-eQS" customClass="QuizCollectionViewCell" customModule="TakeItEasy" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="366" height="366"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AAL-99-Cz4">
-                                            <rect key="frame" x="0.0" y="0.0" width="366" height="366"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pexels-gradienta-6985047" translatesAutoresizingMaskIntoConstraints="NO" id="pir-ZK-BYf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="366" height="366"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="330"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="366" id="gGG-Xk-fs3"/>
-                                                        <constraint firstAttribute="height" constant="366" id="ivd-wK-JbW"/>
+                                                        <constraint firstAttribute="width" constant="330" id="9MH-7p-HU2"/>
+                                                        <constraint firstAttribute="height" constant="330" id="Ny6-uq-cNh"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collections" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EQ-Bs-xvk">
-                                                    <rect key="frame" x="119.5" y="168.5" width="126.5" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collections" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0EQ-Bs-xvk">
+                                                    <rect key="frame" x="0.0" y="155" width="330" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -435,13 +434,15 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="0EQ-Bs-xvk" firstAttribute="leading" secondItem="AAL-99-Cz4" secondAttribute="leading" constant="119.27" id="1gd-Br-V9f"/>
-                                                <constraint firstAttribute="trailing" secondItem="0EQ-Bs-xvk" secondAttribute="trailing" constant="120.23" id="Aig-cx-VbG"/>
                                                 <constraint firstAttribute="trailing" secondItem="pir-ZK-BYf" secondAttribute="trailing" id="CbB-9w-UMl"/>
-                                                <constraint firstItem="0EQ-Bs-xvk" firstAttribute="top" secondItem="AAL-99-Cz4" secondAttribute="top" constant="168.72999999999999" id="LbL-fi-p7s"/>
+                                                <constraint firstItem="0EQ-Bs-xvk" firstAttribute="leading" secondItem="AAL-99-Cz4" secondAttribute="leading" id="FEj-Vq-TL4"/>
                                                 <constraint firstAttribute="bottom" secondItem="pir-ZK-BYf" secondAttribute="bottom" id="Lex-NY-Wml"/>
+                                                <constraint firstItem="pir-ZK-BYf" firstAttribute="top" secondItem="AAL-99-Cz4" secondAttribute="top" id="ME9-8B-czP"/>
+                                                <constraint firstAttribute="trailing" secondItem="0EQ-Bs-xvk" secondAttribute="trailing" id="TF9-u4-0zI"/>
                                                 <constraint firstItem="pir-ZK-BYf" firstAttribute="top" secondItem="AAL-99-Cz4" secondAttribute="top" id="XSq-dT-T66"/>
+                                                <constraint firstItem="pir-ZK-BYf" firstAttribute="leading" secondItem="AAL-99-Cz4" secondAttribute="leading" id="qze-e2-2l1"/>
                                                 <constraint firstItem="pir-ZK-BYf" firstAttribute="leading" secondItem="AAL-99-Cz4" secondAttribute="leading" id="s5g-2y-ehx"/>
+                                                <constraint firstItem="0EQ-Bs-xvk" firstAttribute="top" secondItem="AAL-99-Cz4" secondAttribute="top" constant="155.09999999999999" id="yfS-OR-Hb9"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>

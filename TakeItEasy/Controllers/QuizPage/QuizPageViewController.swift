@@ -150,8 +150,16 @@ extension QuizPageViewController : UISearchResultsUpdating {
                     return false
                 }
             }
+            quizzes = quizzes.filter { x in
+                if x.name.lowercased().starts(with: text.lowercased()) {
+                   return true
+                } else {
+                   return false
+                }
+            }
         } else {
             database = SQLiteObject.sqlObj.getData()
+            quizzes = Quiz.FetchQuizzes()
         }
         quizCollection.reloadData()
     }

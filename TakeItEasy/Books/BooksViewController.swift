@@ -49,7 +49,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     
     @objc func logoutAction() {
         userLoggedOut()
-        dismiss(animated: true)
+        segueToVC(target: SIDs.LoginPageVC.rawValue, sender: self)
     }
     
     

@@ -31,9 +31,8 @@ class SearchPageViewController: UIViewController {
     
     @objc func logoutAction() {
         userLoggedOut()
-        dismiss(animated: true)
+        segueToVC(target: SIDs.LoginPageVC.rawValue, sender: self)
     }
-    
     
     
     /*

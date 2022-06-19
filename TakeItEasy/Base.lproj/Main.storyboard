@@ -1687,9 +1687,6 @@
             <point key="canvasLocation" x="-1078.2608695652175" y="2434.8214285714284"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="g5l-ss-vHL"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="1" width="6000" height="4000"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>

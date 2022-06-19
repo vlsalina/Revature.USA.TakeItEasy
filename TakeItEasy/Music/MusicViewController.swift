@@ -9,6 +9,9 @@ import UIKit
 import AVFoundation
 class MusicViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UISearchBarDelegate {
     
+    // timer
+    var timer : Timer?
+    
     //declare variables
     var playlist = Playlist()
     //button view
@@ -161,14 +164,19 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         self.view.layer.addSublayer(playerLayer)
         
         
+        resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
+        
         // Timer
-        if let duration = player?.currentItem?.duration{
-        let seconds = CMTimeGetSeconds(duration)
-            print(seconds)
-            let secondsText = Float64(seconds).truncatingRemainder(dividingBy: 60)
-            let minutesText = Float64(seconds) / 60
-            resultTime.text = "\(minutesText):\(secondsText)"
-        }
+        //        let duration = player?.currentItem?.duration //{
+        //            print(duration)
+        //            let seconds = CMTimeGetSeconds(duration)
+        //            let secondsText = Float64(seconds).truncatingRemainder(dividingBy: 60)
+        //            let minutesText = Float64(seconds) / 60
+        //            resultTime.text = "\(minutesText):\(secondsText)"
+        //        }
+        //        print("DURATION: ", duration)
+        
+        
         if(!self.initialLabel){
             self.songNameLabel!.text = self.playlist.songTitles[0]
             self.artistNameLabel!.text = self.playlist.artistNames[0]
@@ -182,11 +190,11 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         //set button position
         let size:CGFloat = 50
         playPauseButton.frame = CGRect(x: (holder.frame.size.width - size)/2.0, y: 300, width: size, height: size)
-       
+        
         
         // set button image
         playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
-       
+        
         //set button color
         playPauseButton.tintColor = UIColor(named:"logo")
         
@@ -196,7 +204,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         // calls button functionality
         playPauseButton.addTarget(self, action: #selector(didPressPlayPauseButton), for: .touchUpInside)
         timeSlider.addTarget(self, action: #selector(sliderDidSlide), for: .valueChanged)
-      
+        
     }
     
     //play pause functionaility
@@ -204,8 +212,12 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         if(playlist.songTitles.count > 0){
             if (player?.rate == 0 && !songIsPlaying){
                 player!.play()
+                print("GET SECONDS: ", CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
                 songIsPlaying = true
                 playPauseButton.setBackgroundImage(UIImage(systemName:"pause.fill"), for: .normal)
+                
+                timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+                
             } else if (songIsPlaying){
                 player!.pause()
                 songIsPlaying = false
@@ -261,6 +273,23 @@ extension MusicViewController : UICollectionViewDelegateFlowLayout{
         return CGSize(width: 355, height: 355)
     }
     
+}
+
+extension MusicViewController {
+    @objc func updateTime() {
+        //        status.text = audioPlayer?.currentTime.description
+        //        progress.progress = Float(audioPlayer!.currentTime) / Float(audioPlayer!.duration)
+        //        print(CMTimeGetSeconds((player?.currentTime())!))
+        startTime.text = formatTimeFor(seconds: CMTimeGetSeconds((player?.currentTime())!))
+        
+        // set slider
+        var currentTime = Float(CMTimeGetSeconds((player?.currentTime())!)) / Float(CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
+        
+        print("\(currentTime)%")
+        timeSlider.setValue(currentTime, animated: true)
+        
+        
+    }
 }
 
 

@@ -7,6 +7,13 @@
 
 import UIKit
 
+class ResultsVC: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = UIColor(named: "quiz-results-bgc")
+    }
+}
+
 class QuizPageViewController: UIViewController {
     
     
@@ -16,7 +23,7 @@ class QuizPageViewController: UIViewController {
     @IBOutlet weak var navbar: UINavigationBar!
     @IBOutlet weak var navbarItem: UINavigationItem!
     
-    let searchController = UISearchController()
+    let searchController = UISearchController(searchResultsController: ResultsVC())
     
     var quizzes = Quiz.FetchQuizzes()
     var database : [QuizSQLClass]?
@@ -133,11 +140,8 @@ extension QuizPageViewController : UISearchResultsUpdating {
         guard let text = searchController.searchBar.text else {
             return
         }
-        
         print(text)
     }
-    
-    
 }
 
 extension QuizPageViewController {

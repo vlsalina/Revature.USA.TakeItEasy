@@ -14,11 +14,46 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     @IBOutlet weak var otpTextField: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
-    @IBOutlet weak var mobileNo: UITextField!
-    @IBOutlet weak var confirmPassword: UITextField!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var userid: UITextField!
+    @IBOutlet weak var mobileNo: UITextField! {
+        didSet {
+            let placeholderText = NSAttributedString(string: "Mobile No.",
+                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+            
+            mobileNo.attributedPlaceholder = placeholderText
+        }
+    }
+    @IBOutlet weak var confirmPassword: UITextField! {
+        didSet {
+            let placeholderText = NSAttributedString(string: "Confirm Password",
+                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+            
+            confirmPassword.attributedPlaceholder = placeholderText
+        }
+    }
+    @IBOutlet weak var password: UITextField! {
+        didSet {
+            let placeholderText = NSAttributedString(string: "Password",
+                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+            
+            password.attributedPlaceholder = placeholderText
+        }
+    }
+    @IBOutlet weak var email: UITextField! {
+        didSet {
+            let placeholderText = NSAttributedString(string: "Email",
+                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+            
+            email.attributedPlaceholder = placeholderText
+        }
+    }
+    @IBOutlet weak var userid: UITextField! {
+        didSet {
+            let placeholderText = NSAttributedString(string: "Username",
+                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+            
+            userid.attributedPlaceholder = placeholderText
+        }
+    }
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var box1: UIView!
     
@@ -36,6 +71,12 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     }
     
     func initialize() {
+        addBorderColor(&userid)
+        addBorderColor(&email)
+        addBorderColor(&password)
+        addBorderColor(&confirmPassword)
+        addBorderColor(&mobileNo)
+        
         roundedCorners(&box1)
         roundedCorners(&otpPopup)
     }

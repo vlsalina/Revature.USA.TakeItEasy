@@ -94,7 +94,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     @objc func logoutAction() {
         userLoggedOut()
-        dismiss(animated: true)
+        segueToVC(target: SIDs.LoginPageVC.rawValue, sender: self)
     }
     
     

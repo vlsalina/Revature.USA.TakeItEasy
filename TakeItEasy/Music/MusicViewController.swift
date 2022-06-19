@@ -136,11 +136,6 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
                         self.playlist.artistNames.append(song.artist!.name!)
                         self.playlist.mp3URLs.append(song.preview!)
                         self.playlist.coverURLs.append(song.album!.cover_medium!)
-                        if(!self.initialLabel){
-                            self.songNameLabel!.text = self.playlist.songTitles[0]
-                            self.artistNameLabel!.text = self.playlist.artistNames[0]
-                            self.initialLabel = true
-                        }
                     }
                     self.configure()
                     DispatchQueue.main.async {
@@ -173,6 +168,11 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             let secondsText = Float64(seconds).truncatingRemainder(dividingBy: 60)
             let minutesText = Float64(seconds) / 60
             resultTime.text = "\(minutesText):\(secondsText)"
+        }
+        if(!self.initialLabel){
+            self.songNameLabel!.text = self.playlist.songTitles[0]
+            self.artistNameLabel!.text = self.playlist.artistNames[0]
+            self.initialLabel = true
         }
         
         

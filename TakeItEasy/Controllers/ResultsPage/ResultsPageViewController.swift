@@ -10,6 +10,7 @@ import UIKit
 class ResultsPageViewController: UIViewController {
     
     @IBOutlet weak var resultsTable: UITableView!
+    @IBOutlet weak var redeemBTN: UIButton!
     
     var results = SQLiteObject.sqlObj.getResultsData()
     
@@ -18,7 +19,12 @@ class ResultsPageViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         resultsTable.dataSource = self
+        initialize()
         configureNavbar()
+    }
+    
+    func initialize() {
+        redeemBTN.setTitle(redeemHelper().1, for: .normal)
     }
     
     func configureNavbar() {
@@ -26,6 +32,12 @@ class ResultsPageViewController: UIViewController {
         self.navigationItem.title = userid
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Quiz", style: .done, target: self, action: #selector(toResultsPage))
+    }
+    
+    @IBAction func redeemAction(_ sender: Any) {
+        if (redeemHelper().0 != 0) {
+            showAlert()
+        }
     }
     
     @objc func logoutAction() {
@@ -76,5 +88,45 @@ extension ResultsPageViewController : UITableViewDataSource {
         return 1
     }
     
+}
+
+extension ResultsPageViewController {
+    func redeemHelper() -> (Int, String) {
+        var total = 0
+        
+        for x in results {
+            if (x.name == "Swift" && x.score == 100) { total = total + 100 }
+            if (x.name == "XCode" && x.score == 100) { total = total + 100 }
+            if (x.name == "Storyboard" && x.score == 100) { total = total + 100 }
+            if (x.name == "Collections" && x.score == 100) { total = total + 100 }
+        }
+        
+        if (total == 400) { return (RankConstants.guru.rawValue, ResultsConstants.gold.rawValue)}
+        else if (total == 300) { return (RankConstants.senior.rawValue, ResultsConstants.green.rawValue)}
+        else if (total == 200) { return (RankConstants.junior.rawValue, ResultsConstants.orange.rawValue)}
+        else if (total == 100) { return (RankConstants.entry.rawValue, ResultsConstants.red.rawValue)}
+        else { return (RankConstants.lo.rawValue, ResultsConstants.lo.rawValue)}
+    }
     
+    
+    func showAlert() {
+        let asd = redeemHelper()
+        var msg = ""
+        switch (asd.0) {
+        case RankConstants.entry.rawValue:
+            msg = "Red Star reward redeemed"
+        case RankConstants.junior.rawValue:
+            msg = "Orange Star reward redeemed"
+        case RankConstants.senior.rawValue:
+            msg = "Green Star reward redeemed"
+        case RankConstants.guru.rawValue:
+            msg = "Gold Star reward redeemed"
+        default:
+            msg = "Keep studying"
+        }
+        
+        let alert = UIAlertController(title: "Congrats!", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+        present(alert, animated: true)
+    }
 }

@@ -42,3 +42,19 @@ class Playlist{
         coverURLs = []
     }
 }
+
+class Song {
+    var songTitle : String
+    var album : String
+    var artist : String
+    var mp3URL : String
+    var coverURL : String
+    
+    init(songTitle: String, album: String, artist: String, mp3URL: String, coverURL: String) {
+        self.songTitle = songTitle
+        self.album = album
+        self.artist = artist
+        self.mp3URL = mp3URL
+        self.coverURL = coverURL
+    }
+}

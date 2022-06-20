@@ -15,6 +15,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     //declare variables
     var playlist = Playlist()
     var songs = [Song]()
+    var songsConstant = [Song]()
     //button view
     @IBOutlet weak var musicCollectionView: UICollectionView!
     
@@ -25,6 +26,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     public var playlistIDVar = "10436707122"
     //playbackbuttons
     let playPauseButton = UIButton()
+    let searchController = UISearchController()
     
     @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
@@ -40,14 +42,16 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     @IBOutlet var resultTime:UILabel!
     
     // searchBar variables
-    @IBOutlet weak var musicSB: UISearchBar!
     var filter : Bool = false
     var filteredSongs = Playlist()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        musicSB.delegate = self
+        
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+        
         getMusicData(playlistID: playlistIDVar)
         drawButtons()
         configureNavbar()
@@ -109,7 +113,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "musicCell", for: indexPath) as! MusicCollectionViewCell
         cell.layer.cornerRadius = 3
-//        musicLoadURLImage(urlString: self.playlist.coverURLs[indexPath.row], musicCell: cell)
+        //        musicLoadURLImage(urlString: self.playlist.coverURLs[indexPath.row], musicCell: cell)
         musicLoadURLImage(urlString: songs[indexPath.row].coverURL, musicCell: cell)
         return cell
     }
@@ -148,6 +152,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
                         //                        self.playlist.mp3URLs.append(song.preview!)
                         //                        self.playlist.coverURLs.append(song.album!.cover_medium!)
                         self.songs.append(Song(songTitle: song.title!, album: song.album!.title!, artist: song.artist!.name!, mp3URL: song.preview!, coverURL: song.album!.cover_medium!))
+                        self.songsConstant.append(Song(songTitle: song.title!, album: song.album!.title!, artist: song.artist!.name!, mp3URL: song.preview!, coverURL: song.album!.cover_medium!))
                     }
                     self.configure()
                     DispatchQueue.main.async {
@@ -165,7 +170,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         
     }
     func configure(){
-//        let url = URL(string: self.playlist.mp3URLs[position])
+        //        let url = URL(string: self.playlist.mp3URLs[position])
         let url = URL(string: songs[position].mp3URL)
         playerItem = AVPlayerItem(url:url!)
         player = AVPlayer(playerItem:playerItem!)
@@ -177,11 +182,11 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
         
         if(!self.initialLabel){
-//            self.songNameLabel!.text = self.playlist.songTitles[0]
-//            self.artistNameLabel!.text = self.playlist.artistNames[0]
+            //            self.songNameLabel!.text = self.playlist.songTitles[0]
+            //            self.artistNameLabel!.text = self.playlist.artistNames[0]
             self.songNameLabel!.text = songs[0].songTitle
             self.artistNameLabel!.text = songs[0].artist
-
+            
             self.initialLabel = true
         }
         
@@ -293,6 +298,23 @@ extension MusicViewController {
     }
 }
 
-
-
-
+extension MusicViewController : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        
+        if (!text.isEmpty) {
+            songs = songs.filter { x in
+                if x.songTitle.lowercased().starts(with: text.lowercased()) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+        } else {
+            songs = songsConstant
+        }
+        musicCollectionView.reloadData()
+    }
+}

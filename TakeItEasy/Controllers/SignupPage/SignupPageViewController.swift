@@ -17,15 +17,14 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     @IBOutlet weak var mobileNo: UITextField! {
         didSet {
             let placeholderText = NSAttributedString(string: "Mobile No.",
-                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
-            
+                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
             mobileNo.attributedPlaceholder = placeholderText
         }
     }
     @IBOutlet weak var confirmPassword: UITextField! {
         didSet {
             let placeholderText = NSAttributedString(string: "Confirm Password",
-                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
             
             confirmPassword.attributedPlaceholder = placeholderText
         }
@@ -33,7 +32,7 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     @IBOutlet weak var password: UITextField! {
         didSet {
             let placeholderText = NSAttributedString(string: "Password",
-                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
             
             password.attributedPlaceholder = placeholderText
         }
@@ -41,7 +40,7 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     @IBOutlet weak var email: UITextField! {
         didSet {
             let placeholderText = NSAttributedString(string: "Email",
-                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
             
             email.attributedPlaceholder = placeholderText
         }
@@ -49,7 +48,7 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     @IBOutlet weak var userid: UITextField! {
         didSet {
             let placeholderText = NSAttributedString(string: "Username",
-                                                        attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
             
             userid.attributedPlaceholder = placeholderText
         }
@@ -106,13 +105,15 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
             errorLabel.text = SignupConstants.invalidPassword.rawValue
         }
         catch SignupErrors.invalidPasswordFormat {
-            errorLabel.text = SignupConstants.invalidPasswordFormat.rawValue
+            errorLabel.text = SignupConstants.invalidPassword.rawValue
+            showAlert()
         }
         catch SignupErrors.invalidConfirmPassword {
             errorLabel.text = SignupConstants.invalidConfirmPassword.rawValue
         }
         catch SignupErrors.invalidConfirmPasswordFormat {
-            errorLabel.text = SignupConstants.invalidPasswordFormat.rawValue
+            errorLabel.text = SignupConstants.invalidConfirmPassword.rawValue
+            showAlert()
         }
         catch SignupErrors.invalidMobileNo {
             errorLabel.text = SignupConstants.invalidMobileNo.rawValue
@@ -248,6 +249,36 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
     
     
     
+}
+
+extension SignupPageViewController {
+    func showPasswordFormatReqs() -> String {
+        var strings:[String] = []
+        
+        let bullet1 = "1 uppercase"
+        let bullet2 = "1 lowercase"
+        let bullet3 = "1 number"
+        let bullet4 = "6 characters"
+        
+        strings = [bullet1, bullet2, bullet3, bullet4]
+        
+        var fullString = ""
+        
+        for string: String in strings
+        {
+            let bulletPoint: String = "\u{2022}"
+            let formattedString: String = "\(bulletPoint) \(string)\n"
+            
+            fullString = fullString + formattedString
+        }
+        return fullString
+    }
+    
+    func showAlert() {
+        let alert = UIAlertController(title: "Passwords must have at least:", message: showPasswordFormatReqs(), preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+        present(alert, animated: true)
+    }
 }
 
 

@@ -70,6 +70,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             filter = false
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if !filteredSongs.songTitles.isEmpty{
             return filteredSongs.songTitles.count
@@ -78,6 +79,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         }
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         var sTitles = playlist.songTitles[indexPath.row]
@@ -216,7 +218,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
                 songIsPlaying = true
                 playPauseButton.setBackgroundImage(UIImage(systemName:"pause.fill"), for: .normal)
                 
-                timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
+                timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
                 
             } else if (songIsPlaying){
                 player!.pause()
@@ -285,7 +287,6 @@ extension MusicViewController {
         // set slider
         var currentTime = Float(CMTimeGetSeconds((player?.currentTime())!)) / Float(CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
         
-        print("\(currentTime)%")
         timeSlider.setValue(currentTime, animated: true)
         
         

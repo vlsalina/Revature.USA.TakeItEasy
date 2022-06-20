@@ -113,7 +113,9 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
             songIsPlaying = false
         }
-        
+        timer?.invalidate()
+        timeSlider.setValue(0, animated: true)
+        startTime.text = "00:00"
         configure()
         
     }
@@ -191,7 +193,6 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             let playerLayer = AVPlayerLayer(player:player!)
             playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
             self.view.layer.addSublayer(playerLayer)
-            resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
 
         } else{
             let url = URL(string: self.playlist.mp3URLs[position])
@@ -200,12 +201,9 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             let playerLayer = AVPlayerLayer(player:player!)
             playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
             self.view.layer.addSublayer(playerLayer)
-            resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
-            
         }
+        resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
 
-        
-        
         
         // Timer
         //        let duration = player?.currentItem?.duration //{
@@ -253,6 +251,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
                 
             } else if (songIsPlaying){
                 player!.pause()
+                timer?.invalidate()
                 songIsPlaying = false
                 playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
             }
@@ -317,10 +316,17 @@ extension MusicViewController {
         
         // set slider
         var currentTime = Float(CMTimeGetSeconds((player?.currentTime())!)) / Float(CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
-        
+        print(currentTime)
         timeSlider.setValue(currentTime, animated: true)
-        
-        
+        if currentTime >= 1 {
+            timer?.invalidate()
+            timeSlider.setValue(0, animated: true)
+            startTime.text = "00:00"
+            currentTime = 0
+            
+            
+        }
+    
     }
 }
 

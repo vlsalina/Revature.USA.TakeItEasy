@@ -322,8 +322,7 @@ extension MusicViewController {
             timer?.invalidate()
             timeSlider.setValue(0, animated: true)
             startTime.text = "00:00"
-            currentTime = 0
-            
+            player?.seek(to: .zero)
             
         }
     

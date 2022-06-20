@@ -31,7 +31,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     var player:AVPlayer?
     var playerItem:AVPlayerItem?
     var songIsPlaying:Bool = false
-    var initialLabel:Bool = false
+    
     
     // progressbar
     @IBOutlet weak var timeSlider: UISlider!
@@ -53,33 +53,43 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredSongs.resetData()
-        if searchText == ""{
-            filteredSongs = playlist
-        }
-        for i in 0..<playlist.songTitles.count{
-            if playlist.songTitles[i].lowercased().contains(searchText.lowercased()){
-                filteredSongs.songTitles.append(playlist.songTitles[i])
-                filteredSongs.artistNames.append(playlist.artistNames[i])
-                filteredSongs.albumTitles.append(playlist.albumTitles[i])
-                filteredSongs.coverURLs.append(playlist.coverURLs[i])
-                filteredSongs.mp3URLs.append(playlist.mp3URLs[i])
-                
-            }
-        }
-        musicCollectionView.reloadData()
-        if(searchText != "\n"){
-            filter = true
-        } else{
+        if searchText.isEmpty{
+            filteredSongs.songTitles = playlist.songTitles
+            filteredSongs.artistNames = playlist.artistNames
+            filteredSongs.albumTitles = playlist.albumTitles
+            filteredSongs.coverURLs = playlist.coverURLs
+            filteredSongs.mp3URLs = playlist.mp3URLs
             filter = false
+        } else {
+            print("resetData")
+            filteredSongs.resetData()
+            print(playlist.songTitles)
+            for i in 0..<playlist.songTitles.count{
+                if playlist.songTitles[i].lowercased().contains(searchText.lowercased()){
+                    filteredSongs.songTitles.append(playlist.songTitles[i])
+                    filteredSongs.artistNames.append(playlist.artistNames[i])
+                    filteredSongs.albumTitles.append(playlist.albumTitles[i])
+                    filteredSongs.coverURLs.append(playlist.coverURLs[i])
+                    filteredSongs.mp3URLs.append(playlist.mp3URLs[i])
+                }
+            }
+            filter = true
+            
         }
+        print("reload data")
+        musicCollectionView.reloadData()
+//        if(searchText != "\n"){
+//            filter = true
+//        } else{
+//            filter = false
+//        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if !filteredSongs.songTitles.isEmpty{
+        if filter{
             return filteredSongs.songTitles.count
-        } else {
-            return filter ? 0 : playlist.songTitles.count
+        }else{
+            return playlist.songTitles.count
         }
         
     }
@@ -104,7 +114,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             songIsPlaying = false
         }
         
-        //configure()
+        configure()
         
     }
     
@@ -156,7 +166,10 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
                         
                     }
                     self.configure()
+                    //update initial ui elements
                     DispatchQueue.main.async {
+                        self.songNameLabel!.text = self.playlist.songTitles[0]
+                        self.artistNameLabel!.text = self.playlist.artistNames[0]
                         self.musicCollectionView.reloadData() //reload collections or table views inside DispatchQueue.main.async
                     }
                 }
@@ -178,6 +191,8 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             let playerLayer = AVPlayerLayer(player:player!)
             playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
             self.view.layer.addSublayer(playerLayer)
+            resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
+
         } else{
             let url = URL(string: self.playlist.mp3URLs[position])
             playerItem = AVPlayerItem(url:url!)
@@ -185,10 +200,12 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             let playerLayer = AVPlayerLayer(player:player!)
             playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
             self.view.layer.addSublayer(playerLayer)
+            resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
+            
         }
+
         
         
-        resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
         
         // Timer
         //        let duration = player?.currentItem?.duration //{
@@ -199,13 +216,6 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         //            resultTime.text = "\(minutesText):\(secondsText)"
         //        }
         //        print("DURATION: ", duration)
-        
-        
-        if(!self.initialLabel){
-            self.songNameLabel!.text = self.playlist.songTitles[0]
-            self.artistNameLabel!.text = self.playlist.artistNames[0]
-            self.initialLabel = true
-        }
         
         
     }
@@ -239,7 +249,6 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
                 print("GET SECONDS: ", CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
                 songIsPlaying = true
                 playPauseButton.setBackgroundImage(UIImage(systemName:"pause.fill"), for: .normal)
-                
                 timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
                 
             } else if (songIsPlaying){

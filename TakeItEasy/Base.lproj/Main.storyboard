@@ -1027,15 +1027,27 @@
                                     <outlet property="delegate" destination="7q6-K2-sXA" id="yTF-kW-Lsz"/>
                                 </connections>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="kui-9V-58s">
+                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pYT-mk-H87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pYT-mk-H87" firstAttribute="trailing" secondItem="kui-9V-58s" secondAttribute="trailing" id="DEt-Ui-kz4"/>
+                            <constraint firstItem="kui-9V-58s" firstAttribute="leading" secondItem="Gz5-DX-REJ" secondAttribute="leading" id="G0s-s0-pPg"/>
+                            <constraint firstItem="kui-9V-58s" firstAttribute="top" secondItem="pYT-mk-H87" secondAttribute="top" id="MrV-fQ-4X8"/>
+                            <constraint firstItem="pYT-mk-H87" firstAttribute="trailing" secondItem="kui-9V-58s" secondAttribute="trailing" id="nj5-YS-CZJ"/>
+                            <constraint firstItem="kui-9V-58s" firstAttribute="leading" secondItem="Gz5-DX-REJ" secondAttribute="leading" id="vbf-06-hoq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LiL-Uh-StX"/>
                     <connections>
                         <outlet property="artistNameLabel" destination="cCg-pL-D0b" id="taS-gd-jj6"/>
                         <outlet property="holder" destination="Xza-LF-xz1" id="wBO-5j-8xr"/>
                         <outlet property="musicCollectionView" destination="9ts-GJ-Pfb" id="MRS-Fx-270"/>
+                        <outlet property="musicSB" destination="kui-9V-58s" id="MDs-6i-cdV"/>
                         <outlet property="resultTime" destination="MWW-Ou-cqC" id="P7V-ej-XHY"/>
                         <outlet property="songNameLabel" destination="bT5-jV-eVp" id="sZN-Gw-XbL"/>
                         <outlet property="startTime" destination="RGE-qM-6fi" id="riY-JA-pRp"/>

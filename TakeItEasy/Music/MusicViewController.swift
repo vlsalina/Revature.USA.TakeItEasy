@@ -265,7 +265,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             let value = Float64(timeSlider.value) * totalSeconds
             let seekTime = CMTime(value: Int64(value), timescale: 1)
             player?.seek(to: seekTime, completionHandler: {(completedSeek) in
-                
+                //add slider functionality
             })
         }
     }

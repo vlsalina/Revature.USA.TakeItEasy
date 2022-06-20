@@ -60,7 +60,7 @@ class QuestionsPageViewController: UIViewController {
                 QuizPageViewController.alertMsg = QuizConstants.scoredLow.rawValue
             } else if (score <= 80) {
                 QuizPageViewController.rewardMsg = QuizConstants.scoredMed.rawValue
-                QuizPageViewController.alertMsg = QuizConstants.scoredLow.rawValue
+                QuizPageViewController.alertMsg = QuizConstants.scoredMed.rawValue
             } else {
                 QuizPageViewController.rewardMsg = QuizConstants.scoredHigh.rawValue
                 QuizPageViewController.alertMsg = QuizConstants.scoredHigh.rawValue

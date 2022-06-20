@@ -991,13 +991,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OdU-Xn-4C3">
-                                <rect key="frame" x="0.0" y="56" width="414" height="51"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="7q6-K2-sXA" id="AYb-iU-l5m"/>
-                                </connections>
-                            </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="MusicCollectionView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9ts-GJ-Pfb">
                                 <rect key="frame" x="-1" y="152" width="414" height="408"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1037,18 +1030,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pYT-mk-H87"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="OdU-Xn-4C3" secondAttribute="trailing" id="SA3-ny-yIM"/>
-                            <constraint firstItem="OdU-Xn-4C3" firstAttribute="leading" secondItem="pYT-mk-H87" secondAttribute="leading" id="UNX-dV-Lu1"/>
-                            <constraint firstItem="OdU-Xn-4C3" firstAttribute="top" secondItem="pYT-mk-H87" secondAttribute="top" id="fni-f6-Uga"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LiL-Uh-StX"/>
                     <connections>
                         <outlet property="artistNameLabel" destination="cCg-pL-D0b" id="taS-gd-jj6"/>
                         <outlet property="holder" destination="Xza-LF-xz1" id="wBO-5j-8xr"/>
                         <outlet property="musicCollectionView" destination="9ts-GJ-Pfb" id="MRS-Fx-270"/>
-                        <outlet property="musicSB" destination="OdU-Xn-4C3" id="9EV-oj-2wR"/>
                         <outlet property="resultTime" destination="MWW-Ou-cqC" id="P7V-ej-XHY"/>
                         <outlet property="songNameLabel" destination="bT5-jV-eVp" id="sZN-Gw-XbL"/>
                         <outlet property="startTime" destination="RGE-qM-6fi" id="riY-JA-pRp"/>

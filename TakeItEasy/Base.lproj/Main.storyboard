@@ -1012,25 +1012,25 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="MusicCollectionView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9ts-GJ-Pfb">
-                                <rect key="frame" x="0.0" y="107" width="414" height="408"/>
+                                <rect key="frame" x="0.0" y="107" width="414" height="345"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="50" id="xws-5C-xgJ">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="0.0" id="xws-5C-xgJ">
                                     <size key="itemSize" width="406" height="314"/>
-                                    <size key="estimatedItemSize" width="370" height="299"/>
+                                    <size key="estimatedItemSize" width="406" height="314"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="13" minY="0.0" maxX="10" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="13" minY="0.0" maxX="210" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="musicCell" id="wTg-hv-Ilm" customClass="MusicCollectionViewCell" customModule="TakeItEasy" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="47" width="406" height="314"/>
+                                        <rect key="frame" x="13" y="15.5" width="406" height="314"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ukt-aT-m7S">
                                             <rect key="frame" x="0.0" y="0.0" width="406" height="314"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHs-8p-9ul">
-                                                    <rect key="frame" x="13" y="0.0" width="380" height="299"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fHs-8p-9ul">
+                                                    <rect key="frame" x="0.0" y="0.0" width="406" height="314"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
@@ -1056,7 +1056,7 @@
                             <constraint firstItem="kui-9V-58s" firstAttribute="leading" secondItem="Gz5-DX-REJ" secondAttribute="leading" id="G0s-s0-pPg"/>
                             <constraint firstAttribute="bottom" secondItem="0cs-Cb-QYU" secondAttribute="bottom" id="LGh-Jd-ZJG"/>
                             <constraint firstItem="kui-9V-58s" firstAttribute="top" secondItem="pYT-mk-H87" secondAttribute="top" id="MrV-fQ-4X8"/>
-                            <constraint firstItem="pYT-mk-H87" firstAttribute="bottom" secondItem="9ts-GJ-Pfb" secondAttribute="bottom" constant="244" id="NZv-te-tBU"/>
+                            <constraint firstItem="pYT-mk-H87" firstAttribute="bottom" secondItem="9ts-GJ-Pfb" secondAttribute="bottom" constant="307" id="NZv-te-tBU"/>
                             <constraint firstItem="0cs-Cb-QYU" firstAttribute="leading" secondItem="Gz5-DX-REJ" secondAttribute="leading" id="bx6-Ki-rwg"/>
                             <constraint firstItem="9ts-GJ-Pfb" firstAttribute="leading" secondItem="Gz5-DX-REJ" secondAttribute="leading" id="cVU-bg-d5j"/>
                             <constraint firstItem="pYT-mk-H87" firstAttribute="trailing" secondItem="9ts-GJ-Pfb" secondAttribute="trailing" id="chP-5d-lA9"/>

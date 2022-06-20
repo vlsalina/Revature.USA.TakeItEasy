@@ -292,13 +292,13 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     }
 }
 
-
-extension MusicViewController : UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 355, height: 355)
-    }
-    
-}
+//
+//extension MusicViewController : UICollectionViewDelegateFlowLayout{
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return CGSize(width: 370, height: 370)
+//    }
+//    
+//}
 
 extension MusicViewController {
     @objc func updateTime() {

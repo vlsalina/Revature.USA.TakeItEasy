@@ -216,10 +216,9 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     
     //play pause functionaility
     @objc func didPressPlayPauseButton(){
-        if(playlist.songTitles.count > 0){
+        if(songs.count > 0){
             if (player?.rate == 0 && !songIsPlaying){
                 player!.play()
-                print("GET SECONDS: ", CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
                 songIsPlaying = true
                 playPauseButton.setBackgroundImage(UIImage(systemName:"pause.fill"), for: .normal)
                 

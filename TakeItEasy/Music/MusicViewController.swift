@@ -213,8 +213,8 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
     //Draws buttons in my Holder View
     func drawButtons(){
         //set button position
-        let size:CGFloat = 50
-        playPauseButton.frame = CGRect(x: (holder.frame.size.width - size)/2.0, y: 300, width: size, height: size)
+        let size:CGFloat = 60
+        playPauseButton.frame = CGRect(x: (holder.frame.size.width - size)/2.0, y: 320, width: size, height: size)
         
         
         // set button image
@@ -316,6 +316,8 @@ extension MusicViewController {
             timeSlider.setValue(0, animated: true)
             startTime.text = "00:00"
             player?.seek(to: .zero)
+            songIsPlaying = false
+            playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
             
         }
     

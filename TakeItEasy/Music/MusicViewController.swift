@@ -53,14 +53,18 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filteredSongs.songTitles = []
-        
+        filteredSongs.resetData()
         if searchText == ""{
             filteredSongs = playlist
         }
-        for i in playlist.songTitles{
-            if i.lowercased().contains(searchText.lowercased()){
-                filteredSongs.songTitles.append(i)
+        for i in 0..<playlist.songTitles.count{
+            if playlist.songTitles[i].lowercased().contains(searchText.lowercased()){
+                filteredSongs.songTitles.append(playlist.songTitles[i])
+                filteredSongs.artistNames.append(playlist.artistNames[i])
+                filteredSongs.albumTitles.append(playlist.albumTitles[i])
+                filteredSongs.coverURLs.append(playlist.coverURLs[i])
+                filteredSongs.mp3URLs.append(playlist.mp3URLs[i])
+                
             }
         }
         musicCollectionView.reloadData()
@@ -86,25 +90,33 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         if !filteredSongs.songTitles.isEmpty{
             sTitles = filteredSongs.songTitles[indexPath.row]
         }
-        
+        var aNames = playlist.artistNames[indexPath.row]
+        if(!filteredSongs.artistNames.isEmpty){
+            aNames = filteredSongs.artistNames[indexPath.row]
+        }
         
         position = indexPath.row
         songNameLabel!.text = sTitles
-        artistNameLabel!.text = playlist.artistNames[indexPath.row]
+        artistNameLabel!.text = aNames
         if(songIsPlaying){
             player?.pause()
             playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
             songIsPlaying = false
         }
         
-        configure()
+        //configure()
         
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "musicCell", for: indexPath) as! MusicCollectionViewCell
         cell.layer.cornerRadius = 3
-        musicLoadURLImage(urlString: self.playlist.coverURLs[indexPath.row], musicCell: cell)
+        if(filter){
+            musicLoadURLImage(urlString: self.filteredSongs.coverURLs[indexPath.row], musicCell: cell)
+        } else{
+            musicLoadURLImage(urlString: self.playlist.coverURLs[indexPath.row], musicCell: cell)
+        }
+        
         return cell
     }
     
@@ -141,6 +153,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
                         self.playlist.artistNames.append(song.artist!.name!)
                         self.playlist.mp3URLs.append(song.preview!)
                         self.playlist.coverURLs.append(song.album!.cover_medium!)
+                        
                     }
                     self.configure()
                     DispatchQueue.main.async {
@@ -158,12 +171,21 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         
     }
     func configure(){
-        let url = URL(string: self.playlist.mp3URLs[position])
-        playerItem = AVPlayerItem(url:url!)
-        player = AVPlayer(playerItem:playerItem!)
-        let playerLayer = AVPlayerLayer(player:player!)
-        playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
-        self.view.layer.addSublayer(playerLayer)
+        if(filter){
+            let url = URL(string: self.filteredSongs.mp3URLs[position])
+            playerItem = AVPlayerItem(url:url!)
+            player = AVPlayer(playerItem:playerItem!)
+            let playerLayer = AVPlayerLayer(player:player!)
+            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
+            self.view.layer.addSublayer(playerLayer)
+        } else{
+            let url = URL(string: self.playlist.mp3URLs[position])
+            playerItem = AVPlayerItem(url:url!)
+            player = AVPlayer(playerItem:playerItem!)
+            let playerLayer = AVPlayerLayer(player:player!)
+            playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
+            self.view.layer.addSublayer(playerLayer)
+        }
         
         
         resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))

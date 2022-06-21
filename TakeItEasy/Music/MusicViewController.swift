@@ -310,7 +310,6 @@ extension MusicViewController {
         
         // set slider
         var currentTime = Float(CMTimeGetSeconds((player?.currentTime())!)) / Float(CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
-        print(currentTime)
         timeSlider.setValue(currentTime, animated: true)
         if currentTime >= 1 {
             timer?.invalidate()

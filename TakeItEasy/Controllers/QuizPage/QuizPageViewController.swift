@@ -134,8 +134,6 @@ extension QuizPageViewController : UICollectionViewDataSource, UICollectionViewD
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    
-    
 }
 
 extension QuizPageViewController : UISearchResultsUpdating {

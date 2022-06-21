@@ -235,8 +235,6 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
         return false
     }
     
-    
-    
     /*
      // MARK: - Navigation
      
@@ -247,8 +245,6 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
      }
      */
     
-    
-    
 }
 
 extension SignupPageViewController {
@@ -258,7 +254,7 @@ extension SignupPageViewController {
         let bullet1 = "1 uppercase"
         let bullet2 = "1 lowercase"
         let bullet3 = "1 number"
-        let bullet4 = "6 characters"
+        let bullet4 = "6-12 characters"
         
         strings = [bullet1, bullet2, bullet3, bullet4]
         

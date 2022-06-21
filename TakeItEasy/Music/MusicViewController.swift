@@ -267,6 +267,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         super.viewWillDisappear(animated)
         if let player = player{
             player.pause()
+            timer?.invalidate()
         }
     }
     func musicLoadURLImage(urlString: String, musicCell : MusicCollectionViewCell){

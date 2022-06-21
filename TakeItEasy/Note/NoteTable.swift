@@ -30,6 +30,7 @@ class NoteTable: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         //super.viewWillAppear(animated)
         notes = Helper.helper.getNote()
+        filter = notes
         self.tableView.reloadData()
         print("view will appear")
     }

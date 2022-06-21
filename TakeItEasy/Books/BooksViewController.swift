@@ -319,15 +319,10 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
 
     func updateCurrentBookData(books: Books, bookData : BookData){
         for book in books.items!{ //get all the data for each item and store in book data property
-            bookData.titles.append(book.volumeInfo!.title!) //add book title
-            if book.volumeInfo!.imageLinks!.thumbnail != nil{ //sometimes there is not an image
-                bookData.imageUrls.append(book.volumeInfo!.imageLinks!.thumbnail!) //if there is an image, add the url
-            }
-            else{
-                bookData.imageUrls.append("img1") //if there was no image, just add a default image title from assests
-            }
-            bookData.ids.append(book.id!) //add book id
-            bookData.previewUrls.append(book.volumeInfo!.previewLink!)//add preview links
+            bookData.titles.append(book.volumeInfo?.title ?? "") //add book title
+            bookData.imageUrls.append(book.volumeInfo?.imageLinks?.thumbnail ?? "img1") //if there is an image, add the url
+            bookData.ids.append(book.id ?? "") //add book id
+            bookData.previewUrls.append(book.volumeInfo?.previewLink ?? "")//add preview links
         }
     }
 

@@ -53,6 +53,7 @@ class QuizPageViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         showResults()
+        resetQs()
     }
     
     func initialize() {
@@ -174,6 +175,14 @@ extension QuizPageViewController {
             QuizPageViewController.alertMsg = ""
         }))
         present(alert, animated: true)
+    }
+    
+    func resetQs() {
+        for x in quizzes {
+            for y in x.details.questions {
+                y.answer = Choice(choice: "")
+            }
+        }
     }
 }
 

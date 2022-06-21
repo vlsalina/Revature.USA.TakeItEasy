@@ -1627,7 +1627,7 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJK-E6-Pd9">
                                 <rect key="frame" x="1" y="170" width="206" height="45"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="206" id="2ec-1x-C9I"/>
                                     <constraint firstAttribute="height" constant="45" id="b4n-MX-KFm"/>
@@ -1678,7 +1678,9 @@
                             <constraint firstItem="rMM-xp-al0" firstAttribute="leading" secondItem="IMe-SF-FLD" secondAttribute="leadingMargin" constant="-21" id="zy2-HK-MBY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="z0D-h5-vyK"/>
+                    <navigationItem key="navigationItem" id="z0D-h5-vyK">
+                        <barButtonItem key="backBarButtonItem" title="back" id="5wo-Xb-Jpk"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="dLE-qH-4Id" id="SzR-W4-4Do"/>
                         <outlet property="tableView" destination="Kls-iy-v2z" id="nT8-rc-49q"/>

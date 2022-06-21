@@ -71,11 +71,11 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
         }
         print("reload data")
         musicCollectionView.reloadData()
-//        if(searchText != "\n"){
-//            filter = true
-//        } else{
-//            filter = false
-//        }
+        //        if(searchText != "\n"){
+        //            filter = true
+        //        } else{
+        //            filter = false
+        //        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -186,7 +186,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             let playerLayer = AVPlayerLayer(player:player!)
             playerLayer.frame = CGRect(x: 0, y: 0, width: 10, height: 50)
             self.view.layer.addSublayer(playerLayer)
-
+            
         } else{
             let url = URL(string: self.playlist.mp3URLs[position])
             playerItem = AVPlayerItem(url:url!)
@@ -196,7 +196,7 @@ class MusicViewController: UIViewController,UICollectionViewDataSource,UICollect
             self.view.layer.addSublayer(playerLayer)
         }
         resultTime.text = formatTimeFor(seconds: CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
-
+        
         
         // Timer
         //        let duration = player?.currentItem?.duration //{
@@ -310,7 +310,6 @@ extension MusicViewController {
         
         // set slider
         var currentTime = Float(CMTimeGetSeconds((player?.currentTime())!)) / Float(CMTimeGetSeconds((self.player?.currentItem?.asset.duration)!))
-        print(currentTime)
         timeSlider.setValue(currentTime, animated: true)
         if currentTime >= 1 {
             timer?.invalidate()
@@ -321,7 +320,7 @@ extension MusicViewController {
             playPauseButton.setBackgroundImage(UIImage(systemName: "play.fill"), for: .normal)
             
         }
-    
+        
     }
 }
 

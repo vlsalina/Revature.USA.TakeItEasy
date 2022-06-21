@@ -137,14 +137,6 @@ class SQLiteObject {
         
         for (index, quiz) in quizData.enumerated() {
             
-            // prepare id
-            //            let id = Int32(index + 1)
-            //            if sqlite3_bind_int(stmt, 0, id) != SQLITE_OK {
-            //                let err = String(cString: sqlite3_errmsg(dbpointer)!)
-            //                print("error in saving id ", err)
-            //
-            //            }
-            
             // prepare quiz name
             let qName : NSString = quiz.name as NSString
             if sqlite3_bind_text(stmt, 1, qName.utf8String, -1, nil) != SQLITE_OK {

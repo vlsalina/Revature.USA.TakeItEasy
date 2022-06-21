@@ -29,8 +29,6 @@
 		618F375F28580FED00132D47 /* ResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618F375E28580FED00132D47 /* ResultsTableViewCell.swift */; };
 		6190101E285AA6B90047B2A6 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 6190101C285AA6B90047B2A6 /* index.html */; };
 		6190101F285AA6B90047B2A6 /* handler.js in Resources */ = {isa = PBXBuildFile; fileRef = 6190101D285AA6B90047B2A6 /* handler.js */; };
-		61901021285AA7EF0047B2A6 /* GooglePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61901020285AA7EF0047B2A6 /* GooglePageViewController.swift */; };
-		61901023285AAEE10047B2A6 /* ForumPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61901022285AAEE10047B2A6 /* ForumPageViewController.swift */; };
 		6192AF4C28517C4600631265 /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF4B28517C4600631265 /* LoginPageViewController.swift */; };
 		6192AF5028517CDC00631265 /* DBLoginHelperClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF4F28517CDC00631265 /* DBLoginHelperClass.swift */; };
 		6192AF5328517CFA00631265 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6192AF5128517CFA00631265 /* User+CoreDataClass.swift */; };
@@ -55,6 +53,7 @@
 		61B9C164285559B700A8BA1C /* SQLHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C163285559B700A8BA1C /* SQLHelpers.swift */; };
 		61B9C1662855602A00A8BA1C /* SQLiteConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C1652855602A00A8BA1C /* SQLiteConstants.swift */; };
 		61B9C16F285592C300A8BA1C /* QuestionsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B9C16E285592C300A8BA1C /* QuestionsConstants.swift */; };
+		61DCB95228612D1100C24D23 /* ResultsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DCB95128612D1100C24D23 /* ResultsConstants.swift */; };
 		733261AC28522E19008CBC5C /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261AB28522E19008CBC5C /* MusicViewController.swift */; };
 		733261AF28522E68008CBC5C /* MusicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261AE28522E68008CBC5C /* MusicCollectionViewCell.swift */; };
 		733261F5285555D6008CBC5C /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733261F4285555D6008CBC5C /* SearchPageViewController.swift */; };
@@ -94,8 +93,6 @@
 		618F375E28580FED00132D47 /* ResultsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewCell.swift; sourceTree = "<group>"; };
 		6190101C285AA6B90047B2A6 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		6190101D285AA6B90047B2A6 /* handler.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = handler.js; sourceTree = "<group>"; };
-		61901020285AA7EF0047B2A6 /* GooglePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePageViewController.swift; sourceTree = "<group>"; };
-		61901022285AAEE10047B2A6 /* ForumPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumPageViewController.swift; sourceTree = "<group>"; };
 		6192AF4B28517C4600631265 /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
 		6192AF4F28517CDC00631265 /* DBLoginHelperClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBLoginHelperClass.swift; sourceTree = "<group>"; };
 		6192AF5128517CFA00631265 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -120,6 +117,7 @@
 		61B9C163285559B700A8BA1C /* SQLHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLHelpers.swift; sourceTree = "<group>"; };
 		61B9C1652855602A00A8BA1C /* SQLiteConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteConstants.swift; sourceTree = "<group>"; };
 		61B9C16E285592C300A8BA1C /* QuestionsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsConstants.swift; sourceTree = "<group>"; };
+		61DCB95128612D1100C24D23 /* ResultsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsConstants.swift; sourceTree = "<group>"; };
 		733261AB28522E19008CBC5C /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		733261AE28522E68008CBC5C /* MusicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicCollectionViewCell.swift; sourceTree = "<group>"; };
 		733261F4285555D6008CBC5C /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
@@ -224,8 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				733261F4285555D6008CBC5C /* SearchPageViewController.swift */,
-				61901020285AA7EF0047B2A6 /* GooglePageViewController.swift */,
-				61901022285AAEE10047B2A6 /* ForumPageViewController.swift */,
 			);
 			path = SearchPage;
 			sourceTree = "<group>";
@@ -288,6 +284,7 @@
 				61B9C1652855602A00A8BA1C /* SQLiteConstants.swift */,
 				61B9C16E285592C300A8BA1C /* QuestionsConstants.swift */,
 				61B6290D285ED9D200B73A02 /* StoryboardIDs.swift */,
+				61DCB95128612D1100C24D23 /* ResultsConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -470,11 +467,10 @@
 				61B6290E285ED9D200B73A02 /* StoryboardIDs.swift in Sources */,
 				617A60942855182E009FDFCD /* SQLiteObject.swift in Sources */,
 				845A19C9285780EA005013EA /* BookConstants.swift in Sources */,
+				61DCB95228612D1100C24D23 /* ResultsConstants.swift in Sources */,
 				6192AFBD2852536C00631265 /* QuizCollectionViewCell.swift in Sources */,
 				733261F5285555D6008CBC5C /* SearchPageViewController.swift in Sources */,
 				6192AF632851813700631265 /* Helpers.swift in Sources */,
-				61901021285AA7EF0047B2A6 /* GooglePageViewController.swift in Sources */,
-				61901023285AAEE10047B2A6 /* ForumPageViewController.swift in Sources */,
 				84A3C53628513BF200664E96 /* GeneralBooksCollectionViewCell.swift in Sources */,
 				6192AF60285180B700631265 /* RememberMeHelper.swift in Sources */,
 				6192B069285392D900631265 /* ScoreKeeper.swift in Sources */,

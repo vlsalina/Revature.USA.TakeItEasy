@@ -318,11 +318,14 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
 
     func updateCurrentBookData(books: Books, bookData : BookData){
+        //add books if expected fields are not nil
         for book in books.items!{ //get all the data for each item and store in book data property
-            bookData.titles.append(book.volumeInfo?.title ?? "") //add book title
-            bookData.imageUrls.append(book.volumeInfo?.imageLinks?.thumbnail ?? "img1") //if there is an image, add the url
-            bookData.ids.append(book.id ?? "") //add book id
-            bookData.previewUrls.append(book.volumeInfo?.previewLink ?? "")//add preview links
+            if book.volumeInfo!.title != nil && book.volumeInfo!.imageLinks!.thumbnail != nil && book.id != nil && book.volumeInfo!.previewLink != nil{
+                bookData.titles.append(book.volumeInfo!.title!) //add book title
+                bookData.imageUrls.append(book.volumeInfo!.imageLinks!.thumbnail!) //if there is an image, add the url
+                bookData.ids.append(book.id!) //add book id
+                bookData.previewUrls.append(book.volumeInfo!.previewLink!)//add preview links
+            }
         }
     }
 
@@ -404,7 +407,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     func loadURLImage(urlString : String, bookCell : UICollectionViewCell, update: BookCollection){
         //to add image from url to cell a data task is used
         //if json data didn't contain url thumbnail data, don't load image
-        if urlString == "img1"{
+        if urlString == ""{
             return
         }
         let urlRequest = setupImageUrlRequest(urlString: urlString)

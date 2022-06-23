@@ -320,7 +320,7 @@ class BooksViewController: UIViewController, UICollectionViewDelegate, UICollect
     func updateCurrentBookData(books: Books, bookData : BookData){
         //add books if expected fields are not nil
         for book in books.items!{ //get all the data for each item and store in book data property
-            if book.volumeInfo!.title != nil && book.volumeInfo!.imageLinks!.thumbnail != nil && book.id != nil && book.volumeInfo!.previewLink != nil{
+            if book.volumeInfo?.title != nil && book.volumeInfo?.imageLinks?.thumbnail != nil && book.id != nil && book.volumeInfo?.previewLink != nil{
                 bookData.titles.append(book.volumeInfo!.title!) //add book title
                 bookData.imageUrls.append(book.volumeInfo!.imageLinks!.thumbnail!) //if there is an image, add the url
                 bookData.ids.append(book.id!) //add book id

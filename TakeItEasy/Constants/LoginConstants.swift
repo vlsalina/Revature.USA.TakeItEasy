@@ -17,7 +17,7 @@ enum LoginErrors : Error {
 
 enum LoginConstants : String {
     case userDefaultEmailKey = "userdefault-email"
-    case invalidLoginCredentails = "Invalid email or password"
+    case invalidLoginCredentails = "Invalid username or password"
     case unknownLoginError = "Unknown login error"
     case noUserFound = "No user found"
 }

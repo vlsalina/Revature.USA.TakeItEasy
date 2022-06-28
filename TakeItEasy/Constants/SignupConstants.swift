@@ -21,7 +21,7 @@ enum SignupErrors : Error {
 }
 
 enum SignupConstants : String {
-    case invalidUserId = "Invalid userid"
+    case invalidUserId = "Invalid username"
     case invalidEmail = "Invalid email"
     case invalidEmailFormat = "Please provide valid email format"
     case invalidPassword = "Invalid password"

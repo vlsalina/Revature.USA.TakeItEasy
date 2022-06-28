@@ -12,12 +12,14 @@ class SearchPageViewController: UIViewController {
     
     @IBOutlet weak var navbar: UINavigationBar!
     
+    private var webKitView: WKWebView?
+    let newUrl = URL(string: "https://www.google.com")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let webKitView = WKWebView()
-        let newUrl = URL(string: "https://www.google.com")!
-        webKitView.load(URLRequest(url: newUrl))
+        webKitView = WKWebView()
+        webKitView!.load(URLRequest(url: newUrl))
         view = webKitView
         configureNavbar()
     }
@@ -26,7 +28,12 @@ class SearchPageViewController: UIViewController {
         let userid = userDefaults.string(forKey: "currentUserName")
         self.navigationItem.title = userid
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(didTapRefresh))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
+    }
+    
+    @objc private func didTapRefresh() {
+        webKitView!.load(URLRequest(url: newUrl))
     }
     
     @objc func logoutAction() {

@@ -12,12 +12,14 @@ class SearchPageViewController: UIViewController {
     
     @IBOutlet weak var navbar: UINavigationBar!
     
+    private var webKitView: WKWebView?
+    let newUrl = URL(string: "https://www.google.com")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let webKitView = WKWebView()
-        let newUrl = URL(string: "https://www.google.com")!
-        webKitView.load(URLRequest(url: newUrl))
+        webKitView = WKWebView()
+        webKitView!.load(URLRequest(url: newUrl))
         view = webKitView
         configureNavbar()
     }
@@ -25,8 +27,24 @@ class SearchPageViewController: UIViewController {
     func configureNavbar() {
         let userid = userDefaults.string(forKey: "currentUserName")
         self.navigationItem.title = userid
+        
+        let refresh = UIImage(systemName: "arrow.clockwise")
+        let previous = UIImage(systemName: "chevron.backward")
+        
+        let refreshBTN = UIBarButtonItem(image: refresh, style: .plain, target: self, action: #selector(didTapRefresh))
+        let previousBTN = UIBarButtonItem(image: previous, style: .plain, target: self, action: #selector(didTapPrevious))
+        
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        self.navigationItem.leftBarButtonItems = [previousBTN, refreshBTN]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
+    }
+    
+    @objc private func didTapRefresh() {
+        webKitView!.load(URLRequest(url: newUrl))
+    }
+    
+    @objc private func didTapPrevious() {
+        webKitView!.goBack()
     }
     
     @objc func logoutAction() {

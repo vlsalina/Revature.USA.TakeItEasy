@@ -139,7 +139,6 @@ class SignupPageViewController: UIViewController, UNUserNotificationCenterDelega
         // IMPORTANT: - NEED TO HANDLE DUPLICATE ENTRY ERROR
         errorLabel.text = SignupConstants.registered.rawValue
         DBHelperClass.dbHelper.addUser(userid: userid.text!, password: password.text!, email: email.text!, mobile: mobileNo.text!)
-        print("user successfully signed up")
     }
     
     @IBAction func goToSignIn(_ sender: Any) {

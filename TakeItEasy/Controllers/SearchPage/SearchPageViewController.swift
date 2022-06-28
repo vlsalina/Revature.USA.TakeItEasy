@@ -27,13 +27,24 @@ class SearchPageViewController: UIViewController {
     func configureNavbar() {
         let userid = userDefaults.string(forKey: "currentUserName")
         self.navigationItem.title = userid
+        
+        let refresh = UIImage(systemName: "arrow.clockwise")
+        let previous = UIImage(systemName: "chevron.backward")
+        
+        let refreshBTN = UIBarButtonItem(image: refresh, style: .plain, target: self, action: #selector(didTapRefresh))
+        let previousBTN = UIBarButtonItem(image: previous, style: .plain, target: self, action: #selector(didTapPrevious))
+        
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(didTapRefresh))
+        self.navigationItem.leftBarButtonItems = [previousBTN, refreshBTN]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Log Out", style: .done, target: self, action: #selector(logoutAction))
     }
     
     @objc private func didTapRefresh() {
         webKitView!.load(URLRequest(url: newUrl))
+    }
+    
+    @objc private func didTapPrevious() {
+        webKitView!.goBack()
     }
     
     @objc func logoutAction() {
